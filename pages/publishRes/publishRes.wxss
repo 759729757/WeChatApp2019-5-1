@@ -1,0 +1,7 @@
+/* pages/publishPro/publishPro.wxss */
+page{position: relative;}
+.text-xxlg{margin-bottom: 30rpx;}
+.flex{flex-wrap: wrap;}
+
+
+

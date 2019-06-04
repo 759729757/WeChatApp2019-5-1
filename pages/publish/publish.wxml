@@ -1,0 +1,33 @@
+<!--pages/publish/publish.wxml-->
+<view class='stripe stripe-right'></view>
+<view class='content-warp '>
+  <view class='title text-lg'>
+    选择发布内容
+  </view>
+  <view class='_title'>
+  根据发布内容的不同，选择合适的方式
+  </view>
+</view>
+<view class='content-warp'>
+
+  <view class='flex item' bindtap='gopro'>
+    <image class='pic' src='../../images/project.png' ></image>
+    <view>
+      <view class='text-xlg text-white'>
+        发布项目
+        <image class='icon pull-right' src='../../images/next.png'></image>
+      </view>
+      <view class='_title'>如果你有好的项目，可以选择发布项目</view>
+    </view>
+  </view>
+
+    <view class='flex item' bindtap='gores'>
+    <image class='pic' src='../../images/sdcard.png' ></image>
+    <view>
+      <view class='text-xlg text-white'>发布资源
+      <image class='icon pull-right' src='../../images/next.png'></image></view>
+      <view class='_title'>如果你有好的项目，可以选择发布项目</view>
+    </view>
+  </view>
+
+</view>

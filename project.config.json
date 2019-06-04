@@ -1,0 +1,90 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wxefaaeea96e92322c",
+	"projectname": "WeChatApp",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": 0,
+					"name": "旧版页面",
+					"pathName": "pages/index2/index2",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "找项目",
+					"pathName": "pages/project/project",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "找资源",
+					"pathName": "pages/resource/resource",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "我的",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "新增资源",
+					"pathName": "pages/publish/publish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布项目填资料",
+					"pathName": "pages/publishPro/publishPro",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

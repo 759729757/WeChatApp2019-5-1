@@ -1,0 +1,5 @@
+/* pages/publish/publish.wxss */
+page{height: 100%}
+.pic{width: 200px;height: 260rpx;padding: 40rpx 40rpx 40rpx 0;box-sizing: border-box;}
+.item{background-color: #212C9A;margin: 40rpx 0;padding-right: 40rpx;}
+.icon{vertical-align: middle;}

@@ -1,0 +1,11 @@
+/* pages/resource/resource.wxss */
+/* 搜索 */
+.part-search .text-warp{background-color: #1E2887;border-top-left-radius: 50rpx;border-bottom-left-radius: 50rpx;color: white;font-weight:bold;padding-left: 1em;width: 7em;}
+.search .input-item{background-color: #1E2887;}
+.input-item input + .icon-search{background-color: #EBC682;border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index: 99;padding: 10rpx 20rpx;box-sizing: border-box;}
+.picker{color: white;margin-right: 2em;}
+.search input {padding-left: 2em;justify-content: space-between}
+
+/* 内容 */
+.resource{margin-bottom: 50rpx;}
+.content{margin-top: 20rpx;}

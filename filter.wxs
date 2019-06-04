@@ -1,0 +1,11 @@
+var filter = {
+  isAct: function (refer, value) {
+    if (refer.indexOf(value) != -1)
+      return 'active'
+    else
+      return ""
+  }
+}
+module.exports = {
+  isAct: filter.isAct
+}

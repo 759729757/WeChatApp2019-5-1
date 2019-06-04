@@ -1,0 +1,70 @@
+<!--pages/publishPro/publishPro.wxml-->
+<view class='stripe stripe-right'></view>
+<view class='content-warp'>
+  <view class='text-xxlg text-white'>
+    填写资料
+  </view>
+  <view class='_title'>
+    发布资源产品介绍 最多输入30字
+  </view>
+
+  <view class='flex pic-warp' bindtap='getImg'>
+    <view wx:if="{{!tempFilePaths}}">
+      <image class='icon icon-lg' src='../../images/add2.png'></image>
+      <view class='_title'>上传照片</view>
+    </view>
+
+    <view wx:if="{{tempFilePaths}}">
+      <image class='pic-show' mode='aspectFit' src='{{tempFilePaths}}'></image>
+    </view>
+  </view>
+  <view class='info-warp'>
+    <picker bindchange="bindPickerChange" value="{{proTypeIndex}}" range="{{proType}}">
+      <view class=" title">
+        <block wx:if="{{proTypeIndex =='' }}">项目类选择</block>
+        {{proType[proTypeIndex]}}
+        <image class='icon pull-right' src='../../images/next.png'></image>
+      </view>
+    </picker>
+  </view>
+  <view class='info-warp'>
+    <picker bindchange="bindPickerChange2" value="{{proTypeIndex2}}" range="{{proType2}}">
+      <view class=" title">
+        <block wx:if="{{proTypeIndex2 =='' }}">二级分类选择</block>
+        {{proType2[proTypeIndex2]}}
+        <image class='icon pull-right' src='../../images/next.png'></image>
+      </view>
+    </picker>
+  </view>
+
+  <view class='info-warp flex flex-between'>
+    <input class='title ' placeholder="请输入地区" value="{{address}}"/>
+    <text class='_title '>修改 </text>
+  </view>
+
+  <view class='info-warp flex flex-between'>
+    <input class='title ' placeholder="请输入电话" value="{{telphone}}"/>
+    <text class='_title '>修改 </text>
+  </view>
+
+  <view class='tab-warp'>
+    <input class='title ' placeholder="编辑标签" value="{{tab}}" bindinput="bindKeyInput" />  
+    <view class='flex'>
+    
+      <view class='tab' wx:for="{{tabArr}}" wx:if="{{item}}" wx:key data-index="{{index}}" bindtap='removeTab'>
+        {{item}}
+        <image class='icon icon-sm' src='../../images/close.png'></image>
+      </view>
+    
+    </view>
+    <view class='tab btn-tab' bindtap='addTab'>
+      <image class='icon icon-sm' src='../../images/add2.png'></image>
+      添加标签
+    </view>
+
+    <view class='btn btn-xxxxlg btn-yellow'>发布</view>
+
+  </view>
+
+
+</view>

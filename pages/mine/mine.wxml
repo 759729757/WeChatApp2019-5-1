@@ -1,0 +1,80 @@
+<!--pages/mine/mine.wxml-->
+<!-- 顶部 -->
+<view class='flex flex-between content-warp stripe'>
+  <view class='flex flex-between'>
+    <image class='headImg pic' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
+   <view>
+      <view class='title text-xxlg'>Blanche Hall</view>
+      <view class='_title'>
+        Blanche Hall
+        <image class='icon icon-sm' src='../../images/headIcon.png'></image>
+      </view>
+   </view>
+  </view>
+  <view>
+    <image class='icon' src='../../images/edit.png'></image>
+  </view>
+</view>
+<view class='stripe'>
+
+  <view class=' flex text-center'>
+    <view class=''>
+      <view class='title text-lg'>128</view>
+      <view class='_title'>收藏</view>
+    </view>
+    <view class=''>
+      <view class='title text-lg'>128</view>
+      <view class='_title'>收藏</view>
+    </view>
+    <view class=''>
+      <view class='title text-lg'>128</view>
+      <view class='_title'>收藏</view>
+    </view>
+  </view>
+
+   <view class='content-warp-fullCol'>
+    <view class='flex flex-between card text-white'>
+      <view class='title '>
+        VAD黑卡
+      </view>
+      <view>
+        点击查看特权 >
+      </view>
+    </view>
+  </view>
+
+</view>
+<!-- 列表 -->
+<view class='content-warp-fullCol list'>
+  <view class='flex flex-between'>
+    <view class='flex'>
+      <image class='icon icon-md' src='../../images/vip.png'></image>
+      <view class='text-white text-lg'>会员资料</view>
+    </view>
+    <image class='icon icon-md pull-right' src='../../images/next.png'></image>
+  </view>
+  
+  <view class='flex flex-between'>
+    <view class='flex'>
+      <image class='icon icon-md' src='../../images/shield.png'></image>
+      <view class='text-white text-lg'>我的认证</view>
+    </view>
+    <image class='icon icon-md pull-right' src='../../images/next.png'></image>
+  </view>
+  
+  <view class='flex flex-between'>
+    <view class='flex'>
+      <image class='icon icon-md' src='../../images/file.png'></image>
+      <view class='text-white text-lg'>我的审核</view>
+    </view>
+    <image class='icon icon-md pull-right' src='../../images/next.png'></image>
+  </view>
+  
+  <view class='flex flex-between'>
+    <view class='flex'>
+      <image class='icon icon-md' src='../../images/server.png'></image>
+      <view class='text-white text-lg'>联系客服</view>
+    </view>
+    <image class='icon icon-md pull-right' src='../../images/next.png'></image>
+  </view>
+</view>

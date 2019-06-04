@@ -1,0 +1,83 @@
+<!--pages/project/project.wxml-->
+<wxs module="filter" src="../../filter.wxs"></wxs>
+  <!-- 搜索框 -->
+  <view class="table table-full content-warp">
+    <view class="text-warp table-cell">
+      <picker bindchange="bindPickerChange" value="{{cityNum}}" range="{{city}}">
+        <view class="picker">
+           <image class='icon icon-position icon-left' src='/images/position.png'></image>
+          {{city[cityNum]}}
+        </view>
+      </picker>
+    </view>
+    <view class='table-cell input-item search'>
+      <input placeholder='输入你想找的内容' />
+      <image class='icon icon-search icon-right' src='/images/enter.png'></image>
+    </view>
+  </view>
+  <!-- 筛选框 -->
+  <view class='content-warp-fullCol flex'>
+    <view class='text-center text-gray {{filterActive == 1 ? "text-normal" : ""}}' data-index='1' bindtap='shaixuan'>
+      分类 <image class='icon' src='/images/xia.png' ></image>
+    </view>
+    <view class='text-center text-gray  {{filterActive == 2 ? "text-normal" : ""}}' data-index='2' bindtap='shaixuan'>
+      筛选 <image class='icon' src='/images/xia.png' ></image>
+    </view>
+  </view>
+<!-- 筛选选项 -->
+<view wx:if="{{isFilter}}">
+    <view class='nav-left-warp'>
+      <view class='nav-left'>
+        <view class='item _title {{navLeftActive == index?"active":""}}'
+          wx:for="{{ data }}" wx:key
+          data-index="{{index}}"
+          bindtap='chooseType'>{{item.typeName}}</view>
+      </view>
+    </view>
+    <view class='nav-content'>
+      <view class='item {{ filter.isAct(navContentActive,index) }}' 
+       wx:for="{{ data[navLeftActive].types }}" wx:key 
+       data-index="{{index}}" bindtap='chooseTypeCon'>
+        {{item}}
+      </view>
+    </view>
+    <view class='nav-btn-warp'>
+      <view class='btn btn-xxx-lg btn-white' bindtap='clearNav'>清除</view>
+      <view class='btn btn-xxx-lg btn-yellow' bindtap='companyNav'>完成</view>
+    </view>
+</view>
+
+  <!-- 内容 -->
+  <view class='stripe content-warp content' >
+    <view class='resource' wx:for="{{ data[navLeftActive].data }}" wx:key>
+        
+        <view class='title text-lg'>{{item.title}}</view>
+        <image class='pic-full' src='{{item.image}}'></image>
+        
+        <view class='flex flex-between'>
+        
+          <view class='flex'>
+            <image class='logo table-cell' src='{{item.logo}}'></image>
+
+            <view class='table-cell'>
+              <view>
+                <text class='_title text-small'>{{item.name}}</text>
+                <image class='icon icon-sm' src='/images/gou.png'></image>
+                <image class='icon icon-sm' src='/images/edit2.png'></image>
+              </view>
+              <view class='table-cell text-gray text-small'>
+                {{item.time}}
+              </view>
+            </view>
+          </view>
+          <view>
+            <image class='icon icon-sm' src='/images/eyes.png'></image>
+            <text class='text-gray text-small'>{{item.read}}</text>
+          </view>
+
+      </view>
+
+    </view>
+  </view>
+
+

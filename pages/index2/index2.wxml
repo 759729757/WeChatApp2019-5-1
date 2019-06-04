@@ -1,0 +1,351 @@
+<!--index.wxml-->
+<view class="">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{banner}}" wx:key>
+      <swiper-item class="banner">
+        <image src="{{item.image}}" class="slide-image" height="450" />
+        <text class='ban-title'>{{item.title}}</text>
+        <text class='ban-text'>{{item.describe}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="container body session">
+  <!-- 搜索框 -->
+  <view class="table table-full">
+    <view class='table-cell input-item'>
+      <input class="input" placeholder='输入你想找的内容' />
+      <image class='icon icon-search' src='/images/search.png'></image>
+      <image class='icon icon-mic' src='/images/mic.png'></image>
+    </view>
+    <view class="section table-cell">
+      <picker bindchange="bindPickerChange" value="{{cityNum}}" range="{{city}}">
+        <view class="picker">
+          {{city[cityNum]}}∨
+        </view>
+      </picker>
+    </view>
+  </view>
+  <!-- 推荐 -->
+  <view>
+    <scroll-view class="flex recommend-warp session" scroll-x="true" style="white-space: nowrap;width:     100%;">
+      <view class='recommend-type active'>
+        <text>推荐</text>
+      </view>
+      <view class='recommend-type'>
+        <text>附近</text>
+      </view>
+      <view class='recommend-type '>
+        <text>媒体广告</text>
+      </view>
+      <view class='recommend-type'>
+        <text>供应商</text>
+      </view>
+      <view class='recommend-type'>
+        <text>供应商</text>
+      </view>
+      <view class='recommend-type'>
+        <text>供应商</text>
+      </view>
+      <view class='recommend-type'>
+        <text>供应商</text>
+      </view>
+    </scroll-view>
+    <view class="recommend-content ">
+      <text class='sub-title'>TOP供应商</text>
+      <view class='item-warp '>
+        <view class='item' wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9,10]}}" wx:for-item="i">
+          <image src='https://p.ssl.qhimg.com/dmsmty/74_74_100/t011fd31ba9be750f13.png'></image>
+          <text>供应商</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 产品资源 -->
+  <view class='content session'>
+    <text class='part-title'>产品资源<text class='small'>品质好货</text></text>
+    <view class='pro-warp'>
+      <view class='item'>
+        <image class='pro-image' src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+        <view class='pro-detail'>
+          <text class='pro-title'>灯布搭架 <text class='small'>广州</text></text>
+          <view class='pro-tab'>
+            <image src='/images/tab.png'></image> 行业认证标签1</view>
+          <view class='pro-tab'>
+            <image src='/images/tab.png'></image> 行业认证标签1</view>
+          <view class='pro-like'>
+            <image src='/images/heart.png'></image>233人喜欢</view>
+          <view class='pro-like-btn'>喜欢就点我吧！
+            <image src='/images/Smile.png'></image>
+          </view>
+        </view>
+      </view>
+
+      <view class='item'>
+        <image class='pro-image' src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+        <view class='pro-detail'>
+          <text class='pro-title'>灯布搭架 <text class='small'>广州</text></text>
+          <view class='pro-tab'>
+            <image src='/images/tab.png'></image> 行业认证标签1</view>
+          <view class='pro-tab'>
+            <image src='/images/tab.png'></image> 行业认证标签1</view>
+          <view class='pro-like'>
+            <image src='/images/heart.png'></image>233人喜欢</view>
+          <view class='pro-like-btn'>喜欢就点我吧！
+            <image src='/images/_Smile.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 媒体资源 -->
+    <view class='part-midia session'>
+      <text class='subtitle'>媒体资源 ></text>
+      <view class='media'>
+        <view class='item'>
+          <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+          <text class='title'>标题标题标题标题标题标题=</text>
+        </view>
+        <view class='item'>
+          <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+          <text class='title'>标题标题标题标题标题标题标=题</text>
+        </view>
+        <view class='item'>
+          <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+          <text class='title'>标题标题标题题</text>
+        </view>
+      </view>
+    </view>
+    <!-- 人力资源 -->
+    <view class='part-hr session'>
+      <text class='subtitle'>人力资源 ></text>
+      <view class='hr'>
+        <view class='item'>
+          <view class='detail'>
+            <text class='title'>标题标题标题标题标题标</text>
+            <text class='_title'>小标题标题标题标题标题标题=</text>
+            <text class='footer-text footer-left'>20小时前发布</text>
+            <text class='footer-text footer-right'>300浏览数</text>
+          </view>
+          <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+        </view>
+        <view class='item'>
+          <view class='detail'>
+            <text class='title'>标题标题标题标题标题标</text>
+            <text class='_title'>小标题标题标题标题==</text>
+            <text class='footer-text footer-left'>20小时前发布</text>
+            <text class='footer-text footer-right'>300浏览数</text>
+          </view>
+          <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+        </view>
+        <view class='item'>
+          <view class='detail'>
+            <text class='title'>标题标题标题标题标题标</text>
+            <text class='_title'>小标题标题标=题=</text>
+            <text class='footer-text footer-left'>20小时前发布</text>
+            <text class='footer-text footer-right'>300浏览数</text>
+          </view>
+          <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+        </view>
+      </view>
+    </view>
+    <!-- 演绎资源 -->
+    <view class='part-yanyi session'>
+      <text class='subtitle'>演绎资源 ></text>
+      <view class='yanyi'>
+        <view class='item'>
+          <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+          <view class='detail'>
+            <text class='title'>标题标题标题标题标题标</text>
+            <text class='_title'>小标题标题标题标</text>
+          </view>
+        </view>
+        <view class='item'>
+          <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+          <view class='detail'>
+            <text class='title'>标题标题标题标题标题标</text>
+            <text class='_title'>小标题标题标题标题标题标题=</text>
+          </view>
+        </view>
+        <view class='item'>
+          <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+          <view class='detail'>
+            <text class='title'>标题标题标题标题标题标</text>
+            <text class='_title'>小标题标题标题标题</text>
+          </view>
+        </view>
+        <view class='item'>
+          <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+          <view class='detail'>
+            <text class='title'>标题标题标题标题标题标</text>
+            <text class='_title'>小标题标题标题标</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 项目需求 -->
+  <text class='part-title'>项目需求<text class='small'>千万项目中总有一项属于你</text></text>
+  <scroll-view class='demand-warp' scroll-x>
+
+    <view class='item'>
+      <view class='flex session'>
+        <image class='headImg' src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+        <view>
+          <text class='title'>某某某</text>
+          <text class='_title'>职务名称</text>
+        </view>
+      </view>
+      <view class='demand-con'>
+        <text class='title session'>项目名称</text>
+        <text class='describe session'>项目介绍：项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍目介...</text>
+        <text class='_title'>地区：情缘</text>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='flex session'>
+        <image class='headImg' src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+        <view>
+          <text class='title'>某某某</text>
+          <text class='_title'>职务名称</text>
+        </view>
+      </view>
+      <view class='demand-con'>
+        <text class='title session'>项目名称</text>
+        <text class='describe session'>项目介绍：项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍目介...</text>
+        <text class='_title'>地区：情缘</text>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='flex session'>
+        <image class='headImg' src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+        <view>
+          <text class='title'>某某某</text>
+          <text class='_title'>职务名称</text>
+        </view>
+      </view>
+      <view class='demand-con'>
+        <text class='title session'>项目名称</text>
+        <text class='describe session'>项目介绍：项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍目介...</text>
+        <text class='_title'>地区：情缘</text>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='flex session'>
+        <image class='headImg' src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+        <view>
+          <text class='title'>某某某</text>
+          <text class='_title'>职务名称</text>
+        </view>
+      </view>
+      <view class='demand-con'>
+        <text class='title session'>项目名称</text>
+        <text class='describe session'>项目介绍：项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍目介...</text>
+        <text class='_title'>地区：情缘</text>
+      </view>
+    </view>
+
+  </scroll-view>
+
+  <!-- 快速咨询 -->
+  <view class='part-title text-center'>快速咨询
+    <text class='pull-right _title text-small'>更多</text>
+  </view>
+  <view class='news-warp'>
+    <view class='item'>
+      <view class='news-con'>
+        <text class='title'>项目明恒</text>
+        <text class='describe'>项目介绍：项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍</text>
+        <view class='icon'>
+          <image src='/images/eye.png'></image>
+          <text>30</text>
+        </view>
+        <view class='icon'>
+          <image src='/images/good.png'></image>
+          <text>30</text>
+        </view>
+        <view class='icon'>
+          <image src='/images/comment.png'></image>
+          <text>30</text>
+        </view>
+      </view>
+      <image class='news-img' src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+    </view>
+
+    <view class='item'>
+      <view class='news-con'>
+        <text class='title'>项目明恒</text>
+        <text class='describe'>项目介绍：项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍</text>
+        <view class='icon'>
+          <image src='/images/eye.png'></image>
+          <text>30</text>
+        </view>
+        <view class='icon'>
+          <image src='/images/good.png'></image>
+          <text>30</text>
+        </view>
+        <view class='icon'>
+          <image src='/images/comment.png'></image>
+          <text>30</text>
+        </view>
+      </view>
+      <image class='news-img' src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+    </view>
+
+    <view class='item'>
+      <view class='news-con'>
+        <text class='title'>项目明恒</text>
+        <text class='describe'>项目介绍：项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍</text>
+        <view class='icon'>
+          <image src='/images/eye.png'></image>
+          <text>30</text>
+        </view>
+        <view class='icon'>
+          <image src='/images/good.png'></image>
+          <text>30</text>
+        </view>
+        <view class='icon'>
+          <image src='/images/comment.png'></image>
+          <text>30</text>
+        </view>
+      </view>
+      <image class='news-img' src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+    </view>
+
+  </view>
+<!-- 广告 -->
+  <view class='part-title text-center'>广告合作商</view>
+  <view class='content ad-warp'>
+    <view class='item'>
+       <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+    </view>
+    <view class='item'>
+       <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+    </view>
+    <view class='item'>
+       <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+    </view>
+    
+    <view class='item'>
+       <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+    </view>
+    <view class='item'>
+       <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+    </view>
+    <view class='item'>
+       <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+    </view>
+    <view class='item'>
+       <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+    </view>
+    <view class='item'>
+       <image src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+    </view>
+
+
+  </view>
+
+</view>

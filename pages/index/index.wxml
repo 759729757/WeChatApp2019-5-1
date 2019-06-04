@@ -1,0 +1,309 @@
+<!--  banner  -->
+<view class="">
+  <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{banner}}" wx:key>
+      <swiper-item class="banner">
+        <image src="{{item.image}}" class="slide-image" />
+        <text class='ban-title'>{{item.title}}</text>
+        <text class='ban-text'>{{item.describe}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+  <!-- 搜索框 -->
+  <view class="table table-full content-warp part-search">
+    <view class='table-cell'>
+      <image aspectFit class='companyLogo' src='/images/companyLogo.png'></image>
+    </view>
+    <view class="table-cell text-warp">
+      <text>Stay turned</text>
+    </view>
+    <view class='table-cell search'>
+      <view class='input-item '>
+        <input placeholder='输入供应商进行搜索'></input>
+        <image class='icon icon-search' src='/images/enter.png'></image>
+      </view>
+    </view>
+  </view>
+<!-- 推荐供应商 -->
+<view class='stripe'>
+  <view class='content-warp part-title-warp '>
+    <view class='item-5'>
+      <text class='part-title'>推荐供应商</text>
+      <text class='small'>Recommended supplier</text>
+    </view>
+    <view class='item-5'>
+    <view class='pull-right'>
+      <text class='text-content'>SEE MORE WORKS</text>
+      <image class='icon-more' src='/images/next.png'></image>
+    </view>
+    </view>
+  </view>
+
+  <scroll-view class='scroll-view gongying content-warp' scroll-x>
+      <view class='item'  wx:for="{{supplier}}" wx:key>
+        <view class='flex session'>
+          <image class='headImg' src="{{item.image}}" ></image>
+        </view>
+        <text class='text-content text-center '>{{item.name}}</text>
+      </view>
+
+    </scroll-view>
+</view>
+<!-- 影视制作 -->
+<view class='container-full flex yingshi content-warp-fullRow'>
+  <image class='bigPic' src="{{viedo[viedoIndex].image}}"></image>
+  <view class='flex-col detail content-warp-fullCol'>
+      <text class='part-title'>影视制作</text>
+      <text class='small'>VIDEO MAXKING</text>
+      <view class='text-content'>{{viedo[viedoIndex].content}}</view>
+      <text class='text-more'>{{viedo[viedoIndex].note}}</text>
+  </view>
+</view>
+
+<view class='flex part-video content-warp-fullCol'>
+
+  <view class='item {{index == viedoIndex? "active":""}}' id="{{index}}" wx:for="{{viedo}}" wx:key wx: bindtap='viedoClick'>
+    <view class='sub-title'>{{item.name}}</view>
+    <view class='text-more'>{{item.subName}}</view>
+    <view class='text-detail'>{{item.describe}}</view>
+    <image class='add' src='/images/add.png'></image>
+  </view>
+
+</view>
+
+<!-- 媒体资源 -->
+<view class='stripe'>
+
+ <view class='content-warp part-title-warp '>
+    <view class='item-5'>
+      <text class='part-title'>媒体资源</text>
+      <text class='small'>MEDIA RESOURCES</text>
+    </view>
+    <view class='item-5'>
+    <view class=''>
+      <text class='text-content'>SEE MORE WORKS</text>
+      <image class='icon-more' src='/images/next.png'></image>
+    </view>
+    </view>
+  </view>
+
+    <scroll-view class='scroll-view media-warp content-warp-fullCol' scroll-x>
+
+      <view class='item' wx:for="{{media}}" wx:key>
+        <view class=''>
+          <image class='' src="{{item.image}}"></image>
+        </view>
+        <view class='content-warp'>
+          <view class='title'>{{item.city}}</view>
+          <view class='title'>{{item.address}}</view>
+          <view class='text-content'>{{item.describe}}</view>
+          <view class='text-more'>{{item.note}}</view>
+        </view>
+      </view>
+      
+
+    </scroll-view>
+
+</view>
+
+<!-- 人力资源 -->
+
+<view class='stripe float-warp'>
+ <view class='pull-right content-warp'>
+    <text class='part-title'>人力资源</text>
+    <text class='small'>HUMAN RESOURCES</text>
+  </view>
+</view>
+
+  <scroll-view class='scroll-view part-hr content-warp-fullCol' scroll-x>
+
+    <view class='item  {{index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr}}" wx:key 
+    bindtap='hrClick'>
+      <image class='headImg' src="{{item.image}}"></image>
+      <view class='title'>{{item.name}}</view>
+      <text class='text-content'>{{item.describe}}</text>
+    </view>
+
+  </scroll-view>
+
+
+<!-- 演绎资源 -->
+<view class='stripe part-ziyuan content-warp'>
+   <view class='absoule-left '>
+    <text class='part-title'>演绎资源</text>
+    <text class='small'>PERFORMANCE RESOURCES</text>
+  </view>
+  <view class='flex'>
+  
+    <view class=' flex-center '>
+      <view class='flex-col'>
+        <view class='item'>
+          <image src="{{performance[0].image}}"></image>
+          <view class='detail'>
+            <view class='text-normal'>{{performance[0].title}}</view>
+            <view class='text-normal'>{{performance[0].subTitle}}</view>
+            <text class='text-btn btn-circle'>{{performance[0].note}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  <view class=' flex-center '>
+    <view class='flex-col'>
+
+      <view class='item'>
+         <image src="{{performance[1].image}}"></image>
+          <view class='detail'>
+            <view class='text-normal'>{{performance[1].title}}</view>
+            <view class='text-normal'>{{performance[1].subTitle}}</view>
+            <text class='text-btn btn-circle'>{{performance[1].note}}</text>
+          </view>
+      </view>
+      <view class='item'>
+           <image src="{{performance[2].image}}"></image>
+          <view class='detail'>
+            <view class='text-normal'>{{performance[2].title}}</view>
+            <view class='text-normal'>{{performance[2].subTitle}}</view>
+            <text class='text-btn btn-circle'>{{performance[2].note}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  
+
+</view>
+<!-- 工程搭建 -->
+<view class='stripe cl float-warp'>
+  <view class='pull-right '>
+    <text class='part-title'>工程搭建</text>
+    <text class='small'>ENGINEERING CONSTRUCTION</text>
+  </view>
+</view>
+<view class='content-warp stripe engine'>
+  <swiper display-multiple-items="2" interval="{{interval}}" bindchange="engineSwiper" circular easing-function="linear" class='engine-warp'>
+    <block wx:for="{{engine}}"  wx:for-index="idx" wx:key>
+      <swiper-item class="engine-item {{ idx == engineSwiperIndex ?'active':'' }}">
+        <image aspectFill src="{{item.image}}" class="slide-image" height="221" />
+        <view class='detail'>
+          <view class='text-normal'>Dcdui2y</view>
+          <view class='text-normal'>Dnvncing</view>
+          <text class='text-btn btn-circle'>3D 搭建设计</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='dot-warp'>
+    <block wx:for="{{engine}}"  wx:for-index="idx" wx:key>
+      <view class="dot {{ idx == engineSwiperIndex ?'active':'' }}"></view>
+    </block>
+  </view>
+</view>
+
+<!-- 快速资讯 -->
+<view class='stripe float-warp'>
+
+   <view class='content-warp part-title-warp '>
+    <view class='item-5'>
+      <text class='part-title'>快速资讯</text>
+      <text class='small'>Fast information</text>
+    </view>
+    <view class='item-5'>
+    <view class=''>
+      <text class='text-content'>SEE MORE WORKS</text>
+      <image class='icon-more' src='/images/next.png'></image>
+    </view>
+    </view>
+  </view>
+
+  <view class='information'>
+    <view class='item table {{index==informationIndex?"active":""}}' id="{{index}}" wx:for="{{information}}" wx:key bindtap='informationClick'>
+
+      <image class='table-cell pic' src="{{item.image}}"></image>
+      <view class='table-cell content'>
+        <text class='badge'>{{index}}</text>
+        <view class='text-normal'>{{item.title}}</view>
+        <text class='text-content'>{{item.subTitle}}</text>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!-- 项目需求 -->
+<view class='stripe'>
+  <view class='content-warp part-title-warp '>
+     <view class='item-5'>
+    <view class=''>
+      <text class='text-content'>SEE MORE WORKS</text>
+      <image class='icon-more' src='/images/next.png'></image>
+    </view>
+    </view>
+    <view class='item-5'>
+      <text class='part-title'>项目需求</text>
+      <text class='small'>Media Resources</text>
+    </view>
+  </view>  
+</view>
+
+<view class='container-full project'>
+  <view class='item-5 content-warp'>
+    <image class='pic' src='{{project[projectIndex].image}}'></image>
+  </view>
+    <view class='item-5 content-warp-full '>
+      <view class='flex-col'>
+
+        <text class='text-normal small text-right'>{{project[projectIndex].time}}</text>
+        <view class='text-more text-md'>{{projectIndex+1}}</view>
+        <view class='text-normal title'>{{project[projectIndex].name}}</view>
+        <view class='text-content'>{{project[projectIndex].describe}}</view>
+        <view>
+          <text class='small'>LEARN MORE</text>
+          <image class='icon-more' src='/images/next.png'></image>
+        </view>
+        <view>
+          <view class='btn-page-warp' bindtap='projectPre'>
+            <image class='btn-page' src='/images/pre.png'></image>
+          </view>
+          <view class='btn-page-warp' bindtap='projectNext'>
+            <image class='btn-page' src='/images/next.png'></image>
+          </view>
+        </view>
+      </view>
+      <text class='abs-right-bottom small text-normal'>{{projectIndex+1}}/{{project.length}}</text>
+
+    </view>
+</view>
+
+<!-- 战略合作伙伴 -->
+<view class='stripe '>
+
+  <view class='content-warp part-title-warp '>
+    <view class='item-5'>
+      <text class='part-title'>战略合作伙伴</text>
+      <text class='small'>Strategic Partners</text>
+    </view>
+     <view class='item-5'>
+      <view class=''>
+        <text class='text-content'>SEE MORE WORKS</text>
+        <image class='icon-more' src='/images/next.png'></image>
+      </view>
+    </view>
+  </view>  
+
+
+  <scroll-view class='scroll-view part-partner content-warp' scroll-x>
+
+    <view class='item' wx:for="{{partnar}}" wx:key>
+      <image class='headImg' src="{{item.image}}"></image>
+      <view class='title'>{{item.name}}</view>
+      <view class='text-content'>{{item.describe}}</view>
+      <text class='btn-circle btn-text'>了解更多</text>
+    </view>
+    
+
+  </scroll-view>
+
+</view>
+
