@@ -68,7 +68,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
  }
 
 .item-5{width: 50%;display: inline-block;vertical-align: middle;position: relative;}
-.icon-more{width:20rpx;height: 20rpx; border: 1rpx rgba(255,255,255,.2) solid;border-style: dashed;margin-left: 20rpx;vertical-align: middle;}
+.icon-more{width:20rpx;height: 20rpx;margin-left: 20rpx;vertical-align: middle;}
 .part-title-warp{color: white;}
 
 /* 布局相关 */
@@ -117,6 +117,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 
 
 /* 公用 */
+.bg-normal{background: #212C9A;}
 .info-warp{margin-top: 60rpx;padding-bottom: 20rpx;border-bottom: 1px solid rgba(255, 255, 255, .6);}
 .tab{padding: 15rpx 30rpx;border-radius: 60rpx;background: white;color: #212C9A;white-space: nowrap;margin: 15rpx 0;}
 .tab-warp{margin-top: 60rpx;}

@@ -17,9 +17,10 @@
 .small{color: rgba(255,255,255,.2);display: block;font-weight: bold;}
 .part-title+.small{margin-top: -10rpx;}
 .text-more,.text-detail{color: #CCBC88;}
+.input-item input + .icon-search{margin-right: 0;}
 
 /* 推荐供应商 */
-.gongying .headImg{width: 140rpx;height: 140rpx;margin-bottom: 0rpx;border: 2px solid #212C9A;}
+.gongying .headImg{width: 132rpx;height: 132rpx;margin-bottom: 0rpx;border: 2px solid #212C9A;}
 .gongying .item{margin-right: 40rpx;}
 .gongying .item:last-child{margin-right: 0;}
 .gongying .text-content{font-size: 20rpx;}
