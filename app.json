@@ -9,7 +9,9 @@
     "pages/mine/mine",
     "pages/index2/index2",
     "pages/test/test",
-    "pages/logs/logs"
+    "pages/logs/logs",
+
+    "pages/news/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,31 +30,31 @@
         "iconPath":"images/_homeIcon.png"
         ,"selectedIconPath":"images/homeIcon.png"
       },
-      {
+       {
         "pagePath": "pages/project/project",
         "text": "找项目",
         "iconPath":"images/_projectIcon.png"
         ,"selectedIconPath":"images/projectIcon.png"
       },
-          {
-            "pagePath":"pages/publish/publish",
-            "text":""
-            ,"iconPath":"images/addIcon.png"
-            ,"selectedIconPath":"images/addIcon.png"
-          },
-          {
-            "pagePath":"pages/resource/resource",
-            "text":"找资源",
-            "iconPath":"images/_ziyuanIcon.png"
-            ,"selectedIconPath":"images/ziyuanIcon.png"
-          },{
-            "pagePath":"pages/mine/mine",
-            "text":"我的",
-            "iconPath":"images/_mineIcon.png"
-            ,"selectedIconPath":"images/mineIcon.png"
-          }
-        ]
+      {
+        "pagePath":"pages/publish/publish",
+        "text":""
+        ,"iconPath":"images/addIcon.png"
+        ,"selectedIconPath":"images/addIcon.png"
       },
+      {
+        "pagePath":"pages/resource/resource",
+        "text":"找资源",
+        "iconPath":"images/_ziyuanIcon.png"
+        ,"selectedIconPath":"images/ziyuanIcon.png"
+      },{
+        "pagePath":"pages/mine/mine",
+        "text":"我的",
+        "iconPath":"images/_mineIcon.png"
+        ,"selectedIconPath":"images/mineIcon.png"
+      }
+    ]
+  },
   "usingComponents": {},
   "sitemapLocation": "sitemap.json"
 }

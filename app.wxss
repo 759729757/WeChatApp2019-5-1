@@ -1,5 +1,5 @@
 /**app.wxss**/
-page{font-size: small; background-color:#1E2887; min-height: 100%;}
+page{font-size: small; background-color:#1E2887; min-height: 100%;position: relative;}
 .stripe-right{top: 0;left: 50%;height: 100%;width: 100%;position: absolute;z-index: -1;}
 .container {
   width: 700rpx;
@@ -34,23 +34,27 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 
 
 /* 字体 */
-.part-title{color:#e4bb5f;font-size: large;font-weight: bold;padding:30rpx;display: inline-block;}
+.part-title{color:#fff;font-size: large;font-weight: bold;padding:30rpx;display: inline-block;}
 .part-title .small{font-size: 14rpx;color: black;background-color: #e4bb5f;padding: 4rpx 8rpx;display: inline-block;border-radius: 8rpx;margin-left: 10rpx;vertical-align: middle;}
 .title{font-weight: bold;display: block;color: white;}
 ._title{color: #ccc;}
 .text-gray{color: rgba(255, 255,255, .6);}
 .text-white{color: white;}
 .text-center{text-align: center;display: block;}
-.text-small{font-size: 20rpx;display: inline-block; }
+.text-small{font-size: 20rpx;display: inline-block; } 
 .describe{color: #ccc;font-size: 20rpx;}
 .text-normal{color: white;}
 .text-right{text-align: right;}
 .text-content{color: rgba(255, 255,255, .8);font-size: 12px;margin: 10rpx 0;white-space:pre-wrap;}
-.text-content,.text-more{font-size: 16rpx;}
+.text-content,.text-more{font-size: 18rpx;}
 .sub-title{color: white;font-weight: bold;}
+.text-sm{font-size: 18rpx;}
+.text-md{font-size: 24rpx;}
 .text-lg{font-size:33rpx;margin-bottom: 10rpx;}
 .text-xlg{font-size: 40rpx;margin-bottom: 10rpx;}
 .text-xxlg{font-size: 44rpx;}
+.text-col{width: 1.2em;line-height: 1.8em;}
+.text-aline{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;width: 100%;}
 
 /* 按钮 */
 .btn-xxx-lg,.btn-xxxlg{width: 310rpx;height: 104rpx;font-size: 34rpx;border-radius: 100rpx;text-align: center;line-height: 104rpx;font-weight: bold;letter-spacing: 10rpx;}
@@ -67,7 +71,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 
  }
 
-.item-5{width: 50%;display: inline-block;vertical-align: middle;position: relative;}
+.item-5{width: 50%;display: inline-block;vertical-align: middle;position: relative;white-space: nowrap;}
 .icon-more{width:20rpx;height: 20rpx;margin-left: 20rpx;vertical-align: middle;}
 .part-title-warp{color: white;}
 
@@ -78,7 +82,9 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .table-cell{display: table-cell;}
 .pull-right{float: right;}
 .content-warp{padding: 40rpx;box-sizing: border-box;}
-
+.abs-left{position: absolute;left: 0;}
+.abs-right{position: absolute;right: 0;}
+.width-full{width: 100%;}
 
 /* 图片相关 */
 .headImg{border-radius: 100%;}
@@ -95,6 +101,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 
 .btn-circle{border: 1rpx rgba(255, 255,255, .8) solid;border-radius: 2em;}
 .text-btn,.btn-text{display: inline-block;font-size: 20rpx;margin: 10rpx 0;color: rgba(255,255,255,.8);padding: 10rpx 20rpx;}
+.text-btn-sm{padding: 0 4rpx;}
 
 .btn-page-warp{padding: 15rpx 25rpx;background-color: #192079;display: inline-block;border-right: 1px rgba(255,255,255,.4) solid;}
 .btn-page-warp:last-child{border-right: none;}
@@ -126,5 +133,12 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 
 
 
-
+/* 共有的 */
+.part-title{color: white;padding: 10rpx 0;display: block;font-size: 36rpx;}
+.small{color: rgba(255,255,255,.2);display: block;font-weight: bold;}
+.part-title+.small{margin-top: -10rpx;}
+.text-more,.text-detail{color: #CCBC88;}
+.input-item input + .icon-search{margin-right: 0;}
+.part-title-warp{margin-top: 40rpx;}
+.text-col{margin-top:30rpx;}
 

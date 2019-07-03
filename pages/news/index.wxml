@@ -1,0 +1,34 @@
+<!-- 快速资讯 -->
+<view class=' float-warp stripe'>
+   <view class='content-warp part-title-warp '>
+    <view class='item-5'>
+      <text class='part-title'>快速资讯</text>
+      <text class='small'>Fast information</text>
+    </view>
+    <view class='item-5'>
+    <view class='pull-right'>
+      
+      <view class='table-cell search'>
+      <view class='input-item '>
+        <input placeholder='搜索您需要的内容'></input>
+        <image class='icon icon-search' src='/images/enter.png'></image>
+      </view>
+    </view>
+
+    </view>
+    </view>
+  </view>
+
+  <view class='information'>
+    <view class='item table bg-normal' id="{{index}}" wx:for="{{information}}" wx:key bindtap='informationClick'>
+
+      <image class='table-cell pic' src="{{item.image}}"></image>
+      <view class='table-cell content'>
+        <!-- <text class='badge'>{{index}}</text> -->
+        <view class='text-normal'>{{item.title}}</view>
+        <text class='text-content'>{{item.subTitle}}</text>
+      </view>
+    </view>
+
+  </view>
+</view>

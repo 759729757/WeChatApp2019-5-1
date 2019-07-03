@@ -40,21 +40,21 @@ var data = {
   ],
   "viedo": [
     {
-      "name": "LESSO联盟1",
+      "name": "LESS盟1",
       "subName": "中国驰名商标企业",
       "describe": "和广州其他的影视制 作公司也合作过，但",
       "content": "33从领尚家居建材广再到联塑万嘉，每次的创意，和拍摄制作，新视团队都超越了我们的期待。我们已经合作3年了。",
       "note": "印象：文案策划不错 演员资料很全",
       "image": "https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg"
     }, {
-      "name": "LESSO联盟2",
+      "name": "LES2",
       "subName": "中国驰名商标企业",
       "describe": "和广州其他的影视制 作公司也合作过，但",
       "content": "22从领尚家居建材广告片到领尚生活品牌每次的创意，和拍摄制作，新视团队都超越了我们的期待。我们已经合作3年了。",
       "note": "印象：文案策划不错 演员资料很全",
       "image": "https://ps.ssl.qhimg.com/dm/417_417_/t01433ce62e3d6f5d32.jpg"
     }, {
-      "name": "LESSO联盟3",
+      "name": "LE联盟3",
       "subName": "中国驰名商标企业",
       "describe": "和广州其他的影视制 作公司也合作过，但",
       "content": "11从领尚家居建材牌形象片再到联塑万嘉，每次的创意，和拍摄制作，新视团队都超越了我们的期待。我们已",
@@ -93,19 +93,19 @@ var data = {
     {
       "image": "http://p0.so.qhimgs1.com/bdr/326__/t014c514ad3594d06ec.jpg",
       "name": "陈田",
-      "describe": "舞台3D搭建v 繁华的 v 宝程序vvv 方便宝 v 的 饭都不敢发那个"
+      "describe": "舞台3D搭v 的 饭都不敢发那个"
     }, {
       "image": "http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg",
       "name": "陈田",
-      "describe": "舞台3D搭建v 繁华的 v 宝程序vvv 方便宝 v 的 饭都不敢发那个"
+      "describe": "舞台3D搭建v 繁华的 v 都不敢发那个"
     }, {
       "image": "http://p0.so.qhimgs1.com/bdr/326__/t014c514ad3594d06ec.jpg",
       "name": "陈田",
-      "describe": "舞台3D搭建v 繁华的 v 宝程序vvv 方便宝 v 的 饭都不敢发那个"
+      "describe": "舞台3D搭建v 繁华都不敢发那个"
     }, {
       "image": "http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg",
       "name": "陈田",
-      "describe": "舞台3D搭建v 繁华的 v 宝程序vvv 方便宝 v 的 饭都不敢发那个"
+      "describe": "舞台3D搭 饭都不敢发那个"
     }
   ],
   "performance": [
@@ -131,17 +131,22 @@ var data = {
   "engine": [
     {
       "image": "https://p.ssl.qhimg.com/dm/299_417_/t0122af5092acecdb35.jpg",
-      "title": "Dcduiy",
+      "title": "2018广州分等会啊实打实的",
       "describe": "Dnvncing"
     },
     {
       "image": "https://ps.ssl.qhimg.com/dm/299_417_/t015dfab25f6d4b6556.jpg",
-      "title": "Dcduiy",
+      "title": "2018广州分等会啊实打实的",
       "describe": "Dnvncing"
     },
     {
       "image": "https://p.ssl.qhimg.com/dm/417_417_/t01e4d67a651ab1d53c.jpg",
-      "title": "Dcduiy",
+      "title": "2018广州分等会啊实打实的",
+      "describe": "Dnvncing"
+    },
+    {
+      "image": "https://p.ssl.qhimg.com/dm/417_417_/t01e4d67a651ab1d53c.jpg",
+      "title": "2018广州分等会啊实打实的",
       "describe": "Dnvncing"
     },
   ],
@@ -150,17 +155,23 @@ var data = {
     {
       "image": "http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg",
       "title": "新闻标题",
-      "subTitle": "新闻内容新闻内容新闻内容新闻内容"
+      "subTitle": "新闻内容新闻内容新新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容容新闻内容新闻内容新闻内容新闻内容闻内容新闻内容",
+      "date":"2019/02/23",
+      "time":"18:00"
     },
     {
       "image": "https://p.ssl.qhimg.com/dm/417_417_/t01e4d67a651ab1d53c.jpg",
       "title": "新闻标题",
-      "subTitle": "新闻内容新闻内容新闻内容新闻内容"
+      "subTitle": "新闻内容新闻内容新闻新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容内容新闻内容",
+      "date": "2019/02/23",
+      "time": "18:00"
     },
     {
       "image": "http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg",
       "title": "新闻标题",
-      "subTitle": "新闻内容新闻内容新闻内容新闻内容"
+      "subTitle": "新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容",
+      "date": "2019/02/23",
+      "time": "18:00"
     }
   ],
 

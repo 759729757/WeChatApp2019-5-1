@@ -15,7 +15,7 @@ Page({
 
     engine: [],// 工程搭建数据
     engineSwiperIndex: 0,
-    viedoIndex: 2, //影视制作选中的下标
+    viedoIndex: 0, //影视制作选中的下标
     informationIndex: 0,//快速咨询选中的下标
     hrIndex: 0,//人力资源选中的下标
     projectIndex: 0,//人力资源选中的下标
@@ -35,25 +35,35 @@ Page({
   },
 
   //项目翻页
-  projectPre:function(){
-    var i = this.data.projectIndex - 1
-    if(i<=0) i=0;
-    this.setData({
-      projectIndex: i
-    })
-  },
-  //项目翻页
-  projectNext: function () {
-    var i = this.data.projectIndex + 1
-    if (i >= this.data.project.length) i = this.data.project.length - 1;
-    this.setData({
-      projectIndex: i
-    })
-  },
+  // projectPre:function(){
+  //   var i = this.data.projectIndex - 1
+  //   if(i<=0) i=0;
+  //   this.setData({
+  //     projectIndex: i
+  //   })
+  // },
+  // //项目翻页
+  // projectNext: function () {
+  //   var i = this.data.projectIndex + 1
+  //   if (i >= this.data.project.length) i = this.data.project.length - 1;
+  //   this.setData({
+  //     projectIndex: i
+  //   })
+  // },
     //人力资源点击
-  hrClick: function (index) {
+  hr1Click: function (index) {
     this.setData({
       hrIndex: index.currentTarget.id
+    })
+  },
+  hr2Click: function (index) {
+    this.setData({
+      hrIndex: "2"+index.currentTarget.id
+    })
+  },
+  hr3Click: function (index) {
+    this.setData({
+      hrIndex: "3" +index.currentTarget.id
     })
   },
   //快速咨询点击
