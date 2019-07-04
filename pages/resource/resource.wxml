@@ -6,7 +6,7 @@
       <picker bindchange="bindPickerChange" value="{{cityNum}}" range="{{city}}">
         <view class="picker">
            <image class='icon icon-position icon-left' src='/images/position.png'></image>
-          {{city[cityNum]}}
+          <text class='text-white'>{{city[cityNum]}}</text>
         </view>
       </picker>
     </view>

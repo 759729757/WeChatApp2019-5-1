@@ -2,16 +2,24 @@
   "pages": [
     "pages/index/index",
     "pages/project/project",
+    
     "pages/resource/resource",
+    "pages/resource/resourceDetail",
+    
     "pages/publish/publish",
     "pages/publishPro/publishPro",
     "pages/publishRes/publishRes",
+    
     "pages/mine/mine",
+    "pages/mine/mineDetail",
+
     "pages/index2/index2",
     "pages/test/test",
     "pages/logs/logs",
 
-    "pages/news/index"
+    "pages/news/index",
+
+    "pages/recommend/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

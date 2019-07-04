@@ -1,11 +1,11 @@
 /**app.wxss**/
-page{font-size: small; background-color:#1E2887; min-height: 100%;position: relative;}
+page{font-size: small; background-color:#1E2887; min-height: 100%;position: relative;font-family: "微软雅黑";}
 .stripe-right{top: 0;left: 50%;height: 100%;width: 100%;position: absolute;z-index: -1;}
 .container {
   width: 700rpx;
   margin: 0 auto;
 } 
-::-webkit-scrollbar {
+::-webkit-scrollbar { 
   width: 0;
   height: 0;
   color: transparent;
@@ -16,6 +16,8 @@ image{max-height: 100%;max-width: 100%;}
 .input{border-radius: 20px 0 0 20px ;margin-right: 1em;background-color: #1b245f;padding: 10rpx 3em;font-size: small;}
 .input-item{position: relative;}
 .session{margin-top: 35rpx;}
+
+
 
 /* 图标 */
 .input-item .icon{position: absolute;}
@@ -32,6 +34,20 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 
 .logo{width: 70rpx;height: 70rpx;border-radius: 60rpx;display: inline-block;vertical-align: text-top;margin-right: 20rpx;}
 
+/* 按钮 */
+.btn{border-radius: 10rpx;}
+.btn-xxx-lg,.btn-xxxlg{width: 310rpx;height: 104rpx;font-size: 34rpx;border-radius: 100rpx;text-align: center;line-height: 104rpx;font-weight: bold;letter-spacing: 10rpx;}
+.btn-white{background-color: white;color: #000;}  
+.btn-yellow{background-color: #e4bb5f;color: #fff;}
+.btn-xxxxlg{width:80%;height: 104rpx;font-size: 34rpx;border-radius: 100rpx;text-align: center;line-height: 104rpx;font-weight: bold;letter-spacing: 10rpx;margin: 40rpx auto;}
+.btn-full{width: 100%;font-size: 30rpx;padding: .5em 0;text-align: center;}
+.btn-circle{border-width: 1rpx;border-style: solid;border-radius: 2em;}
+.text-btn,.btn-text{display: inline-block;font-size: 20rpx;margin: 10rpx 0;color: rgba(255,255,255,.8);padding: 10rpx 20rpx;}
+.text-btn-sm{padding: 0 1em;margin: 0 .3em;}
+.btn-page-warp{padding: 15rpx 25rpx;background-color: #192079;display: inline-block;border-right: 1px rgba(255,255,255,.4) solid;}
+.btn-page-warp:last-child{border-right: none;}
+.btn-page{width: 20rpx;height: 20rpx;border: dashed 1px rgba(255,255,255,.4);}
+.btn-tab{background: #212C9A;color: #ccc;display: inline-block;padding-right: 60rpx;}
 
 /* 字体 */
 .part-title{color:#fff;font-size: large;font-weight: bold;padding:30rpx;display: inline-block;}
@@ -40,6 +56,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 ._title{color: #ccc;}
 .text-gray{color: rgba(255, 255,255, .6);}
 .text-white{color: white;}
+.text-yellow{color: #EBC682;}
 .text-center{text-align: center;display: block;}
 .text-small{font-size: 20rpx;display: inline-block; } 
 .describe{color: #ccc;font-size: 20rpx;}
@@ -56,11 +73,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .text-col{width: 1.2em;line-height: 1.8em;}
 .text-aline{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;width: 100%;}
 
-/* 按钮 */
-.btn-xxx-lg,.btn-xxxlg{width: 310rpx;height: 104rpx;font-size: 34rpx;border-radius: 100rpx;text-align: center;line-height: 104rpx;font-weight: bold;letter-spacing: 10rpx;}
-.btn-white{background-color: white;color: #000;}  
-.btn-yellow{background-color: #e4bb5f;color: #fff;}
-.btn-xxxxlg{width:80%;height: 104rpx;font-size: 34rpx;border-radius: 100rpx;text-align: center;line-height: 104rpx;font-weight: bold;letter-spacing: 10rpx;margin: 40rpx auto;}
+
 
 
 .scroll-view{
@@ -71,12 +84,12 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 
  }
 
-.item-5{width: 50%;display: inline-block;vertical-align: middle;position: relative;white-space: nowrap;}
-.icon-more{width:20rpx;height: 20rpx;margin-left: 20rpx;vertical-align: middle;}
 .part-title-warp{color: white;}
 
 /* 布局相关 */
+.body-warp{overflow: hidden;}
 .flex{display: flex;justify-content: space-around;align-items: center;}
+.flex-between{justify-content: space-between;}
 .table{display: table;}
 .table-full{width: 100%;}
 .table-cell{display: table-cell;}
@@ -85,6 +98,11 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .abs-left{position: absolute;left: 0;}
 .abs-right{position: absolute;right: 0;}
 .width-full{width: 100%;}
+.item-5{width: 50%;display: inline-block;vertical-align: middle;position: relative;}
+.part-title-warp .item-5{white-space: nowrap;}
+.clear{clear: both;}
+.martop-100{margin-top: 100rpx;}
+
 
 /* 图片相关 */
 .headImg{border-radius: 100%;}
@@ -96,16 +114,11 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .content-warp-fullCol{padding: 0 40rpx;box-sizing: border-box;width:100%;}
 .content-warp-fullRow{padding: 40rpx 0;box-sizing: border-box;}
 
+.icon-more{width:20rpx;height: 20rpx;margin-left: 20rpx;vertical-align: middle;}
 
 .float-warp{overflow: hidden;}
 
-.btn-circle{border: 1rpx rgba(255, 255,255, .8) solid;border-radius: 2em;}
-.text-btn,.btn-text{display: inline-block;font-size: 20rpx;margin: 10rpx 0;color: rgba(255,255,255,.8);padding: 10rpx 20rpx;}
-.text-btn-sm{padding: 0 4rpx;}
 
-.btn-page-warp{padding: 15rpx 25rpx;background-color: #192079;display: inline-block;border-right: 1px rgba(255,255,255,.4) solid;}
-.btn-page-warp:last-child{border-right: none;}
-.btn-page{width: 20rpx;height: 20rpx;border: dashed 1px rgba(255,255,255,.4);}
 
 .flex-col{display: flex;flex-direction: column;align-items: self-start;}
 .flex-around{justify-content: space-around;}
@@ -128,7 +141,6 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .info-warp{margin-top: 60rpx;padding-bottom: 20rpx;border-bottom: 1px solid rgba(255, 255, 255, .6);}
 .tab{padding: 15rpx 30rpx;border-radius: 60rpx;background: white;color: #212C9A;white-space: nowrap;margin: 15rpx 0;}
 .tab-warp{margin-top: 60rpx;}
-.btn-tab{background: #212C9A;color: #ccc;display: inline-block;padding-right: 60rpx;}
 
 
 
@@ -142,3 +154,10 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .part-title-warp{margin-top: 40rpx;}
 .text-col{margin-top:30rpx;}
 
+/* 搜索框 */
+.part-search .text-warp{background-color: #1E2887;border-top-left-radius: 50rpx;border-bottom-left-radius: 50rpx;color: white;font-weight:bold;padding-left: 1em;width: 7em;}
+.search{width: 280rpx;}
+.search .input-item{background-color: #1E2887;}
+.input-item input{background: #fff;border-radius: 50rpx;padding-left: 1em;color: #4E578B;height: 50rpx;padding-right: 80rpx;font-size: 18rpx;}
+.input-item input + .icon-search{right: 0;background-color: #EBC682;border-radius: 50rpx;top: 0;width: 80rpx;height: 52rpx;z-index: 99;padding: 10rpx 20rpx;box-sizing: border-box;}
+.part-title-warp {margin-top: 0;}

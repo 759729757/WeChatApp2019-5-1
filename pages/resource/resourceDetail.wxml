@@ -1,0 +1,51 @@
+<!--pages/resource/resourceDetail.wxml-->
+<view class='stripe stripe-right'></view>
+<view class='clear'></view>
+<view class='container'>
+  <view class='flex flex-between session'>
+    <text class='text-lg text-white'>业务/产品介绍</text>
+    <text class='pull-right btn-text btn-circle btn-yellow'>+关注</text>
+  </view>
+
+  <view class='text-gray text-md session'>
+    业务介绍文字描述就是选哪个当数据改变触发渲染层重新渲染的时候，会校正带有 key 的组件，框架会确保他们被重新排序，而不是重新创建，以确保使组件保持自身的状态，并且提高列表渲染时的效率。
+  </view>
+
+  <view class='text-white session'>
+    特性：
+    <text class='text-btn text-btn-sm btn-circle text-yellow'>1W-2W</text>
+    <text class='text-btn text-btn-sm btn-circle text-yellow'>3天</text>
+    <text class='text-btn text-btn-sm btn-circle text-yellow'>要求面谈</text>
+  </view>
+
+  <image class='pic-full' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
+
+</view>
+
+<view class='bg-normal part2'>
+
+  <view class='container'>
+    <text class='text-lg text-white'>公司/个人名称</text>
+    <view class='text-white lab-warp'>
+      <text class='text-btn text-btn-sm btn-circle text-yellow'>1W-2W</text>
+      <text class='text-btn text-btn-sm btn-circle text-yellow'>3天</text>
+      <text class='text-btn text-btn-sm btn-circle text-yellow'>要求面谈</text>
+    </view>
+    <view class='session footer'>
+      <view class='text-white text-md'>联系方式：1232923823</view>
+      <view class='text-white text-md'>联系地址：广州市某是的撒肯德基</view>
+      <view class='text-white text-md'>官网链接：www.asdasd.com</view>
+    </view>
+
+    <view class='flex flex-between martop-100'>
+      <view class='btn btn-full btn-yellow'>
+        立即联系TA
+      </view>
+      <view class=' text-btn '>
+        <image class='icon btn icon-lg btn-yellow ' src='../../images/share.png'></image>
+      </view>
+    </view>
+
+
+  </view>
+</view>
