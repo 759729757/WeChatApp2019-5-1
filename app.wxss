@@ -34,7 +34,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 
 .logo{width: 70rpx;height: 70rpx;border-radius: 60rpx;display: inline-block;vertical-align: text-top;margin-right: 20rpx;}
 
-/* 按钮 */
+/* 按钮 */ 
 .btn{border-radius: 10rpx;}
 .btn-xxx-lg,.btn-xxxlg{width: 310rpx;height: 104rpx;font-size: 34rpx;border-radius: 100rpx;text-align: center;line-height: 104rpx;font-weight: bold;letter-spacing: 10rpx;}
 .btn-white{background-color: white;color: #000;}  

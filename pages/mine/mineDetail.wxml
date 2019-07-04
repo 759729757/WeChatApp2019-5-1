@@ -33,8 +33,13 @@
       </view>
       <view class='text-white tr'>
         <text class='headTitle'>性别</text>
-        <text class='text-gray'>请选择</text>
-      </view>
+        <!-- <text class='text-gray'>请选择</text> -->
+          <picker class='text-gray' bindchange="bindPickerChange" value="{{index}}" range="{{sex}}">
+            <view class="picker text-gray">
+              {{sex[index]}}
+            </view>
+          </picker>
+         </view>
       <view class='text-white tr'>
         <text class='headTitle'>生日</text>
         <input class='text-gray' placeholder="请填写您的生日"/>
@@ -44,10 +49,11 @@
         <input class='text-gray' placeholder="请填写您的所在地"/>
       </view>
     </view>
-
-
   </view>
 
+  <view class='container session'>
+    <view class='btn-full btn-white btn-circle'>保存资料</view> 
+  </view>
 </view>
 
 
