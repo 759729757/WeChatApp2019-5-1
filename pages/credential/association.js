@@ -1,25 +1,39 @@
-// pages/mine/mine.js
+// pages/credential/association.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    card1: '',
+    card2: ''
   },
-  goDetail:function(){
-    wx.navigateTo({
-      url: '/pages/mine/mineDetail',
+  chooseCard1: function () {
+    var self = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        const tempFilePaths = res.tempFilePaths
+        self.setData({
+          card1: res.tempFilePaths[0]
+        })
+      },
     })
   },
-  goCredential:function(){
-    wx.navigateTo({
-      url: '/pages/credential/index',
-    })
-  },
-  goCard:function(){
-    wx.navigateTo({
-      url: '/pages/vipCard/index',
+  chooseCard2: function () {
+    var self = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        const tempFilePaths = res.tempFilePaths
+        self.setData({
+          card2: res.tempFilePaths[0]
+        })
+      },
     })
   },
   /**
@@ -33,7 +47,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    wx.setNavigationBarTitle({
+      title: '协会认证'
+    })
   },
 
   /**

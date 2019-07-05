@@ -38,11 +38,11 @@
     </view>
 
     <view class='flex flex-between martop-100'>
-      <view class='btn btn-full btn-yellow'>
+      <view class='btn btn-full btn-white'>
         立即联系TA
       </view>
       <view class=' text-btn '>
-        <image class='icon btn icon-lg btn-yellow ' src='../../images/share.png'></image>
+        <image class='icon btn icon-lg btn-white ' src='../../images/share.png'></image>
       </view>
     </view>
 

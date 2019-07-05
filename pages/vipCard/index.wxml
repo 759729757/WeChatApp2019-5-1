@@ -1,0 +1,63 @@
+<!--pages/vipCard/index.wxml-->
+<view class='stripe stripe-right'></view>
+ <view class=''>
+    <view class='container flex flex-left bg-normal '>
+      <image class='headImg' src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+      <view>
+        <view class='title'>账号昵称</view>
+        <view class='text-yellow'>会员尊享更更多特权</view>
+      </view>
+    </view>
+    <view class='container bg-normal'>
+      <view class='tr'>
+        <view class='line-left text-white '>
+          会员等级
+        </view>
+      </view>
+      <view class='text-white tr'>
+        <text class='headTitle'>普通会员</text>
+        <text class='pull-right'>
+          <text class='text-yellow'>20元/</text>月
+        </text>
+      </view>
+      <view class='text-white tr'>
+        <text class='headTitle '>VIP会员</text>
+        <text class='pull-right'>
+          <text class='text-yellow'>50元/</text>月
+        </text>
+      </view>
+      <view class='text-white tr'>
+        <text class='headTitle'>资深会员</text>
+        <text class='pull-right'>
+          <text class='text-yellow'>100元/</text>月
+        </text>
+        <view class='text-sm text-gray'>到期后自动续费，可随时取消</view>
+      </view>
+    </view>
+
+    <view class='container bg-normal'>
+      <view class='tr'>
+        <view class='line-left text-white '>
+          会员等级
+        </view>
+      </view>
+      <view class='text-white tr' data-type="0" bindtap='chooseType'>
+        <image class='icon icon-md' src='../../images/alipay.png'></image>
+        <text>支付宝</text>
+        <image wx:if="{{payType==0}}" class='icon pull-right' src='../../images/correct.png'></image>
+      </view>
+      <view class='text-white tr' data-type="1" bindtap='chooseType'> 
+        <image class='icon icon-md' src='../../images/wechat.png'></image>
+        <text>微信支付</text>
+        <image wx:if="{{payType==1}}" class='icon pull-right' src='../../images/correct.png'></image>
+      </view>
+    </view>
+
+    <view class='container martop-100'>
+      <view class='btn btn-full btn-circle btn-white'>开通会员</view>
+    </view>
+
+  </view>
+
+
+

@@ -40,6 +40,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .btn-white{background-color: white;color: #000;}  
 .btn-yellow{background-color: #e4bb5f;color: #fff;}
 .btn-xxxxlg{width:80%;height: 104rpx;font-size: 34rpx;border-radius: 100rpx;text-align: center;line-height: 104rpx;font-weight: bold;letter-spacing: 10rpx;margin: 40rpx auto;}
+.btn-lg{height: 80rpx;text-align: center;border-radius: 100rpx;padding: 0 2em;font-size: 30rpx;line-height: 80rpx;}
 .btn-full{width: 100%;font-size: 30rpx;padding: .5em 0;text-align: center;}
 .btn-circle{border-width: 1rpx;border-style: solid;border-radius: 2em;}
 .text-btn,.btn-text{display: inline-block;font-size: 20rpx;margin: 10rpx 0;color: rgba(255,255,255,.8);padding: 10rpx 20rpx;}
@@ -90,10 +91,12 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .body-warp{overflow: hidden;}
 .flex{display: flex;justify-content: space-around;align-items: center;}
 .flex-between{justify-content: space-between;}
+.flex-left{justify-content: left;}
 .table{display: table;}
 .table-full{width: 100%;}
 .table-cell{display: table-cell;}
 .pull-right{float: right;}
+.pull-left{float: left;}
 .content-warp{padding: 40rpx;box-sizing: border-box;}
 .abs-left{position: absolute;left: 0;}
 .abs-right{position: absolute;right: 0;}
@@ -102,6 +105,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .part-title-warp .item-5{white-space: nowrap;}
 .clear{clear: both;}
 .martop-100{margin-top: 100rpx;}
+.hr{width: 100%;border-bottom-width: 1px ;border-style: solid;border-top: none;margin: 40rpx 0;}
 
 
 /* 图片相关 */
@@ -138,6 +142,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 
 /* 公用 */
 .bg-normal{background: #212C9A;}
+.bg-dark{background: #1E2887;}
 .info-warp{margin-top: 60rpx;padding-bottom: 20rpx;border-bottom: 1px solid rgba(255, 255, 255, .6);}
 .tab{padding: 15rpx 30rpx;border-radius: 60rpx;background: white;color: #212C9A;white-space: nowrap;margin: 15rpx 0;}
 .tab-warp{margin-top: 60rpx;}

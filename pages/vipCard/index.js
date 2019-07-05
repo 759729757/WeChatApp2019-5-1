@@ -1,39 +1,33 @@
-// pages/mine/mine.js
+// pages/vipCard/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    payType:0
+  },
 
-  },
-  goDetail:function(){
-    wx.navigateTo({
-      url: '/pages/mine/mineDetail',
-    })
-  },
-  goCredential:function(){
-    wx.navigateTo({
-      url: '/pages/credential/index',
-    })
-  },
-  goCard:function(){
-    wx.navigateTo({
-      url: '/pages/vipCard/index',
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
   },
+  //选择付款方式
+  chooseType:function(event){
+    this.setData({
+      payType: event.target.dataset.type
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    wx.setNavigationBarTitle({
+      title: '会员卡'
+    })
   },
 
   /**

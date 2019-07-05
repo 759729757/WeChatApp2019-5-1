@@ -42,8 +42,8 @@
       </view>
     </view>
     <view class='nav-btn-warp'>
-      <view class='btn btn-xxx-lg btn-white' bindtap='clearNav'>清除</view>
-      <view class='btn btn-xxx-lg btn-yellow' bindtap='companyNav'>完成</view>
+      <view class='btn btn-xxx-lg btn-white' bindtap='clearNav'>编辑</view>
+      <view class='btn btn-xxx-lg btn-yellow' bindtap='companyNav'>上传</view>
     </view>
 </view>
 

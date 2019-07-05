@@ -34,7 +34,7 @@
       <text class='small'>Recommended supplier</text>
     </view>
     <view class='item-5'>
-    <view class='pull-right'>
+    <view class='pull-right' bindtap='goRecommend'>
       <text class='text-content'>MORE</text>
       <image class='icon-more' src='/images/next.png'></image>
     </view>
@@ -279,7 +279,7 @@
       <text class='small'>Fast information</text>
     </view>
     <view class='item-5'>
-    <view class='pull-right'>
+    <view class='pull-right' bindtap='goZixun'>
       <text class='text-content'>MORE</text>
       <image class='icon-more' src='/images/next.png'></image>
     </view>

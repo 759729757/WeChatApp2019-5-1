@@ -15,6 +15,11 @@ Page({
 
 
   },
+  goDetail:function(){
+    wx.navigateTo({
+      url: 'resourceDetail',
+    })
+  },
   // 确认筛选
   companyNav(e) {
     this.setData({

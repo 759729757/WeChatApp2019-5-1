@@ -1,25 +1,24 @@
-// pages/mine/mine.js
+// pages/credential/company.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    card:''
   },
-  goDetail:function(){
-    wx.navigateTo({
-      url: '/pages/mine/mineDetail',
-    })
-  },
-  goCredential:function(){
-    wx.navigateTo({
-      url: '/pages/credential/index',
-    })
-  },
-  goCard:function(){
-    wx.navigateTo({
-      url: '/pages/vipCard/index',
+  chooseCard: function () {
+    var self = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        const tempFilePaths = res.tempFilePaths
+        self.setData({
+          card: res.tempFilePaths[0]
+        })
+      },
     })
   },
   /**
@@ -33,7 +32,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    wx.setNavigationBarTitle({
+      title: '企业身份认证'
+    })
   },
 
   /**

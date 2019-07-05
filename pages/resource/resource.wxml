@@ -49,7 +49,7 @@
 
   <!-- 内容 -->
   <view class='stripe content-warp content' >
-    <view class='resource' wx:for="{{ data[navLeftActive].data }}" wx:key>
+    <view class='resource' wx:for="{{ data[navLeftActive].data }}" wx:key bindtap='goDetail'>
         
         <view class='title text-lg'>{{item.title}}</view>
         <image class='pic-full' src='{{item.image}}'></image>

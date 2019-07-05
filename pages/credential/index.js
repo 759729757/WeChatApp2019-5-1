@@ -1,4 +1,4 @@
-// pages/mine/mine.js
+// pages/credential/index.js
 Page({
 
   /**
@@ -7,19 +7,19 @@ Page({
   data: {
 
   },
-  goDetail:function(){
+  goIndividual:function(){
     wx.navigateTo({
-      url: '/pages/mine/mineDetail',
+      url: 'individual',
     })
   },
-  goCredential:function(){
+  goAssociation: function () {
     wx.navigateTo({
-      url: '/pages/credential/index',
+      url: 'association',
     })
   },
-  goCard:function(){
+  goCompany: function () {
     wx.navigateTo({
-      url: '/pages/vipCard/index',
+      url: 'company',
     })
   },
   /**
@@ -33,7 +33,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+      wx.setNavigationBarTitle({
+        title: '我的认证'
+      })
   },
 
   /**

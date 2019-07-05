@@ -50,6 +50,16 @@ Page({
   //     projectIndex: i
   //   })
   // },
+  goRecommend:function(){
+    wx.navigateTo({
+      url: '/pages/recommend/index',
+    })
+  },
+  goZixun:function(){
+    wx.navigateTo({
+      url: '/pages/news/index',
+    })
+  },
     //人力资源点击
   hr1Click: function (index) {
     this.setData({

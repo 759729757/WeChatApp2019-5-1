@@ -33,7 +33,7 @@
   </view>
 
    <view class='content-warp-fullCol'>
-    <view class='flex flex-between card text-white'>
+    <view class='flex flex-between card text-white' bindtap='goCard'>
       <view class='title '>
         VAD黑卡
       </view>
@@ -46,7 +46,7 @@
 </view>
 <!-- 列表 -->
 <view class='content-warp-fullCol list'>
-  <view class='flex flex-between'>
+  <view class='flex flex-between' bindtap='goDetail'>
     <view class='flex'>
       <image class='icon icon-md' src='../../images/vip.png'></image>
       <view class='text-white text-lg'>会员资料</view>
@@ -54,7 +54,7 @@
     <image class='icon icon-md pull-right' src='../../images/next.png'></image>
   </view>
   
-  <view class='flex flex-between'>
+  <view class='flex flex-between' bindtap='goCredential'>
     <view class='flex'>
       <image class='icon icon-md' src='../../images/shield.png'></image>
       <view class='text-white text-lg'>我的认证</view>
