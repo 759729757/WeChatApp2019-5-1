@@ -2,7 +2,7 @@
 @import "font.wxss";
 @import "bg.wxss";
 page{font-size: small; background-color:#1E2887; position: relative;
-font-family: "PingFangSC-Medium","苹方","微软雅黑";
+font-family: "PingFangSC-Medium","苹方","微软雅黑";min-height:100%;
 }
 .stripe-right{top: 0;left: 50%;height: 100%;width: 100%;position: absolute;z-index: -1;}
 .container {

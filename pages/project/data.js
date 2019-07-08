@@ -6,7 +6,7 @@ var data=[
     data:[
       {
         image:"https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg",
-        title:"高清KT版,规格9×9 价格面议",
+        title:"3D场景搭建",
         logo:"https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg",
         name:"广州阿迪有限公司",
         time:" 2 hours ago",
