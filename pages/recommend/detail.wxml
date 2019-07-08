@@ -1,0 +1,43 @@
+<!--pages/recommend/detail.wxml-->
+<view class='bg-normal flex flex-col flex-center container-sm'>
+  <image class='headImg' src='https://ps.ssl.qhimg.com/dmfd/420_207_/t01ed8e6f986b9c3356.jpg'></image>
+  <view class='text-xmd sub-title text-white '>广州科技有限公司</view>
+  <view class='text-content text-sm'>公司简介：广州科技优先公司射虎对手打败菜名都是大号圣诞节安康读好书打火机阿斯加德好</view>
+  <!-- <view class='btn btn-yellow text-btn btn-circle'>+ 关注</view> -->
+  <image class='img-text' hidden="{{isFollow}}" mode='widthFix' bindtap='follow' src='../../images/follow.png'></image>
+  <image class='img-text' hidden="{{!isFollow}}" mode='widthFix' bindtap='follow' src='../../images/followed.png'></image>
+</view>
+<view class='bg-normal text-white'>
+  <view class='container'>
+    <view class='bg-dark'>
+     <image class='icon ' src='../../images/lianxi.png'></image>
+      联系人：灌灌
+    </view>
+    <view class='bg-dark'>
+     <image class='icon ' src='../../images/tel.png'></image>
+      联系电话：123827368
+    </view>
+    <view class='bg-dark'>
+     <image class='icon ' src='../../images/address.png'></image>
+      公司地址：广东省广州市白云区沙河镇8东1单元201
+    </view>
+  </view>
+</view>
+<view class='flex text-bold text-center tab-warp text-gray'>
+  <view class='{{tab == 1 ? "active":""}}' data-tabIndex='1' bindtap='chooseTab'>
+    发布的需求
+    <view class='underline'></view>
+  </view>
+  <view class='{{tab == 2 ? "active":""}}' data-tabIndex='2' bindtap='chooseTab'>
+    发布的资源
+    <view class='underline'></view>
+  </view>
+</view>
+<view class='bg-normal container padding'>
+  <view class='text-white'>
+    项目需求名称
+    <text class='pull-right text-gray text-sm'>40分钟前发布</text>
+  </view>
+  <view class='text-content'>项目需求内容：项目需求内容项目需求内容项目需求内容项目需求内容项目需求内容项目需求内容项目需求内容项目需求内容项目需求内容...</view>
+</view>
+

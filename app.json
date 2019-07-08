@@ -23,6 +23,9 @@
     "pages/news/index",
 
     "pages/recommend/index",
+    "pages/recommend/detail",
+
+    "pages/login/index",
 
     "pages/index2/index2",
     "pages/test/test",

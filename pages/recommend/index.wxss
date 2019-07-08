@@ -1,6 +1,9 @@
 /* pages/recommend/index.wxss */
+.pic{width: 100%;height:350rpx; }
 .item{margin: 20rpx;background: #212C9A;}
 .item-5{vertical-align: top;}
 .martop-100{margin-top: 80rpx;}
 .martop-100 .item{padding-top: 20rpx;}
 .content{padding: .5em;box-sizing: border-box;}
+.text-content{margin-top: 20rpx;}
+

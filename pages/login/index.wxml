@@ -1,0 +1,32 @@
+<!--pages/login/index.wxml-->
+<view class='stripe stripe-right'></view>
+<view class='container'>
+  <view class='item-5'>
+    <image class='_logo' mode="widthFix" src='../../images/logo.png'></image>
+  </view>
+</view>
+
+<view class='container2'>
+  <view class='text-md text-white'>
+    请输入账号
+  </view>
+  <input type="number" ></input>
+  <view class='text-md text-white'>
+    请输入密码
+  </view>
+  <input password="true"></input>
+
+  <view class='btn btn-full btn-white btn-circle'>登录</view>
+  
+  <view class='flex flex-center text-gray flex-center martop-30'>
+    <text>其他登录方式</text>
+    <text class='gap'>|</text>
+    <text>注册</text>
+  </view>
+
+
+</view>
+
+
+
+

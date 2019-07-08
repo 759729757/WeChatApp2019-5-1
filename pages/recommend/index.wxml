@@ -21,7 +21,7 @@
 
 <view>
   <view class='item-5'>
-      <view wx:for="{{list2}}" wx:key class='item'>
+      <view wx:for="{{list2}}" wx:key class='item' bindtap='goDetail'>
         <image class='pic' src="{{item.image}}"></image>
          <view class='content'>
           <view class='text-normal'>{{item.name}}</view>
@@ -30,8 +30,8 @@
         </view>
       </view>
   </view>
-  <view class='item-5 martop-100'>
-       <view wx:for="{{list1}}" wx:key class='item'>
+  <view class='item-5 martop-50'>
+       <view wx:for="{{list1}}" wx:key class='item' bindtap='goDetail'>
          <view class='content'>
           <view class='text-normal'>{{item.name}}</view>
           <text class='text-yellow text-sm'>{{item.describe}}</text>

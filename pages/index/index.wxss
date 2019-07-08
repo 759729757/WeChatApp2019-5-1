@@ -16,7 +16,7 @@
 
 /* 推荐供应商 */
 .gongying .headImg{width: 132rpx;height: 132rpx;margin-bottom: 0rpx;border: 2px solid #212C9A;}
-.gongying .item{margin-right: 40rpx;}
+.gongying .item{margin-right: 20rpx;}
 .gongying .item:last-child{margin-right: 0;}
 .gongying .text-content{font-size: 20rpx;}
 
@@ -38,14 +38,14 @@
 .part-video .item.active .text-detail{display: block;}
 .part-video .item.active view{color: #24294C;}
 
-/* 媒体资源 */
+/* 媒体资源 */ 
 .media-warp .item{width: 300rpx;background-color: #212C9A;margin-right: 40rpx;}
 .media-warp .item image{height: 340rpx;}
 .media-warp .item:last-child{margin-right:0;}
 .media-warp .item:first-child{margin-left:40rpx;}
 
 /* 人力资源 */
-.part-hr-warp{position: relative;}
+.part-hr-warp{position: relative;overflow: hidden;zoom: 1;}
 .part-hr.scroll-view{justify-content: flex-end;align-items: flex-end;padding-left: 60rpx;}
 .part-hr .item{background-color: #212C9A;width: 220rpx;padding: 20rpx;padding-top: 40rpx;box-sizing: border-box;position: relative;overflow: visible;margin: 40rpx 0;margin-right: 40rpx;vertical-align: text-bottom;}
 .part-hr .item:last-child{margin-right: 0;}

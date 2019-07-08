@@ -1,14 +1,11 @@
-// pages/recommend/index.js
-var testData = require('../../data.js');//拿测试数据 
+// pages/login/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    data:[],
-    list1:[],
-    list2:[]
+
   },
 
   /**
@@ -17,24 +14,12 @@ Page({
   onLoad: function (options) {
 
   },
-  goDetail:function(){
-    wx/wx.navigateTo({
-      url: 'detail'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    var data = testData.supplier;
-    var l = data.length;
-    var harf = Math.floor(l/2);
-
-    this.setData({
-      data: data,
-      list1:data.slice(0,harf),
-      list2:data.slice(harf)
-    })
+    
   },
 
   /**

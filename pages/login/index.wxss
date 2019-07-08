@@ -1,0 +1,9 @@
+/* pages/login/index.wxss */
+page{background: #212C9A;min-height: 100%;}
+.container2{width: 80%;margin: 0 auto;}
+._logo{width: 240rpx;margin-top: 150rpx;margin-left: 50rpx;margin-bottom: 170rpx;}
+input{border-bottom:1px rgba(255,255,255,.23) solid;margin-bottom: 30rpx;font-size: 42rpx;height: 40rpx;line-height: 40rpx;font-weight: bold;color: white; margin-top: 10rpx;padding: 10rpx 0;}
+.btn-full{margin-top: 120rpx;}
+
+
+

@@ -1,39 +1,36 @@
-// pages/recommend/index.js
-var testData = require('../../data.js');//拿测试数据 
+// pages/recommend/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    data:[],
-    list1:[],
-    list2:[]
+    tab:1,
+    isFollow:false
   },
-
+  follow:function(e){
+    this.setData({
+      isFollow: !this.data.isFollow
+    })
+  },
+  chooseTab:function(e){
+      this.setData({
+        tab : e.target.dataset.tabindex
+      })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
   },
-  goDetail:function(){
-    wx/wx.navigateTo({
-      url: 'detail'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    var data = testData.supplier;
-    var l = data.length;
-    var harf = Math.floor(l/2);
-
-    this.setData({
-      data: data,
-      list1:data.slice(0,harf),
-      list2:data.slice(harf)
+    wx.setNavigationBarTitle({
+      title: '供应商'
     })
   },
 

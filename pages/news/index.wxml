@@ -1,5 +1,6 @@
 <!-- 快速资讯 -->
-<view class=' float-warp stripe'>
+<view class='stripe stripe-right'></view>
+<view class=' float-warp'>
    <view class='content-warp part-title-warp '>
     <view class='item-5'>
       <text class='part-title'>快速资讯</text>

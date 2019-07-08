@@ -101,7 +101,7 @@
 				{
 					"id": 8,
 					"name": "当前测试",
-					"pathName": "pages/credential/association",
+					"pathName": "pages/recommend/detail",
 					"query": "",
 					"scene": null
 				}
