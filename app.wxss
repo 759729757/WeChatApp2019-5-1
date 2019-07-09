@@ -48,7 +48,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .btn-yellow{background-color: #e4bb5f;color: #fff;}
 .btn-xxxxlg{width:80%;height: 104rpx;font-size: 36rpx;border-radius: 100rpx;text-align: center;line-height: 104rpx;font-weight: bold;letter-spacing: 10rpx;margin: 40rpx auto;}
 .btn-lg{height: 80rpx;text-align: center;border-radius: 100rpx;padding: 0 2em;font-size: 32rpx;line-height: 80rpx;}
-.btn-full{width: 100%;font-size: 34rpx;padding: .3em 0;text-align: center;font-weight: bold;color: #212C9A;letter-spacing: 10rpx;}
+.btn-full{width: 100%;font-size: 34rpx;box-sizing: border-box;padding: .3em 0;text-align: center;font-weight: bold;color: #212C9A;letter-spacing: 10rpx;}
 .text-btn,.btn-text{display: inline-block;font-size: 24rpx;margin: 10rpx 0;color: rgba(255,255,255,.8);padding: 10rpx 20rpx;letter-spacing: .2em;}
 .text-btn-sm{padding: 0 1em;margin: 0 .3em;font-size:10px;}
 .btn-circle{border-width: 1rpx;border-style: solid;border-radius: 2em;padding-left: 1em;padding-right: 1em;}
@@ -111,16 +111,21 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .abs-left{position: absolute;left: 0;}
 .abs-right{position: absolute;right: 0;}
 .width-full{width: 100%;}
+.float-warp{overflow: hidden;}
 .item-5{width: 50%;display: inline-block;vertical-align: middle;position: relative;}
+.item-3{width: 33.333%;float: left;}
 .part-title-warp .item-5{white-space: nowrap;}
 .clear{clear: both;}
 .martop-100{margin-top: 100rpx;}
 .martop-50{margin-top: 50rpx;}
 .martop-30{margin-top: 30rpx;}
+.martop-15{margin-top: 15rpx;}
 .hr{width: 100%;border-bottom-width: 1px ;border-style: solid;border-top: none;margin: 40rpx 0;}
 .gap{margin: 0 2em;display: inline-block;}
-
-
+.cover{position: fixed;width: 100%;height: 100%;left: 0;top: 0;display: flex;
+flex-direction: column;justify-content: center;align-items: center;z-index: 100;
+background: rgba(0,0,0,.24);}
+.confirm{background: #fff;border-radius: 20rpx;padding: 40rpx;align-items: center;color: #212C9A;font-weight: bold;text-align: center;}
 
 /* 图片相关 */
 .headImg{border-radius: 100%;}

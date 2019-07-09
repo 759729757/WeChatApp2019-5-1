@@ -14,7 +14,10 @@
     "pages/mine/mine",
     "pages/mine/mineDetail",
     "pages/mine/follow",
-  
+    "pages/mine/audit",
+    "pages/mine/pubilsh",
+    "pages/mine/auditDetail",
+    
 
     "pages/credential/index",
     "pages/credential/individual",

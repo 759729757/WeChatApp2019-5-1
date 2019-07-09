@@ -15,6 +15,7 @@ picker{width: 5em;}
 
 .bg-dark{background: #1E2887;}
 .tab-warp{position: absolute;height: 100%;width: 100%;margin: 0;}
+.icon-sm{width: 10rpx;height: 10rpx;}
 
 /* 内容 */
 .pic{width: 260rpx;height: 200rpx;border-radius: 20rpx;margin-left: 20rpx;}

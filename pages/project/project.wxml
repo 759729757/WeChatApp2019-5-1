@@ -20,10 +20,10 @@
   <!-- 筛选框 -->
   <view class='content-warp-fullCol flex'>
     <view class='text-center text-gray {{filterActive == 1 ? "text-normal" : ""}}' data-index='1' bindtap='shaixuan'>
-      分类 <image class='icon' src='/images/xia.png' ></image>
+      分类 <image class='icon icon-sm' src='/images/xia.png' ></image>
     </view>
     <view class='text-center text-gray  {{filterActive == 2 ? "text-normal" : ""}}' data-index='2' bindtap='shaixuan'>
-      筛选 <image class='icon' src='/images/xia.png' ></image>
+      筛选 <image class='icon icon-sm' src='/images/xia.png' ></image>
     </view>
   </view>
 

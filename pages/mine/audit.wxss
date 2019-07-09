@@ -1,6 +1,6 @@
 /* pages/mine/follow.wxss */
 .icon-sm{width: .5em;height: .5em;vertical-align: middle;}
-.img-text{width: 2.4em;height: 34rpx;}
+.img-text{width: 5em;}
 .menu-warp .menu_{display:none;}
 .menu-active .menu{display: none;}
 .menu-active .menu_{display: inline-block;}

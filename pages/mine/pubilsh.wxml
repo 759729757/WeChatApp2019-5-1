@@ -1,0 +1,73 @@
+<!--pages/mine/pubilsh.wxml-->
+<view class='stripe stripe-right'></view>
+<view class='bg-normal search-warp'>
+  <!-- 搜索框 -->
+  <view class="table table-full content-warp">
+    <view class="text-warp table-cell">
+      <picker bindchange="bindPickerChange" value="{{cityNum}}" range="{{city}}">
+        <view class="picker">
+          <image class='icon icon-position icon-left' src='/images/position.png'></image>
+          {{city[cityNum]}}
+        </view>
+      </picker>
+    </view>
+    <view class='table-cell input-item search'>
+      <input placeholder='输入你想找的内容' />
+      <image class='icon icon-search icon-right' src='/images/enter.png'></image>
+    </view>
+  </view>
+
+  <!-- 筛选框 -->
+  <view class='content-warp-fullCol flex'>
+    <view class='text-center text-gray {{filterActive == 1 ? "text-normal" : ""}}'>
+      资源产品
+      <image class='icon icon-sm' src='/images/xia.png'></image>
+    </view>
+    <view class='text-center text-gray  {{filterActive == 2 ? "text-normal" : ""}}'>
+      项目需求
+      <image class='icon icon-sm' src='/images/xia.png'></image>
+    </view>
+  </view>
+</view>
+
+<!-- 内容 -->
+<view class='warp'>
+  <view class='container'>
+
+    <view class='resource martop-30' wx:for="{{ data[navLeftActive].data }}" wx:key>
+
+      <view class='title text-lg'>{{item.title}}</view>
+      <view class='float-warp'>
+       <image class='item-3' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
+        <image class='item-3' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
+         <image class='item-3' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
+      </view>
+      <view class='flex flex-between'>
+        <view class='flex'>
+
+          <view class='table-cell text-gray text-md'>
+            {{item.time}}
+          </view>
+        </view>
+        <view hover-class='menu-active' data-index='{{index}}' bindtap='hini' hover-stay-time='200' class='menu-warp'>
+          <image class='img-text menu' mode='widthFix' 
+           data-index='{{index}}' bindtap='toogleHini'
+           src='../../images/delete.png'></image>
+        </view>
+
+      </view>
+
+    </view>
+  </view>
+
+</view>
+<!-- 弹框 -->
+<view class='cover' wx:if="{{confirm}}">
+  <view class='confirm'>
+    <view>确定真的要删除您关注的内容？</view>
+    <view class='flex flex-between martop-50'>
+      <view class='btn btn-text bg-normal btn-circle' bindtap='toogleHini'>确定</view>
+      <view class='btn btn-text bg-normal btn-circle' bindtap='toogleHini'>我再想想</view>
+    </view>
+  </view>
+</view>

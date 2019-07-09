@@ -1,0 +1,25 @@
+/* pages/mine/pubilsh.wxss */
+page{background: #212C9A;}
+/* 搜索 */
+.search .input-item{background-color: #1E2887;}
+picker{width: 5em;}
+.picker{color: white;margin-right: 0;}
+.search{width: 100%;padding: 3rpx 0;}
+.search input {padding-left: 2em;background: #1E2887;color: #ccc;line-height: 50rpx;}
+.warp{overflow: hidden;zoom: 1;background:none;position: relative;}
+.container{position: relative;z-index: 1;}
+.content-warp{padding: 20rpx;}
+.content-warp+.content-warp{padding-top: 20rpx;}
+.search-warp{padding: 20rpx 0;}
+.stripe-right{z-index: 0;}
+.bg-normal{z-index: 1;position: relative;}
+.icon-sm{width: 10rpx;height: 10rpx;}
+.bg-dark{background: #1E2887;}
+.tab-warp{position: absolute;height: 100%;width: 100%;margin: 0;}
+.item-3{height: 220rpx;}
+.float-warp{margin: 20rpx 0;}
+.resource{margin-bottom: 30rpx;}
+.confirm .btn{border-radius: 2em;width: 5em;}
+
+
+

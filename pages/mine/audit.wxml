@@ -9,7 +9,7 @@
   <view class='stripe stripe-right'></view>
   <view class='container'>
 
-    <view class='resource martop-30' wx:for="{{ data[navLeftActive].data }}" wx:key >
+    <view class='resource martop-30' wx:for="{{ data[navLeftActive].data }}" wx:key bindtap='goDetail'>
 
       <view class='title text-lg'>{{item.title}}</view>
       <image class='pic-full' src='{{item.image}}'></image>
@@ -25,15 +25,9 @@
             </view>
           </view>
         </view>
-        <view class='hini flex' wx:if='{{ data[navLeftActive].data[index].hini }}'>
-          <view class='croner'></view>
-          <view>取消关注</view>
-          <view  data-index='{{index}}' bindtap='toogleHini'>删除</view>
-        </view>
-        <view hover-class='menu-active' data-index='{{index}}' bindtap='hini'
-        hover-stay-time='200' class='menu-warp'>
-          <image class='img-text menu'  src='../../images/menu.png'></image>
-          <image class='img-text menu_'src='../../images/_menu.png'></image>
+       
+        <view class='menu-warp'>
+          <image class='img-text menu' mode='widthFix'  src='../../images/approve.png'></image>
         </view>
 
       </view>
@@ -42,14 +36,5 @@
   </view>
 
 </view>
-<!-- 弹框 -->
-<view class='cover' wx:if="{{confirm}}">
-  <view class='confirm'>
-    <view>确定真的要删除您关注的内容？</view>
-    <view class='flex flex-between martop-50'>
-      <view class='btn btn-text bg-normal btn-circle' bindtap='toogleHini'>确定</view>
-       <view class='btn btn-text bg-normal btn-circle' bindtap='toogleHini'>我再想想</view>
-    </view>
-  </view>
-</view>
+
 

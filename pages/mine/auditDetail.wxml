@@ -1,0 +1,14 @@
+<!--pages/mine/auditDetail.wxml-->
+<view class='stripe stripe-right'></view>
+<view class='content-warp'>
+  <view class='title'>大标题大标题大标题大标题大标题大标题大标题大标题</view>
+  <view class='text-gray text-md martop-15'>05-20 13:00</view>
+  <view class='text-content martop-30'>简介：区2019年普通高校招生录取工作已于7月3日正式开始。在录取期间，考生需要注意哪些区2019年普通高校招生录取工作已于7月3日正式开始。在录取期间，考生需要注意哪些区2019年普通高校招生录取工作已于7月3日正式开始。在间，考生需要注意哪要注意哪些区2019年普通高校招生录取工作已于7月3日正式取期需要注意哪些些特效 <text class='text-yellow'>【展开】</text></view>
+
+  <image class='pic-full' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
+    <image class='pic-full' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
+
+    <view class='btn martop-100 btn-full btn-circle btn-white'>审核通过</view>
+</view>
+
+
