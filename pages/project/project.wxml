@@ -14,7 +14,7 @@
     </view>
     <view class='table-cell input-item search'>
       <input placeholder='输入你想找的内容' />
-      <image class='icon icon-search icon-right' src='/images/enter.png'></image>
+      <image class='icon icon-search icon-right'  src='/images/enter.png'></image>
     </view>
   </view>
   <!-- 筛选框 -->
@@ -26,9 +26,11 @@
       筛选 <image class='icon' src='/images/xia.png' ></image>
     </view>
   </view>
+
+</view>
 <!-- 筛选选项 -->
-<view wx:if="{{isFilter}}" class='bg-normal warp'>
-    <view class='nav-left-warp'>
+<view wx:if="{{isFilter}}" class=' tab-warp'>
+    <view class='nav-left-warp bg-dark'>
       <view class='nav-left'>
         <view class='item _title {{navLeftActive == index?"active":""}}'
           wx:for="{{ data }}" wx:key
@@ -48,42 +50,26 @@
       <view class='btn btn-xxx-lg btn-yellow' bindtap='companyNav'>上传</view>
     </view>
 </view>
-</view>
-
   <!-- 内容 -->
-  <view class='' wx:if="{{!isFilter}}">
-  
-    <view class='content-warp media' wx:for="{{ data[navLeftActive].data }}" wx:key>
-      <view class='flex'>
-        <view class='flex flex-col'>
-          <view class='title text-lg'>{{item.title}}</view>
-          <view class='flex'>
-            <image class='logo table-cell' src='{{item.logo}}'></image>
+  <view class='warp ' wx:if="{{!isFilter}}">
+  <view class='stripe stripe-right'></view>
+    <view class='container'>
+       <view class='content-warp media item-5' wx:for="{{ data[navLeftActive].data }}" wx:key bindtap='goDetail'>
+        <view class='title text-lg'>{{item.title}}</view>
+        <view class='text-content'>{{item.content}}</view>
 
-            <view class='table-cell'>
-              <view>
-                <text class='_title text-small'>{{item.name}}</text>
-                <image class='icon icon-sm' src='/images/gou.png'></image>
-                <image class='icon icon-sm' src='/images/edit2.png'></image>
-              </view>
-              <view class='table-cell text-gray text-small'>
-                {{item.time}}
-              </view>
-            </view>
-          </view>
-          <view class='flex flex-between table-full ' >
-            <view>
-              <image class='icon icon-sm' src='/images/position.png'></image>
-              <text class='text-gray text-small'>{{item.address}}</text>
-            </view>
-            <view>
-              <image class='icon icon-sm' src='/images/eyes.png'></image>
-              <text class='text-gray text-small'>{{item.read}}</text>
-            </view>
-          </view>
+        <view class='flex flex-between table-full ' >
+        <view>
+          <image class='icon icon-sm' src='/images/position.png'></image>
+          <text class='text-gray text-small'>{{item.address}}</text>
         </view>
-        <image class='pic' src='{{item.image}}'></image>
+        <view>
+          <!-- <image class='icon icon-sm' src='/images/eyes.png'></image> -->
+          <text class='text-gray text-small'>{{item.time}}</text>
+        </view>
       </view>
+    </view>
+ 
     </view>
   
   </view>

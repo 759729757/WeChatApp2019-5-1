@@ -1,0 +1,13 @@
+/* pages/resource/resourceDetail.wxss */
+.container{overflow: hidden;}
+.icon-lg{width: 70rpx;height: 70rpx;margin-right: 0;}
+.part2{padding-top: 50rpx;}
+.flex .text-btn{padding-right: 0;}
+.martop-100{margin-top: 150rpx;}
+.footer .text-md{line-height: 2em;}
+.lab-warp{margin-top: 10rpx;}
+.scroll-view{margin: 20rpx 0;}
+.pic{width: 380rpx;margin-right: 40rpx;border-radius: 15rpx;}
+.headImg{width: 3.5em;height: 3.5em;margin-right: 40rpx;}
+.footer view{height: 2em;}
+

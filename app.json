@@ -2,16 +2,19 @@
   "pages": [
     "pages/index/index",
     "pages/project/project",
-    
+    "pages/project/projectDetail",
+
     "pages/resource/resource",
     "pages/resource/resourceDetail",
-    
+
     "pages/publish/publish",
     "pages/publishPro/publishPro",
     "pages/publishRes/publishRes",
-    
+
     "pages/mine/mine",
     "pages/mine/mineDetail",
+    "pages/mine/follow",
+  
 
     "pages/credential/index",
     "pages/credential/individual",
@@ -19,14 +22,14 @@
     "pages/credential/association",
 
     "pages/vipCard/index",
-
+    
     "pages/news/index",
 
     "pages/recommend/index",
     "pages/recommend/detail",
 
     "pages/login/index",
-
+    
     "pages/index2/index2",
     "pages/test/test",
     "pages/logs/logs"
@@ -45,31 +48,32 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath":"images/_homeIcon.png"
-        ,"selectedIconPath":"images/homeIcon.png"
+        "iconPath": "images/_homeIcon.png",
+        "selectedIconPath": "images/homeIcon.png"
       },
-       {
+      {
         "pagePath": "pages/project/project",
         "text": "找项目",
-        "iconPath":"images/_projectIcon.png"
-        ,"selectedIconPath":"images/projectIcon.png"
+        "iconPath": "images/_projectIcon.png",
+        "selectedIconPath": "images/projectIcon.png"
       },
       {
-        "pagePath":"pages/publish/publish",
-        "text":""
-        ,"iconPath":"images/addIcon.png"
-        ,"selectedIconPath":"images/addIcon.png"
+        "pagePath": "pages/publish/publish",
+        "text": "",
+        "iconPath": "images/addIcon.png",
+        "selectedIconPath": "images/addIcon.png"
       },
       {
-        "pagePath":"pages/resource/resource",
-        "text":"找资源",
-        "iconPath":"images/_ziyuanIcon.png"
-        ,"selectedIconPath":"images/ziyuanIcon.png"
-      },{
-        "pagePath":"pages/mine/mine",
-        "text":"我的",
-        "iconPath":"images/_mineIcon.png"
-        ,"selectedIconPath":"images/mineIcon.png"
+        "pagePath": "pages/resource/resource",
+        "text": "找资源",
+        "iconPath": "images/_ziyuanIcon.png",
+        "selectedIconPath": "images/ziyuanIcon.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/_mineIcon.png",
+        "selectedIconPath": "images/mineIcon.png"
       }
     ]
   },

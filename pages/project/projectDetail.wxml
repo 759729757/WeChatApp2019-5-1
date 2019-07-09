@@ -1,0 +1,58 @@
+<!--pages/resource/resourceDetail.wxml-->
+<view class='stripe stripe-right'></view>
+<view class='clear'></view>
+<view class='container'>
+  <view class='flex flex-between session'>
+    <text class='text-lg text-white'>业务/产品介绍</text>
+    
+    <image class='img-text' hidden="{{isFollow}}" mode='widthFix' bindtap='follow' src='../../images/follow.png'></image>
+    <image class='img-text' hidden="{{!isFollow}}" mode='widthFix' bindtap='follow' src='../../images/followed.png'></image>
+  </view>
+  <view class='text-white session'>
+    特性：
+    <text class='text-btn text-btn-sm btn-circle text-yellow'>1W-2W</text>
+    <text class='text-btn text-btn-sm btn-circle text-yellow'>3天</text>
+    <text class='text-btn text-btn-sm btn-circle text-yellow'>要求面谈</text>
+  </view>
+  <view class='text-white session text-md'>
+    截至日期：2019-05-18
+  </view>
+  <view class='text-gray text-md session'>
+    业务介绍文字描述就是选哪个当数据改变触发渲染层重新渲染的时候，会校正带有 key 的组件，框架会确保他们被重新排序，而不是重新创建，以确保使组件保持自身的状态，并且提高列表渲染时的效率。
+  </view>
+
+ 
+  <scroll-view class='scroll-view' scroll-x>
+      <image class='pic' mode='widthFix' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'  wx:for="[1,2,4,5]" wx:key></image>
+  </scroll-view>
+
+</view>
+
+<view class='bg-normal part2 container padding martop-50'>
+
+  <view class=''>
+    <view class='flex flex-left'>
+      <image class='headImg' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
+      <view>
+        <view class='text-lg text-white'>广东省科技技术信息有限公司</view>
+        <view class='text-content '>公司剪辑欸公司简介公司简介公司简介Eb32232</view>
+      </view>
+    </view>
+    
+    <view class='session footer'>
+      <view class='text-white '>联系方式：1232923823</view>
+      <view class='text-white '>联系地址：广州市某是的撒肯德基</view>
+      <view class='text-white '>官网链接：www.asdasd.com</view>
+    </view>
+  </view>
+</view>
+
+<view class='flex flex-between content-warp bg-dark martop-50'>
+  <view class='btn btn-full btn-white'>
+    立即联系TA
+  </view>
+  <view class=' text-btn '>
+    <image class='icon btn icon-lg btn-white ' src='../../images/share.png'></image>
+  </view>
+</view>
+

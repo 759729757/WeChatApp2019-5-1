@@ -1,0 +1,39 @@
+<!--pages/mine/follow.wxml-->
+<view class='flex text-gray bg-normal padding'>
+  <view  class='item _title {{navLeftActive == index?"text-white":""}}' wx:for="{{ data }}"
+   data-index="{{index}}" bindtap='chooseType' >{{item.typeName}}<image class='icon icon-sm' src='../../images/xia.png'></image></view>
+</view>
+<!-- 内容 -->
+<view class='warp ' wx:if="{{!isFilter}}">
+  <view class='stripe stripe-right'></view>
+  <view class='container'>
+    <view class='resource martop-30' wx:for="{{ data[navLeftActive].data }}" wx:key bindtap='goDetail'>
+
+      <view class='title text-lg'>{{item.title}}</view>
+      <image class='pic-full' src='{{item.image}}'></image>
+
+      <view class='flex flex-between'>
+
+        <view class='flex'>
+          <image class='logo table-cell' src='{{item.logo}}'></image>
+
+          <view class='table-cell'>
+            <view>
+              <text class='_title text-md'>{{item.name}}</text>
+            </view>
+            <view class='table-cell text-gray text-md'>
+              {{item.time}}
+            </view>
+          </view>
+        </view>
+        <view hover-class='menu-active' hover-stay-time='200' class='menu-warp'>
+          <image class='img-text menu'   src='../../images/menu.png'></image>
+          <image class='img-text menu_'  src='../../images/_menu.png'></image>
+        </view>
+
+      </view>
+
+    </view>
+  </view>
+
+</view>

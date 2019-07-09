@@ -4,7 +4,8 @@
 <view class='container'>
   <view class='flex flex-between session'>
     <text class='text-lg text-white'>业务/产品介绍</text>
-    <text class='pull-right btn-text btn-circle btn-yellow'>+关注</text>
+      <image class='img-text' hidden="{{isFollow}}" mode='widthFix' bindtap='follow' src='../../images/follow.png'></image>
+    <image class='img-text' hidden="{{!isFollow}}" mode='widthFix' bindtap='follow' src='../../images/followed.png'></image>
   </view>
 
   <view class='text-gray text-md session'>
@@ -22,9 +23,9 @@
 
 </view>
 
-<view class='bg-normal part2'>
+<view class='bg-normal part2 container padding'>
 
-  <view class='container'>
+  <view class=''>
     <text class='text-lg text-white'>公司/个人名称</text>
     <view class='text-white lab-warp'>
       <text class='text-btn text-btn-sm btn-circle text-yellow'>1W-2W</text>
@@ -36,16 +37,14 @@
       <view class='text-white text-md'>联系地址：广州市某是的撒肯德基</view>
       <view class='text-white text-md'>官网链接：www.asdasd.com</view>
     </view>
+  </view>
+</view>
 
-    <view class='flex flex-between martop-100'>
-      <view class='btn btn-full btn-white'>
-        立即联系TA
-      </view>
-      <view class=' text-btn '>
-        <image class='icon btn icon-lg btn-white ' src='../../images/share.png'></image>
-      </view>
-    </view>
-
-
+<view class='flex flex-between content-warp bg-dark martop-50'>
+  <view class='btn btn-full btn-white'>
+    立即联系TA
+  </view>
+  <view class=' text-btn '>
+    <image class='icon btn icon-lg btn-white ' src='../../images/share.png'></image>
   </view>
 </view>

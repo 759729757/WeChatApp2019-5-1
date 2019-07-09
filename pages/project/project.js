@@ -21,6 +21,11 @@ Page({
       isFilter: false
     })
   },
+  goDetail(){
+    wx.navigateTo({
+      url: 'projectDetail',
+    })
+  },
   //清除
   clearNav(e){
     this.setData({

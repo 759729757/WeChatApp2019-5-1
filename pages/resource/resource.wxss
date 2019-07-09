@@ -1,10 +1,14 @@
 /* pages/resource/resource.wxss */
 /* 搜索 */
-/* .part-search .text-warp{background-color: #1E2887;border-top-left-radius: 50rpx;border-bottom-left-radius: 50rpx;color: white;font-weight:bold;padding-left: 1em;width: 7em;}
+page{background: #212C9A;}
 .search .input-item{background-color: #1E2887;}
-.input-item input + .icon-search{background-color: #EBC682;border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index: 99;padding: 10rpx 20rpx;box-sizing: border-box;}
-.picker{color: white;margin-right: 2em;}
-.search input {padding-left: 2em;justify-content: space-between} */
+picker{width: 5em;}
+.picker{color: white;margin-right: 0;}
+.search{width: 100%;padding: 3rpx 0;}
+.search input {padding-left: 2em;background: #1E2887;color: #ccc;line-height: 50rpx;}
+.warp{overflow: hidden;zoom: 1;background: #1E2887;position: relative;}
+.stripe-right{z-index: 0;}
+.container{position: relative;z-index: 1;}
 
 /* 内容 */
 .resource{margin-bottom: 50rpx;}
