@@ -6,12 +6,12 @@ var data = {
       "describe": "to Cinema 4D"
     },
     {
-      "image": "http://p1.so.qhimgs1.com/bdr/326__/t01d51d0555bd71a76d.jpg",
+      "image": "https://goss.veer.com/creative/vcg/veer/800water/veer-309676862.jpg",
       "title": "Beginner's Guide",
       "describe": "to Cinema 4D"
     },
     {
-      "image": "http://p1.so.qhmsg.com/bdr/326__/t01d25127cf4c4dfa86.jpg",
+      "image": "https://goss.veer.com/creative/vcg/veer/800water/veer-149723907.jpg",
       "title": "Beginner's Guide",
       "describe": "to Cinema 4D"
     },
@@ -22,7 +22,7 @@ var data = {
       "name": "广州大酒店"
     },
     {
-      "image": "http://p0.so.qhimgs1.com/bdr/326__/t014c514ad3594d06ec.jpg",
+      "image": "https://goss.veer.com/creative/vcg/veer/800water/veer-149723907.jpg",
       "name": "广州大酒店2"
     },
     {

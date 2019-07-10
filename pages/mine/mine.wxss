@@ -1,5 +1,12 @@
 /* pages/mine/mine.wxss */
 /* 顶部 */
+.content-warp{position: relative;}
 .pic{width: 180rpx;height: 180rpx;margin-right: 40rpx;}
-.card{background-color: #EBC682;border-radius: 40rpx 40rpx 0 0;color: white;padding: 20rpx 30rpx;margin-top: 50rpx;}
+.card{background-color: #fff;border-radius: 40rpx 40rpx 0 0;color: #1E2887;padding: 20rpx 30rpx;margin-top: 30rpx;}
 .list>view{margin: 60rpx 0;}
+.list>.flex{padding-left: 2em;padding-right: .5em;}
+
+
+
+
+

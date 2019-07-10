@@ -11,7 +11,7 @@
 .input-item input{background: #fff;border-radius: 50rpx;padding-left: 1em;color: #4E578B;height: 50rpx;padding-right: 80rpx;font-size: 18rpx;}
 .input-item input + .icon-search{right: 0;background-color: #EBC682;border-radius: 50rpx;top: 0;width: 80rpx;height: 52rpx;z-index: 99;padding: 10rpx 20rpx;box-sizing: border-box;}
 
-
+.picker .icon{margin-right: 5rpx;}
 
 
 /* 推荐供应商 */
@@ -22,10 +22,10 @@
 
 /* 影视制作 */
 .yingshi .bigPic{width: 55%;height: 360rpx;border-top-left-radius: 30rpx;border-bottom-left-radius: 30rpx;border:16rpx #212C9A solid;border-right-width: 0;box-sizing: border-box; }
-.yingshi .detail{width: 40%;} 
+.yingshi .detail{width: 45%;padding-right: 20rpx;} 
 .flex.yingshi{align-items: flex-start;}
 .flex.part-video{align-items: flex-end;}
-.part-video{padding-bottom: 80rpx;}
+.part-video{padding-bottom: 40rpx;}
 .part-video .item{background-color: #212C9A;border-radius: 10rpx;padding: 20rpx;position: relative;margin-right: 20rpx;transition: all .3s;}
 .part-video .item:last-child{margin-right:0;}
 
@@ -46,10 +46,9 @@
 
 /* 人力资源 */
 .part-hr-warp{position: relative;overflow: hidden;zoom: 1;}
-.part-hr.scroll-view{justify-content: flex-end;align-items: flex-end;padding-left: 60rpx;}
-.part-hr .item{background-color: #212C9A;width: 220rpx;padding: 20rpx;padding-top: 40rpx;box-sizing: border-box;position: relative;overflow: visible;margin: 40rpx 0;margin-right: 40rpx;vertical-align: text-bottom;}
+.part-hr.scroll-view{justify-content: flex-end;align-items: flex-end;}
+.part-hr .item{background-color: #212C9A;width: 220rpx;padding: 20rpx;padding-top: 40rpx;box-sizing: border-box;position: relative;overflow: visible;margin: 40rpx 0;margin-right: 20rpx;vertical-align: text-bottom;}
 .part-hr .item:last-child{margin-right: 0;}
-
 .part-hr .item.active{background: white;color:#24294C;width: 270rpx;height: 170rpx;}
 .part-hr .item.active .headImg{width: 60rpx;height: 60rpx;border-radius:60rpx;left: 30rpx;top: -30rpx;}
 .part-hr .item.active .title ,.part-hr .item.active .text-content{color:#24294C; }
@@ -78,8 +77,8 @@ transition: padding .35s;}
 .engine-item.active .detail{left: 40rpx;top: 40rpx;}
 .engine-item.active .text-btn{margin-top: 200rpx;}
 
-.engine{padding: 0 20rpx;}
-.engine .item-5{padding: 20rpx;box-sizing: border-box;}
+.engine{padding: 0 30rpx;}
+.engine .item-5{padding: 10rpx;box-sizing: border-box;}
 .engine .item-5 image{height: 350rpx;}
 
 .dot-warp{position: absolute;left: 50%;bottom: 50rpx;width: 50%;text-align: center;}
@@ -91,6 +90,7 @@ transition: padding .35s;}
 .information .item{padding: 20rpx 40rpx;margin: 20rpx 0;display: table;width: 100%;box-sizing: border-box;}
 .information .pic{width: 200rpx;height: 200rpx;}
 .information .table-cell{vertical-align:middle;}
+.information .text-content{height:4.2em;overflow: hidden;}
 .information .content{padding-left: 30rpx;position: relative;box-sizing: border-box;height: 200rpx;
   display: flex;flex-direction: column;justify-content: space-between;}
 .information .content view{max-width: 100%;}
@@ -103,7 +103,7 @@ transition: padding .35s;}
 
 /* 项目需求 */
 .project .pic{width: 300rpx;height: 400rpx;}
-.project .small{display: inline-block;vertical-align: middle;font-size:18rpx;}
+.project .small{display: inline-block;vertical-align: middle;font-size:20rpx;}
 .project .flex-col{justify-content: start;height: 400rpx;}
 .project .flex-col .title{margin: 20rpx 0;}
 .project .text-normal{color: white;}
@@ -113,7 +113,7 @@ transition: padding .35s;}
 .swiper.project{padding-bottom: 40rpx;}
 
 /* 战略伙伴 */
-.part-partner .item{background: #212C9A;width: 280rpx;height: 410rpx;text-align: center;margin-right: 40rpx;}
+.part-partner .item{background: #212C9A;width: 280rpx;height: 410rpx;text-align: center;margin-right: 20rpx;}
 .part-partner .item:last-child{margin-right: 0;}
 .part-partner .text-content{font-size: 24rpx;}
 .part-partner .headImg{width: 150rpx;height: 150rpx;margin: 30rpx;}

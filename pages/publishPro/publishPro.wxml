@@ -62,7 +62,7 @@
       添加标签
     </view>
 
-    <view class='btn btn-xxxxlg btn-yellow'>发布</view>
+    <view class='btn btn-full btn-circle martop-50 btn-yellow'>发布</view>
 
   </view>
 

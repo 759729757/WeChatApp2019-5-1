@@ -8,6 +8,7 @@ Page({
    */
 
   data: {
+    city: ['广州', '深圳', '珠海', '东莞'], cityNum: 0,//城市选择器
 
     autoplay: true,//首页轮播自动播放
     interval: 5000,//时间间隔
@@ -88,7 +89,11 @@ Page({
       viedoIndex: index.currentTarget.id
     })
   },
-
+  bindPickerChange(e) {//城市选择器
+    this.setData({
+      cityNum: e.detail.value
+    })
+  },
   // 工程搭建swiper滑动
   engineSwiper:function(e){
     this.setData({

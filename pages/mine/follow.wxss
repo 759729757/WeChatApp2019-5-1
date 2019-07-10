@@ -9,4 +9,3 @@
 .croner{width: 0;height: 0;border-left: 10rpx solid #000;border-top:10rpx solid transparent;border-bottom:10rpx solid transparent;position: absolute;right: -10rpx;}
 .confirm .btn{border-radius: 2em;width: 5em;}
 
-

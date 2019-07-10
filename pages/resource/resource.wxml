@@ -1,32 +1,30 @@
 <!--pages/project/project.wxml-->
 <wxs module="filter" src="../../filter.wxs"></wxs>
-<!-- 搜索框 -->
-<view class='bg-normal content-warp'>
-  <view class="table table-full ">
+ <view class='bg-normal search-warp'>
+  <!-- 搜索框 -->
+  <view class="table table-full content-warp">
     <view class="text-warp table-cell">
       <picker bindchange="bindPickerChange" value="{{cityNum}}" range="{{city}}">
         <view class="picker">
-          <image class='icon icon-position icon-left' src='/images/position.png'></image>
-          <text class='text-white'>{{city[cityNum]}}</text>
+           <image class='icon icon-position icon-left' src='/images/position.png'></image>{{city[cityNum]}}
         </view>
       </picker>
     </view>
-    <view class='table-cell input-item search '>
+    <view class='table-cell input-item search'>
       <input placeholder='输入你想找的内容' />
-      <image class='icon icon-search icon-right' src='/images/enter.png'></image>
+      <image class='icon icon-search icon-right'  src='/images/enter.png'></image>
     </view>
   </view>
   <!-- 筛选框 -->
-  <view class='content-warp-fullCol flex session'>
+  <view class='content-warp-fullCol flex'>
     <view class='text-center text-gray {{filterActive == 1 ? "text-normal" : ""}}' data-index='1' bindtap='shaixuan'>
-      分类
-      <image class='icon' src='/images/xia.png'></image>
+      分类<image class='icon icon-sm' src='/images/xia.png' ></image>
     </view>
     <view class='text-center text-gray  {{filterActive == 2 ? "text-normal" : ""}}' data-index='2' bindtap='shaixuan'>
-      筛选
-      <image class='icon' src='/images/xia.png'></image>
+      筛选<image class='icon icon-sm' src='/images/xia.png' ></image>
     </view>
   </view>
+
 </view>
 
 <!-- 筛选选项 -->

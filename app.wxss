@@ -1,7 +1,7 @@
 /**app.wxss**/
 @import "font.wxss";
 @import "bg.wxss";
-page{font-size: small; background-color:#1E2887; position: relative;
+page{font-size: small; background-color:#1E2887; position: relative;overflow-x: hidden;
 font-family: "PingFangSC-Medium","苹方","微软雅黑";min-height:100%;
 }
 .stripe-right{top: 0;left: 50%;height: 100%;width: 100%;position: absolute;z-index: -1;}
@@ -32,8 +32,9 @@ image{max-height: 100%;max-width: 100%;}
 input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index: 99;padding: 10rpx 20rpx;box-sizing: border-box;}
 .icon-right{right: 0;}
 .icon-left{left: 0;}
-.icon-sm{width: 26rpx;height: 26rpx;vertical-align: middle;margin: 0 10rpx;}
+.icon-sm{width: 26rpx;height: 26rpx;vertical-align: middle;margin: 0 10rpx;margin-bottom:.2em;}
 .icon-md{width: 48rpx;height: 48rpx;}
+.icon-xmd{width: 80rpx;height: 80rpx;}
 .icon-lg{width: 100rpx;height: 100rpx;}
 
 .logo{width: 70rpx;height: 70rpx;border-radius: 60rpx;display: inline-block;vertical-align: text-top;margin-right: 20rpx;}
@@ -59,7 +60,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 
 /* 字体 */
 .part-title{color:#fff;font-size: large;font-weight: bold;padding:30rpx;display: inline-block;}
-.part-title .small{font-size: 14rpx;color: black;background-color: #e4bb5f;padding: 4rpx 8rpx;display: inline-block;border-radius: 8rpx;margin-left: 10rpx;vertical-align: middle;}
+.part-title .small{font-size: 20rpx;color: black;background-color: #e4bb5f;padding: 4rpx 8rpx;display: inline-block;border-radius: 8rpx;margin-left: 10rpx;vertical-align: middle;}
 .title{font-weight: bold;display: block;color: white;}
 ._title{color: #ccc;}
 .text-gray{color: rgba(255, 255,255, .6);}
@@ -94,6 +95,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 
 /* 布局相关 */
 .body-warp{overflow: hidden;}
+.relative{position: relative;}
 .padding{padding: 20rpx;box-sizing: border-box;}
 .flex{display: flex;justify-content: space-around;align-items: center;}
 .flex-col{display: flex;flex-direction: column;align-items: self-start;}
