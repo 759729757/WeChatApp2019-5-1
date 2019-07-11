@@ -1,4 +1,5 @@
 /* pages/resource/resourceDetail.wxss */
+page{margin-bottom: 200rpx;}
 .container{overflow: hidden;}
 .icon-lg{width: 70rpx;height: 70rpx;margin-right: 0;}
 .part2{padding-top: 50rpx;}

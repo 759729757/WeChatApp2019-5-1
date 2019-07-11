@@ -1,4 +1,5 @@
-
+@import "../../font.wxss";
+page{font-family: "pinfang";}
 .swiper{height: 440rpx;width: 100%;}
 .swiper image{width: 100%;height: 100%;}
 .banner{position: relative;color: white;}
@@ -10,14 +11,14 @@
 .search .input-item{background-color: #1E2887;}
 .input-item input{background: #fff;border-radius: 50rpx;padding-left: 1em;color: #4E578B;height: 50rpx;padding-right: 80rpx;font-size: 18rpx;}
 .input-item input + .icon-search{right: 0;background-color: #EBC682;border-radius: 50rpx;top: 0;width: 80rpx;height: 52rpx;z-index: 99;padding: 10rpx 20rpx;box-sizing: border-box;}
-
+.scroll-view{padding: 0 0 40rpx 0;}
+.scroll-view .item:first-child{margin-left: 40rpx;}
 .picker .icon{margin-right: 5rpx;}
 
 
 /* 推荐供应商 */
 .gongying .headImg{width: 132rpx;height: 132rpx;margin-bottom: 0rpx;border: 2px solid #212C9A;}
 .gongying .item{margin-right: 20rpx;}
-.gongying .item:last-child{margin-right: 0;}
 .gongying .text-content{font-size: 20rpx;}
 
 /* 影视制作 */
@@ -27,7 +28,6 @@
 .flex.part-video{align-items: flex-end;}
 .part-video{padding-bottom: 40rpx;}
 .part-video .item{background-color: #212C9A;border-radius: 10rpx;padding: 20rpx;position: relative;margin-right: 20rpx;transition: all .3s;}
-.part-video .item:last-child{margin-right:0;}
 
 .part-video .text-detail{max-width: 220rpx;font-size: 24rpx;}
 
@@ -41,14 +41,12 @@
 /* 媒体资源 */ 
 .media-warp .item{width: 300rpx;background-color: #212C9A;margin-right: 40rpx;}
 .media-warp .item image{height: 340rpx;}
-.media-warp .item:last-child{margin-right:0;}
-.media-warp .item:first-child{margin-left:40rpx;}
+/* .media-warp .item:first-child{margin-left:40rpx;} */
 
 /* 人力资源 */
 .part-hr-warp{position: relative;overflow: hidden;zoom: 1;}
 .part-hr.scroll-view{justify-content: flex-end;align-items: flex-end;}
 .part-hr .item{background-color: #212C9A;width: 220rpx;padding: 20rpx;padding-top: 40rpx;box-sizing: border-box;position: relative;overflow: visible;margin: 40rpx 0;margin-right: 20rpx;vertical-align: text-bottom;}
-.part-hr .item:last-child{margin-right: 0;}
 .part-hr .item.active{background: white;color:#24294C;width: 270rpx;height: 170rpx;}
 .part-hr .item.active .headImg{width: 60rpx;height: 60rpx;border-radius:60rpx;left: 30rpx;top: -30rpx;}
 .part-hr .item.active .title ,.part-hr .item.active .text-content{color:#24294C; }
@@ -114,7 +112,6 @@ transition: padding .35s;}
 
 /* 战略伙伴 */
 .part-partner .item{background: #212C9A;width: 280rpx;height: 410rpx;text-align: center;margin-right: 20rpx;}
-.part-partner .item:last-child{margin-right: 0;}
 .part-partner .text-content{font-size: 24rpx;}
 .part-partner .headImg{width: 150rpx;height: 150rpx;margin: 30rpx;}
 .part-partner .btn-circle{background-color: #1E2887;border: none;padding: 15rpx 30rpx;}

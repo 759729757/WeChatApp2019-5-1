@@ -2,11 +2,9 @@
 var testData = require('data.js');//拿测试数据
 
 Page({
-
   /**
    * 页面的初始数据
    */
-
   data: {
     city: ['广州', '深圳', '珠海', '东莞'], cityNum: 0,//城市选择器
 
@@ -35,22 +33,7 @@ Page({
 
   },
 
-  //项目翻页
-  // projectPre:function(){
-  //   var i = this.data.projectIndex - 1
-  //   if(i<=0) i=0;
-  //   this.setData({
-  //     projectIndex: i
-  //   })
-  // },
-  // //项目翻页
-  // projectNext: function () {
-  //   var i = this.data.projectIndex + 1
-  //   if (i >= this.data.project.length) i = this.data.project.length - 1;
-  //   this.setData({
-  //     projectIndex: i
-  //   })
-  // },
+
   goRecommend:function(){
     wx.navigateTo({
       url: '/pages/recommend/index',
@@ -112,6 +95,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    console.log('this.getTabBar',this.getTabBar)
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 0
+      })
+    }
+
     console.log('拿到数据',testData);
     this.setData({
       banner: testData.banner,

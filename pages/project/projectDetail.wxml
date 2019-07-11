@@ -47,7 +47,7 @@
   </view>
 </view>
 
-<view class='flex flex-between content-warp bg-dark martop-50'>
+<view class='flex flex-between content-warp bg-dark martop-50 warp-fixed-bottom'>
   <view class='btn btn-full btn-white'>
     立即联系TA
   </view>

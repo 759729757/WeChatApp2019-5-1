@@ -11,26 +11,26 @@
     </block>
   </swiper>
 </view>
-  <!-- 搜索框 -->
-  <view class="table table-full content-warp part-search bg-normal">
-    <view class='table-cell'>
-       <picker bindchange="bindPickerChange" value="{{cityNum}}" range="{{city}}">
-        <view class="picker text-white">
-           <image class='icon icon-position icon-left' src='/images/position.png'></image>
-          {{city[cityNum]}}
-        </view>
-      </picker>
-    </view>
-    <view class="table-cell text-warp">
-      <text>Stay turned</text>
-    </view>
-    <view class='table-cell search'>
-      <view class='input-item '>
-        <input placeholder='输入供应商进行搜索'></input>
-        <image class='icon icon-search' src='/images/enter.png'></image>
+<!-- 搜索框 -->
+<view class="table table-full content-warp part-search bg-normal">
+  <view class='table-cell'>
+    <picker bindchange="bindPickerChange" value="{{cityNum}}" range="{{city}}">
+      <view class="picker text-white">
+        <image class='icon icon-position icon-left' src='/images/position.png'></image>
+        {{city[cityNum]}}
       </view>
+    </picker>
+  </view>
+  <view class="table-cell text-warp">
+    <text>Stay turned</text>
+  </view>
+  <view class='table-cell search'>
+    <view class='input-item '>
+      <input placeholder='输入供应商进行搜索'></input>
+      <image class='icon icon-search' src='/images/enter.png'></image>
     </view>
   </view>
+</view>
 <!-- 推荐供应商 -->
 <view class=''>
   <view class='content-warp part-title-warp '>
@@ -39,43 +39,43 @@
       <text class='small'>Recommended supplier</text>
     </view>
     <view class='item-5'>
-    <view class='pull-right' bindtap='goRecommend'>
-      <text class='text-content'>MORE</text>
-      <image class='icon-more' src='/images/next.png'></image>
-    </view>
+      <view class='pull-right' bindtap='goRecommend'>
+        <text class='text-content'>MORE</text>
+        <image class='icon-more' src='/images/_next.png'></image>
+      </view>
     </view>
   </view>
 
   <scroll-view class='scroll-view gongying content-warp' scroll-x>
-      <view class='item'  wx:for="{{supplier}}" wx:key>
-        <view class='flex session'>
-          <image class='headImg' src="{{item.image}}" ></image>
-        </view>
-        <text class='text-content text-center '>{{item.name}}</text>
+    <view class='item' wx:for="{{supplier}}" wx:key>
+      <view class='flex session'>
+        <image class='headImg' src="{{item.image}}"></image>
       </view>
+      <text class='text-content text-center '>{{item.name}}</text>
+    </view>
 
-    </scroll-view>
+  </scroll-view>
 </view>
 <!-- 影视制作 -->
-  <view class='content-warp part-title-warp '>
-    <view class='item-5'>
-      <text class='part-title'>影视制作</text>
-      <text class='small'>VIDEO MAXKING</text>
-    </view>
-    <view class='item-5'>
+<view class='content-warp part-title-warp '>
+  <view class='item-5'>
+    <text class='part-title'>影视制作</text>
+    <text class='small'>VIDEO MAXKING</text>
+  </view>
+  <view class='item-5'>
     <view class='pull-right'>
       <text class='text-content'>MORE</text>
-      <image class='icon-more' src='/images/next.png'></image>
-    </view>
+      <image class='icon-more' src='/images/_next.png'></image>
     </view>
   </view>
+</view>
 
 <view class='bg-dark'>
   <view class='container-full flex yingshi content-warp-fullRow '>
     <view class='flex-col detail content-warp-fullCol'>
-        <view class='part-title'>{{viedo[viedoIndex].name}}</view>
-        <view class='text-content'>{{viedo[viedoIndex].content}}</view>
-        <text class='text-more '>{{viedo[viedoIndex].note}}</text>
+      <view class='part-title'>{{viedo[viedoIndex].name}}</view>
+      <view class='text-content'>{{viedo[viedoIndex].content}}</view>
+      <text class='text-more '>{{viedo[viedoIndex].note}}</text>
     </view>
     <image class='bigPic' src="{{viedo[viedoIndex].image}}"></image>
   </view>
@@ -93,107 +93,104 @@
 </view>
 
 <!-- 媒体资源 -->
-  <view class='content-warp part-title-warp '>
-    <view class='item-5'>
-      <text class='part-title'>媒体资源</text>
-      <text class='small'>MEDIA RESOURCES</text>
-    </view>
-    <view class='item-5'>
+<view class='content-warp part-title-warp '>
+  <view class='item-5'>
+    <text class='part-title'>媒体资源</text>
+    <text class='small'>MEDIA RESOURCES</text>
+  </view>
+  <view class='item-5'>
     <view class='pull-right'>
       <text class='text-content'>MORE</text>
-      <image class='icon-more' src='/images/next.png'></image>
+      <image class='icon-more' src='/images/_next.png'></image>
     </view>
+  </view>
+</view>
+
+<scroll-view class='scroll-view media-warp content-warp-full' scroll-x>
+
+  <view class='item' wx:for="{{media}}" wx:key>
+    <view class=''>
+      <image class='' src="{{item.image}}"></image>
+    </view>
+    <view class='content-warp'>
+      <view class='title'>{{item.city}}</view>
+      <view class='title'>{{item.address}}</view>
+      <view class='text-content'>{{item.describe}}</view>
+      <view class='text-more'>{{item.note}}</view>
     </view>
   </view>
 
-    <scroll-view class='scroll-view media-warp content-warp-full' scroll-x>
-
-      <view class='item' wx:for="{{media}}" wx:key>
-        <view class=''>
-          <image class='' src="{{item.image}}"></image>
-        </view>
-        <view class='content-warp'>
-          <view class='title'>{{item.city}}</view>
-          <view class='title'>{{item.address}}</view>
-          <view class='text-content'>{{item.describe}}</view>
-          <view class='text-more'>{{item.note}}</view>
-        </view>
-      </view>
-
-    </scroll-view>
+</scroll-view>
 
 <!-- 人力资源 -->
 <view class='content-warp part-title-warp '>
-    <view class='item-5'>
-      <text class='part-title'>人力资源</text>
-      <text class='small'>HUMAN RESOURCES</text>
-    </view>
-    <view class='item-5'>
+  <view class='item-5'>
+    <text class='part-title'>人力资源</text>
+    <text class='small'>HUMAN RESOURCES</text>
+  </view>
+  <view class='item-5'>
     <view class='pull-right'>
       <text class='text-content'>MORE</text>
-      <image class='icon-more' src='/images/next.png'></image>
-    </view>
-    </view>
-  </view>
-  <view class=' content-warp-fullCol bg-dark'>
-    <view class='part-hr-warp'>
-      <scroll-view class='scroll-view part-hr pull-left' scroll-x>
-
-        <view class='item  {{index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr}}" wx:key 
-        bindtap='hr1Click'>
-          <image class='headImg' src="{{item.image}}"></image>
-          <view class='title'>{{item.name}}</view>
-          <text class='text-content'>{{item.describe}}</text>
-        </view>
-
-      </scroll-view>
-    </view>
-
-    <view class='part-hr-warp'>
-      <scroll-view class='scroll-view part-hr pull-left' scroll-x>
-
-        <view class='item  {{"2"+index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr}}" wx:key 
-        bindtap='hr2Click'>
-          <image class='headImg' src="{{item.image}}"></image>
-          <view class='title'>{{item.name}}</view>
-          <text class='text-content'>{{item.describe}}</text>
-        </view>
-
-      </scroll-view>
-    </view>
-
-    <view class='part-hr-warp'>
-      <scroll-view class='scroll-view part-hr pull-left' scroll-x>
-
-        <view class='item  {{"3"+index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr}}" wx:key 
-        bindtap='hr3Click'>
-          <image class='headImg' src="{{item.image}}"></image>
-          <view class='title'>{{item.name}}</view>
-          <text class='text-content'>{{item.describe}}</text>
-        </view>
-
-      </scroll-view>
+      <image class='icon-more' src='/images/_next.png'></image>
     </view>
   </view>
+</view>
+<view class=' content-warp-fullCol bg-dark'>
+  <view class='part-hr-warp'>
+    <scroll-view class='scroll-view part-hr pull-left' scroll-x>
+
+      <view class='item  {{index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr}}" wx:key bindtap='hr1Click'>
+        <image class='headImg' src="{{item.image}}"></image>
+        <view class='title'>{{item.name}}</view>
+        <text class='text-content'>{{item.describe}}</text>
+      </view>
+
+    </scroll-view>
+  </view>
+
+  <view class='part-hr-warp'>
+    <scroll-view class='scroll-view part-hr pull-left' scroll-x>
+
+      <view class='item  {{"2"+index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr}}" wx:key bindtap='hr2Click'>
+        <image class='headImg' src="{{item.image}}"></image>
+        <view class='title'>{{item.name}}</view>
+        <text class='text-content'>{{item.describe}}</text>
+      </view>
+
+    </scroll-view>
+  </view>
+
+  <view class='part-hr-warp'>
+    <scroll-view class='scroll-view part-hr pull-left' scroll-x>
+
+      <view class='item  {{"3"+index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr}}" wx:key bindtap='hr3Click'>
+        <image class='headImg' src="{{item.image}}"></image>
+        <view class='title'>{{item.name}}</view>
+        <text class='text-content'>{{item.describe}}</text>
+      </view>
+
+    </scroll-view>
+  </view>
+</view>
 
 
 <!-- 演绎资源 -->
 <view class='content-warp part-title-warp '>
   <view class='item-5'>
-      <text class='part-title'>演绎资源</text>
-      <text class='small'>PERFORMANCE RESOURCES</text>
-    </view>
-    <view class='item-5'>
+    <text class='part-title'>演绎资源</text>
+    <text class='small'>PERFORMANCE RESOURCES</text>
+  </view>
+  <view class='item-5'>
     <view class='pull-right'>
       <text class='text-content'>MORE</text>
-      <image class='icon-more' src='/images/next.png'></image>
+      <image class='icon-more' src='/images/_next.png'></image>
     </view>
   </view>
 </view>
 
 <view class=' part-ziyuan content-warp'>
   <view class='flex part-ziyuan-warp'>
-  
+
     <view class=' flex-center '>
       <view class='flex-col'>
         <view class='item item2'>
@@ -206,19 +203,19 @@
         </view>
       </view>
     </view>
-  <view class=' flex-center '>
-    <view class='flex-col'>
+    <view class=' flex-center '>
+      <view class='flex-col'>
 
-      <view class='item'>
-         <image src="{{performance[1].image}}"></image>
+        <view class='item'>
+          <image src="{{performance[1].image}}"></image>
           <view class='detail'>
             <view class='text-normal'>{{performance[1].title}}</view>
             <view class='text-normal'>{{performance[1].subTitle}}</view>
             <text class='text-btn btn-circle text-btn-sm'>{{performance[1].note}}</text>
           </view>
-      </view>
-      <view class='item'>
-           <image src="{{performance[2].image}}"></image>
+        </view>
+        <view class='item'>
+          <image src="{{performance[2].image}}"></image>
           <view class='detail'>
             <view class='text-normal'>{{performance[2].title}}</view>
             <view class='text-normal'>{{performance[2].subTitle}}</view>
@@ -229,19 +226,19 @@
     </view>
 
   </view>
-  
+
 
 </view>
 <!-- 工程搭建 -->
 <view class='content-warp part-title-warp '>
   <view class='item-5'>
-      <text class='part-title'>工程搭建</text>
-      <text class='small'>ENGINEERING CONSTRUCTION</text>
-    </view>
-    <view class='item-5'>
+    <text class='part-title'>工程搭建</text>
+    <text class='small'>ENGINEERING CONSTRUCTION</text>
+  </view>
+  <view class='item-5'>
     <view class='pull-right'>
       <text class='text-content'>MORE</text>
-      <image class='icon-more' src='/images/next.png'></image>
+      <image class='icon-more' src='/images/_next.png'></image>
     </view>
   </view>
 </view>
@@ -264,7 +261,7 @@
       <view class="dot {{ idx == engineSwiperIndex ?'active':'' }}"></view>
     </block>
   </view> -->
-   <block wx:for="{{engine}}"  wx:for-index="idx" wx:key>
+  <block wx:for="{{engine}}" wx:for-index="idx" wx:key>
     <view class='item-5'>
       <image aspectFill src="{{item.image}}" class="slide-image" height="160" />
       <view class='text-aline _title'>{{ item.title }}</view>
@@ -277,16 +274,16 @@
 <!-- 快速资讯 -->
 <view class=' float-warp'>
 
-   <view class='content-warp part-title-warp '>
+  <view class='content-warp part-title-warp '>
     <view class='item-5'>
       <text class='part-title'>快速资讯</text>
       <text class='small'>Fast information</text>
     </view>
     <view class='item-5'>
-    <view class='pull-right' bindtap='goZixun'>
-      <text class='text-content'>MORE</text>
-      <image class='icon-more' src='/images/next.png'></image>
-    </view>
+      <view class='pull-right' bindtap='goZixun'>
+        <text class='text-content'>MORE</text>
+        <image class='icon-more' src='/images/_next.png'></image>
+      </view>
     </view>
   </view>
 
@@ -298,7 +295,7 @@
         <!-- <text class='badge'>{{index}}</text> -->
         <view class='text-normal'>{{item.title}}</view>
         <text class='text-content'>{{item.subTitle}}</text>
-        <view class='text-gray text-md'>{{item.date}} 
+        <view class='text-gray text-md'>{{item.date}}
           <text class='pull-right text-sm'>{{item.time}}</text>
         </view>
       </view>
@@ -318,37 +315,37 @@
     <view class='item-5'>
       <view class='pull-right'>
         <text class='text-content'>MORE</text>
-        <image class='icon-more' src='/images/next.png'></image>
+        <image class='icon-more' src='/images/_next.png'></image>
       </view>
     </view>
-  </view>  
+  </view>
 
 </view>
 
 
 <swiper class='swiper project bg-normal' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
-    <block wx:for="{{project}}" wx:key>
-      <swiper-item class="banner">
+  <block wx:for="{{project}}" wx:key>
+    <swiper-item class="banner">
 
-        <view class='item-5 content-warp'>
-          <image class='pic' src='{{item.image}}'></image>
-        </view>
-        <view class='item-5 content-warp-full'>
-          <view class='flex-col'>
-            <view class='text-gray text-md width-full'>
-              <text class=' text-gray pull-left'>{{index+1}}</text>
-              <text class='pull-right'>{{item.time}}</text>
-            </view>
-            
-            <view class='text-normal title'>{{item.name}}</view>
-            <view class='text-content'>{{item.describe}}</view>
+      <view class='item-5 content-warp'>
+        <image class='pic' src='{{item.image}}'></image>
+      </view>
+      <view class='item-5 content-warp-full'>
+        <view class='flex-col'>
+          <view class='text-gray text-md width-full'>
+            <text class=' text-gray pull-left'>{{index+1}}</text>
+            <text class='pull-right'>{{item.time}}</text>
           </view>
-          <text class='abs-right-bottom small text-gray'>{{index+1}}/{{project.length}}</text>
+
+          <view class='text-normal title'>{{item.name}}</view>
+          <view class='text-content'>{{item.describe}}</view>
         </view>
-        
-      </swiper-item>
-    </block>
-  </swiper>
+        <text class='abs-right-bottom small text-gray'>{{index+1}}/{{project.length}}</text>
+      </view>
+
+    </swiper-item>
+  </block>
+</swiper>
 
 
 
@@ -360,13 +357,13 @@
       <text class='part-title'>战略合作伙伴</text>
       <text class='small'>Strategic Partners</text>
     </view>
-     <view class='item-5'>
-      <view class=''>
+    <view class='item-5'>
+      <view class='pull-right'>
         <text class='text-content'>MORE</text>
-        <image class='icon-more' src='/images/next.png'></image>
+        <image class='icon-more' src='/images/_next.png'></image>
       </view>
     </view>
-  </view>  
+  </view>
 
 
   <scroll-view class='scroll-view part-partner content-warp' scroll-x>
@@ -377,9 +374,8 @@
       <view class='text-content'>{{item.describe}}</view>
       <text class='btn-circle btn-text'>了解更多</text>
     </view>
-    
+
 
   </scroll-view>
 
 </view>
-
