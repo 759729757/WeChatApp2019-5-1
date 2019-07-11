@@ -122,7 +122,7 @@
 
 </scroll-view>
 
-<!-- 人力资源 -->
+<!-- 人力资源  -->
 <view class='content-warp part-title-warp '>
   <view class='item-5'>
     <text class='part-title'>人力资源</text>
@@ -135,42 +135,46 @@
     </view>
   </view>
 </view>
-<view class=' content-warp-fullCol bg-dark'>
-  <view class='part-hr-warp'>
-    <scroll-view class='scroll-view part-hr pull-left' scroll-x>
-
+<view class=' content-warp bg-dark float-warp part-hr'>
+  <view class='part-hr-warp item-3'>
       <view class='item  {{index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr}}" wx:key bindtap='hr1Click'>
-        <image class='headImg' src="{{item.image}}"></image>
-        <view class='title'>{{item.name}}</view>
+        <view class='flex flex-between'>
+          <view>
+            <view class='title'>{{item.name}}</view>
+            <view class='text-gray text-sm'>{{item.major}}</view>
+          </view>
+           <image class='icon headImg icon-md' src="{{item.image}}"></image>
+        </view>
         <text class='text-content'>{{item.describe}}</text>
       </view>
-
-    </scroll-view>
   </view>
 
-  <view class='part-hr-warp'>
-    <scroll-view class='scroll-view part-hr pull-left' scroll-x>
-
+  <view class='part-hr-warp item-3'>
       <view class='item  {{"2"+index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr}}" wx:key bindtap='hr2Click'>
-        <image class='headImg' src="{{item.image}}"></image>
-        <view class='title'>{{item.name}}</view>
+        <view class='flex flex-between'>
+          <view>
+            <view class='title'>{{item.name}}</view>
+            <view class='text-gray text-sm'>{{item.major}}</view>
+          </view>
+           <image class='icon headImg icon-md' src="{{item.image}}"></image>
+        </view>
         <text class='text-content'>{{item.describe}}</text>
       </view>
-
-    </scroll-view>
   </view>
 
-  <view class='part-hr-warp'>
-    <scroll-view class='scroll-view part-hr pull-left' scroll-x>
-
+  <view class='part-hr-warp item-3'>
       <view class='item  {{"3"+index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr}}" wx:key bindtap='hr3Click'>
-        <image class='headImg' src="{{item.image}}"></image>
-        <view class='title'>{{item.name}}</view>
+        <view class='flex flex-between'>
+          <view>
+            <view class='title'>{{item.name}}</view>
+            <view class='text-gray text-sm'>{{item.major}}</view>
+          </view>
+           <image class='icon headImg icon-md' src="{{item.image}}"></image>
+        </view>
         <text class='text-content'>{{item.describe}}</text>
       </view>
-
-    </scroll-view>
   </view>
+
 </view>
 
 

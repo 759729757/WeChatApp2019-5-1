@@ -93,19 +93,18 @@ var data = {
     {
       "image": "https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640",
       "name": "陈田",
+      "major":"导演资源",
       "describe": "舞台3D搭v 的 饭都不敢发那个"
     }, {
       "image": "http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg",
       "name": "陈田",
+      "major": "导演资源",
       "describe": "舞台3D搭建v 繁华的 v 都不敢发那个"
     }, {
       "image": "https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640",
       "name": "陈田",
+      "major": "导演资源",
       "describe": "舞台3D搭建v 繁华都不敢发那个"
-    }, {
-      "image": "http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg",
-      "name": "陈田",
-      "describe": "舞台3D搭 饭都不敢发那个"
     }
   ],
   "performance": [

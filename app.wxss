@@ -40,7 +40,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .icon-sm{width: 26rpx;height: 26rpx;vertical-align: middle;margin: 0 10rpx;margin-bottom:.2em;}
 .icon-md{width: 48rpx;height: 48rpx;}
 .icon-xmd{width: 80rpx;height: 80rpx;}
-.icon-lg{width: 100rpx;height: 100rpx;}
+.icon-lg{width: 100rpx;height: 100rpx;} 
 
 .logo{width: 70rpx;height: 70rpx;border-radius: 60rpx;display: inline-block;vertical-align: text-top;margin-right: 20rpx;}
 
@@ -68,6 +68,7 @@ input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index:
 .part-title .small{font-size: 20rpx;color: black;background-color: #e4bb5f;padding: 4rpx 8rpx;display: inline-block;border-radius: 8rpx;margin-left: 10rpx;vertical-align: middle;}
 .title{font-weight: bold;display: block;color: white;}
 ._title{color: #7178B3;}
+.text-normal{color: #212C9A;}
 .text-gray{color: #7178B3;}
 .text-white{color: white;}
 .text-yellow{color: #EBC682;}
