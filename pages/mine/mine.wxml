@@ -19,15 +19,15 @@
   </view>
   <view class=' flex text-center'>
     <view class=''>
-      <view class='text-lg text-white'>128</view>
+      <view class='text-xmd text-white'>128</view>
       <view class='_title'>收藏</view>
     </view>
     <view class=''>
-      <view class='text-lg text-white'>128</view>
+      <view class='text-xmd text-white'>128</view>
       <view class='_title'>收藏</view>
     </view>
     <view class=''>
-      <view class='text-lg text-white'>128</view>
+      <view class='text-xmd text-white'>128</view>
       <view class='_title'>收藏</view>
     </view>
   </view>
@@ -54,7 +54,7 @@
   <view class='flex flex-between' bindtap='goDetail'>
     <view class='flex'>
       <!-- <image class='icon icon-md' src='../../images/vip.png'></image> -->
-      <view class='text-white text-lg'>会员资料</view>
+      <view class='text-white '>会员资料</view>
     </view>
     <image class='icon icon-sm pull-right' src='../../images/next2.png'></image>
   </view>
@@ -62,15 +62,15 @@
   <view class='flex flex-between' bindtap='goCredential'>
     <view class='flex'>
       <!-- <image class='icon icon-md' src='../../images/shield.png'></image> -->
-      <view class='text-white text-lg'>我的认证</view>
+      <view class='text-white '>我的认证</view>
     </view>
     <image class='icon icon-sm pull-right' src='../../images/next2.png'></image>
   </view>
 
-  <view class='flex flex-between'>
+  <view class='flex flex-between' bindtap='goAudit'>
     <view class='flex'>
       <!-- <image class='icon icon-md' src='../../images/file.png'></image> -->
-      <view class='text-white text-lg'>我的审核</view>
+      <view class='text-white '>我的审核</view>
     </view>
     <image class='icon icon-sm pull-right' src='../../images/next2.png'></image>
   </view>
@@ -78,7 +78,7 @@
   <view class='flex flex-between'>
     <view class='flex'>
       <!-- <image class='icon icon-md' src='../../images/server.png'></image> -->
-      <view class='text-white text-lg'>联系客服</view>
+      <view class='text-white '>联系客服</view>
     </view>
     <image class='icon icon-sm pull-right' src='../../images/next2.png'></image>
   </view>

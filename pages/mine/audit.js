@@ -37,7 +37,7 @@ Page({
       data: data
     })
     wx.setNavigationBarTitle({
-      title: '关注列表',
+      title: '我的审核',
     })
   },
 

@@ -24,7 +24,7 @@
   <view class="table-cell text-warp">
     <text>Stay turned</text>
   </view>
-  <view class='table-cell search'>
+  <view class='table-cell search bg-dark'>
     <view class='input-item '>
       <input placeholder='输入供应商进行搜索'></input>
       <image class='icon icon-search' src='/images/enter.png'></image>

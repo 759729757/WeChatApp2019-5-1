@@ -14,7 +14,7 @@ var data = {
       "image": "https://goss.veer.com/creative/vcg/veer/800water/veer-149723907.jpg",
       "title": "Beginner's Guide",
       "describe": "to Cinema 4D"
-    },
+    }
   ],
   "supplier": [
     {
@@ -147,7 +147,7 @@ var data = {
       "image": "https://p.ssl.qhimg.com/dm/417_417_/t01e4d67a651ab1d53c.jpg",
       "title": "2018广州分等会啊实打实的",
       "describe": "Dnvncing"
-    },
+    }
   ],
 
   "information": [

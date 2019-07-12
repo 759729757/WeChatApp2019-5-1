@@ -55,7 +55,7 @@
   <view class='stripe stripe-right'></view>
     <view class='container'>
        <view class='content-warp media item-5' wx:for="{{ data[navLeftActive].data }}" wx:key bindtap='goDetail'>
-        <view class='title text-lg'>{{item.title}}</view>
+        <view class='title text-xmd'>{{item.title}}</view>
         <view class='text-content'>{{item.content}}</view>
 
         <view class='flex flex-between table-full ' >

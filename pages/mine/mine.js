@@ -12,6 +12,11 @@ Page({
       url: '/pages/mine/mineDetail',
     })
   },
+  goAudit:function(){
+    wx.navigateTo({
+      url: 'audit',
+    })
+  },
   goCredential:function(){
     wx.navigateTo({
       url: '/pages/credential/index',
