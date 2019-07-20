@@ -17,9 +17,9 @@
      <image class='icon ' src='../../images/tel.png'></image>
       联系电话：123827368
     </view>
-    <view class='bg-dark'>
+    <view class='bg-dark flex'>
      <image class='icon ' src='../../images/address.png'></image>
-      公司地址：广东省广州市白云区沙河镇8东1单元201
+      <text>公司地址：广东省广是是是州市白云区沙河镇8东1单元201</text>
     </view>
   </view>
 </view>

@@ -7,13 +7,11 @@
         <text class='small'>Recommended supplier</text>
       </view>
       <view class='item-5'>
-        <view class='pull-right'>
-          <view class='table-cell search'>
-            <view class='input-item '>
-              <input placeholder='供应商搜索'></input>
-              <image class='icon icon-search' src='/images/enter.png'></image>
-            </view>
-        </view>
+        <view class=' search'>
+          <view class='input-item '>
+            <input placeholder='供应商搜索'></input>
+            <image class='icon icon-search' src='/images/enter.png'></image>
+          </view>
       </view>
     </view>
   </view>

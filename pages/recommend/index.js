@@ -26,6 +26,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    wx.setNavigationBarTitle({
+      title: '推荐供应商',
+    })
     var data = testData.supplier;
     var l = data.length;
     var harf = Math.floor(l/2);

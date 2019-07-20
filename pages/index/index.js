@@ -1,6 +1,6 @@
 // pages/index2/index2.js
+var app = getApp();
 var testData = require('data.js');//拿测试数据
-
 Page({
   /**
    * 页面的初始数据
@@ -95,7 +95,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log('this.getTabBar',this.getTabBar)
     if (typeof this.getTabBar === 'function' &&
       this.getTabBar()) {
       this.getTabBar().setData({
@@ -103,7 +102,6 @@ Page({
       })
     }
 
-    console.log('拿到数据',testData);
     this.setData({
       banner: testData.banner,
       supplier: testData.supplier,

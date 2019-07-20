@@ -6,7 +6,7 @@
   height: 0;
   color: transparent;
 }
-page{font-size: small; background-color:#1E2887; position: relative;overflow-x: hidden;
+page{font-size: small; background-color:#192079; position: relative;overflow-x: hidden;
 font-family: "pinfang";min-height:100%;
 }
 .stripe-right{top: 0;left: 50%;height: 100%;width: 50%;position: absolute;z-index: -1;}
@@ -37,7 +37,7 @@ image{max-height: 100%;max-width: 100%;}
 input + .icon{border-radius: 50rpx;top: 5rpx;width: 80rpx;height: 54rpx;z-index: 99;padding: 10rpx 20rpx;box-sizing: border-box;}
 .icon-right{right: 0;}
 .icon-left{left: 0;}
-.icon-sm{width: 26rpx;height: 26rpx;vertical-align: middle;margin: 0 10rpx;margin-bottom:.2em;}
+.icon-sm{width: 26rpx;height: 26rpx;vertical-align: middle;margin: 0 10rpx;}
 .icon-md{width: 48rpx;height: 48rpx;}
 .icon-xmd{width: 80rpx;height: 80rpx;}
 .icon-lg{width: 100rpx;height: 100rpx;} 
@@ -170,7 +170,7 @@ background: rgba(0,0,0,.24);}
 
 /* 公用 */
 .bg-normal{background: #212C9A;border-radius: 20rpx;}
-.bg-dark{background: #1E2887;}
+.bg-dark{background: #192079;}
 .info-warp{margin-top: 60rpx;padding-bottom: 20rpx;border-bottom: 1px solid rgba(255, 255, 255, .6);}
 .tab{padding: 15rpx 30rpx;border-radius: 60rpx;background: white;color: #212C9A;white-space: nowrap;margin: 15rpx 0;}
 .tab-warp{margin-top: 60rpx;}
@@ -185,9 +185,9 @@ background: rgba(0,0,0,.24);}
 .text-col{margin-top:30rpx;}
 
 /* 搜索框 */
-.part-search .text-warp{background-color: #1E2887;border-top-left-radius: 50rpx;border-bottom-left-radius: 50rpx;color: white;font-weight:bold;padding-left: 1em;width: 7em;}
+.part-search .text-warp{background-color: #192079;border-top-left-radius: 50rpx;border-bottom-left-radius: 50rpx;color: white;font-weight:bold;padding-left: 1em;width: 7em;}
 .search{width: 280rpx;}
-.search .input-item{background-color: #1E2887;}
-.input-item input{background: #fff;border-radius: 50rpx;padding-left: 1em;color: #4E578B;line-height: 50rpx;height: 50rpx;padding-right: 80rpx;font-size: 20rpx;}
-.input-item input + .icon-search{right: 4rpx;background-color: #EBC682;border-radius: 50rpx;top: 12rpx;width: 70rpx;height: 44rpx;z-index: 99;padding: 10rpx 20rpx;box-sizing: border-box;}
+.search .input-item{background-color: #192079;}
+.input-item input{background: #fff;border-radius: 50rpx;padding-left: 1em;color: #4E578B;line-height: 52rpx;height: 52rpx;padding-right: 80rpx;font-size: 20rpx;}
+.input-item input + .icon-search{right: 4rpx;background-color: #EBC682;border-radius: 50rpx;top: 8rpx;width: 80rpx;height: 52rpx;z-index: 99;padding: 10rpx 20rpx;box-sizing: border-box;}
 .part-title-warp {margin-top: 0;}

@@ -7,7 +7,7 @@
       <image class='headImg pic' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
       <view>
         <view class='title text-xxlg'>Blanche Hall</view>
-        <view class='_title'>
+        <view class='_title flex flex-left'>
           Blanche Hall
           <image class='icon icon-sm' src='../../images/headIcon.png'></image>
         </view>
@@ -34,8 +34,8 @@
   <view class=''>
     <view class='content-warp-fullCol'>
       <view class='flex flex-between card text-white' bindtap='goCard'>
-        <view class='text-bold'>
-          V AD黑卡
+        <view class='text-bold flex'>
+          <image class='icon icon-sm' mode='aspectFit' src='../../images/V.png'></image> AD黑卡
         </view>
         <view class='text-sm'>
           点击查看特权

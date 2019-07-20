@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 8,
 			"list": [
 				{
 					"id": 0,
@@ -101,7 +101,7 @@
 				{
 					"id": 8,
 					"name": "当前测试",
-					"pathName": "pages/mine/pubilsh",
+					"pathName": "pages/login/index",
 					"query": "",
 					"scene": null
 				}

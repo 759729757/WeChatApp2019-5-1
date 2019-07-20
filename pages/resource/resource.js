@@ -9,7 +9,7 @@ Page({
     city: ['广州', '深圳', '珠海', '东莞'], cityNum: 0,//城市选择器
     isFilter: false,
     data: [],//页面全部数据
-    filterActive: 0,
+    filterActive: 1,
     navLeftActive: 0,
     navContentActive: "",
 
@@ -78,6 +78,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    wx.setNavigationBarTitle({
+      title: '找资源',
+    })
     this.setData({
       data: data
     })

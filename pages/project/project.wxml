@@ -31,7 +31,7 @@
 <!-- 筛选选项 -->
 <view wx:if="{{isFilter}}" class=' tab-warp'>
     <view class='nav-left-warp bg-dark'>
-      <view class='nav-left'>
+      <view class='nav-left'> 
         <view class='item _title {{navLeftActive == index?"active":""}}'
           wx:for="{{ data }}" wx:key
           data-index="{{index}}"

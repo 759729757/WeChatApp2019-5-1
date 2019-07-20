@@ -6,19 +6,20 @@ page{font-family: "pinfang";}
 .ban-text,.ban-title{position: absolute;left: 40rpx;top: 42%;font-weight: bold;font-size: 40rpx}
 .ban-text{top: calc(42% + 1.4em);width: calc(100% - 80rpx);}
 .companyLogo{width: 100rpx;height: 50rpx;vertical-align: middle;}
-.part-search .text-warp{background-color: #1E2887;border-top-left-radius: 50rpx;border-bottom-left-radius: 50rpx;color: white;font-weight:bold;padding-left: 1em;width: 7em;}
+.part-search .text-warp{background-color: #192079;border-top-left-radius: 50rpx;border-bottom-left-radius: 50rpx;color: white;font-weight:bold;padding-left: 1em;width: 7em;}
 .search{width: 280rpx;}
-.search .input-item{background-color: #1E2887;}
+.search .input-item{background-color: #1E2887;border-top-right-radius: 60rpx;border-bottom-right-radius: 60rpx;}
+.table-cell.search{border-top-right-radius: 60rpx;border-bottom-right-radius: 60rpx;}
 .input-item input{background: #fff;border-radius: 50rpx;padding-left: 1em;color: #4E578B;height: 50rpx;padding-right: 80rpx;font-size: 18rpx;}
 .input-item input + .icon-search{right: 0;background-color: #EBC682;border-radius: 50rpx;top: 0;width: 80rpx;height: 52rpx;z-index: 99;padding: 10rpx 20rpx;box-sizing: border-box;}
 .scroll-view{padding: 0 0 40rpx 0;}
 .scroll-view .item:first-child{margin-left: 40rpx;}
 .picker .icon{margin-right: 5rpx;}
-
+.pull-right .text-content{color: #fff;}
 
 /* 推荐供应商 */
 .gongying .headImg{width: 132rpx;height: 132rpx;margin-bottom: 0rpx;border: 2px solid #212C9A;}
-.gongying .item{margin-right: 20rpx;}
+.gongying .item{margin-right: 40rpx;}
 .gongying .text-content{font-size: 20rpx;}
 
 /* 影视制作 */
@@ -87,7 +88,7 @@ transition: padding .35s;}
 .information .item{padding: 20rpx 40rpx;margin: 20rpx 0;display: table;width: 100%;box-sizing: border-box;}
 .information .pic{width: 200rpx;height: 200rpx;}
 .information .table-cell{vertical-align:middle;}
-.information .text-content{height:4.2em;overflow: hidden;}
+.information .text-content{height:3.6em;overflow: hidden;}
 .information .content{padding-left: 30rpx;position: relative;box-sizing: border-box;height: 200rpx;
   display: flex;flex-direction: column;justify-content: space-between;}
 .information .content view{max-width: 100%;}
@@ -112,7 +113,7 @@ transition: padding .35s;}
 /* 战略伙伴 */
 .part-partner .item{background: #212C9A;width: 280rpx;height: 410rpx;text-align: center;margin-right: 20rpx;}
 .part-partner .text-content{font-size: 24rpx;}
-.part-partner .headImg{width: 150rpx;height: 150rpx;margin: 30rpx;}
+.part-partner .headImg{width: 150rpx;height: 150rpx;margin: 30rpx;box-sizing: border-box;border: 6px #1E2887 solid;}
 .part-partner .btn-circle{background-color: #1E2887;border: none;padding: 15rpx 30rpx;}
 
 

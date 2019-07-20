@@ -12,7 +12,7 @@
     </view>
     <view class='table-cell input-item search'>
       <input placeholder='输入你想找的内容' />
-      <image class='icon icon-search icon-right'  src='/images/enter.png'></image>
+      <image class='icon icon-search icon-right' src='/images/enter.png'></image>
     </view>
   </view>
   <!-- 筛选框 -->
@@ -61,18 +61,21 @@
 
           <view class='table-cell'>
             <view>
-              <text class='_title text-small'>{{item.name}}</text>
-              <image class='icon icon-sm' src='/images/gou.png'></image>
-              <image class='icon icon-sm' src='/images/edit2.png'></image>
+              <view class='flex text-md text-white text-small'>{{item.name}}
+                <image class='icon icon-sm' src='/images/gou.png'></image>
+                <image class='icon icon-sm' src='/images/edit2.png'></image>
+              </view>
             </view>
             <view class='table-cell text-gray text-small'>
               {{item.time}}
             </view>
           </view>
         </view>
-        <view>
-          <image class='icon icon-sm' src='/images/eyes.png'></image>
-          <text class='text-gray text-small'>{{item.read}}</text>
+        <view> 
+          <view class='text-gray flex text-small'>
+            <image class='icon icon-sm' mode='aspectFit' src='/images/eyes.png'></image>
+            {{item.read}}
+          </view>
         </view>
 
       </view>

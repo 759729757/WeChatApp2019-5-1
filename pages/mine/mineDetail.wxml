@@ -2,26 +2,31 @@
 <view class='stripe stripe-right'></view>
 <view class='body-warp'>
   <view class='warp bg-normal'>
-    <image class='headImg' src='http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg'></image>
+    <image class='headImg' bindtap='chooseImg' src='{{data.headPortrait}}'></image>
     <view class='container'>
       <view class='line-left text-white'>
         账号信息
-      </view>
+      </view> 
       <view class='text-white tr'>
         <text class='headTitle'>昵称</text>
-        <text class='text-gray'>管管</text>
+        <input class='text-gray' value="{{ data.nickName }}" disabled='{{!isEdit}}' bindinput="nameInput" placeholder="请输入昵称" />
       </view>
       <view class='text-white tr'>
         <text class='headTitle'>个人认证</text>
-        <text class='text-gray'>个人认证</text>
+        <text class='text-gray' wx:if="{{data.qualificationsAuthenticated}}">已认证</text>
+        <text class='text-gray' wx:if="{{!data.qualificationsAuthenticated}}">未认证</text>
       </view>
       <view class='text-white tr'>
         <text class='headTitle'>注册时间</text>
-        <text class='text-gray'>2019-02-23</text>
+        <picker class='text-gray' mode="date" disabled='true' value="{{data.createdTime}}" start="2015-09-01" end="{{nowDate}}" bindchange="bindDateChange">
+          <view class="picker">
+            {{data.createdTime}}
+          </view>
+        </picker>
       </view>
       <view class='text-white tr'>
         <text class='headTitle'>信用</text>
-        <text class='text-gray'>500</text>
+        <text class='text-gray'>{{data.credit || '暂无'}}</text>
       </view>
       
     </view>
@@ -29,30 +34,34 @@
   <view class='bg-normal'>
     <view class='container'>
       <view class='line-left text-white'>
-        账号信息
+        个人信息
       </view>
       <view class='text-white tr'>
         <text class='headTitle'>性别</text>
         <!-- <text class='text-gray'>请选择</text> -->
-          <picker class='text-gray' bindchange="bindPickerChange" value="{{index}}" range="{{sex}}">
+          <picker class='text-gray' disabled='{{!isEdit}}' bindchange="bindPickerChange" value="{{data.sex}}" range="{{sex}}">
             <view class="picker text-gray">
-              {{sex[index]}}
+              {{sex[data.sex]}}
             </view>
           </picker>
          </view>
       <view class='text-white tr'>
         <text class='headTitle'>生日</text>
-        <input class='text-gray' placeholder="请填写您的生日"/>
+             <picker class='text-gray' mode="date" disabled='{{!isEdit}}' value="{{data.brithday}}" start="1950-09-01" end="{{nowDate}}" bindchange="bindbriChange">
+          <view class="picker">
+            {{data.birthday}}
+          </view>
+        </picker>
       </view>
       <view class='text-white tr'>
         <text class='headTitle'>所在地</text>
-        <input class='text-gray' placeholder="请填写您的所在地"/>
+        <input class='text-gray' value="{{data.location}}" disabled='{{!isEdit}}' bindinput='locInput' placeholder="请填写您的所在地"/>
       </view>
     </view>
   </view>
 
   <view class='container session'>
-    <view class='btn-full btn-white btn-circle'>保存资料</view> 
+    <view class='btn-full btn-white btn-circle' bindtap='edit'>{{status}}</view> 
   </view>
 </view>
 

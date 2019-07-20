@@ -248,23 +248,6 @@
 </view>
 
 <view class='content-warp-fullRow  engine'>
-  <!-- <swiper display-multiple-items="2" interval="{{interval}}" bindchange="engineSwiper" circular easing-function="linear" class='engine-warp'>
-    <block wx:for="{{engine}}"  wx:for-index="idx" wx:key>
-      <swiper-item class="engine-item {{ idx == engineSwiperIndex ?'active':'' }}">
-        <image aspectFill src="{{item.image}}" class="slide-image" height="221" />
-        <view class='detail'>
-          <view class='text-normal'>Dcdui2y</view>
-          <view class='text-normal'>Dnvncing</view>
-          <text class='text-btn btn-circle'>3D 搭建设计</text>
-        </view>
-      </swiper-item>
-    </block>
-  </swiper>
-  <view class='dot-warp'>
-    <block wx:for="{{engine}}"  wx:for-index="idx" wx:key>
-      <view class="dot {{ idx == engineSwiperIndex ?'active':'' }}"></view>
-    </block>
-  </view> -->
   <block wx:for="{{engine}}" wx:for-index="idx" wx:key>
     <view class='item-5'>
       <image aspectFill src="{{item.image}}" class="slide-image" height="160" />
@@ -376,7 +359,7 @@
       <image class='headImg' src="{{item.image}}"></image>
       <view class='title'>{{item.name}}</view>
       <view class='text-content'>{{item.describe}}</view>
-      <text class='btn-circle btn-text'>了解更多</text>
+      <text class='btn-circle btn-text text-md'>了解更多</text>
     </view>
 
 

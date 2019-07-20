@@ -15,7 +15,7 @@ picker{width: 5em;}
 .bg-dark{background: #1E2887;}
 .tab-warp{position: absolute;height: 100%;width: 100%;margin: 0;}
 .content-warp-fullCol .icon-sm{width: 10rpx;height: 10rpx;}
-
+.pic-full{height: 400rpx;}
 /* 内容 */
 .resource{margin-bottom: 50rpx;}
 .content{margin-top: 20rpx;}

@@ -6,4 +6,21 @@
 .martop-100 .item{padding-top: 20rpx;}
 .content{padding: .5em;box-sizing: border-box;}
 .text-content{margin-top: 20rpx;}
+.search{width: 100%;}
+.input-item input + .icon-search {
+    right:0;
+    background-color:#EBC682;
+    border-radius:50rpx;
+    top:0;
+    width:80rpx;
+    height:52rpx;
+    z-index:99;
+    padding:10rpx 20rpx;
+    box-sizing:border-box;
+}
+.item-5 .content{border-bottom: rgb(41, 51, 158) 4px solid;}
+.item-5.martop-50 .content{border-top: rgb(41, 51, 158) 4px solid;border-bottom: 0;}
+
+
+
 

@@ -10,13 +10,13 @@
   <view class='text-md text-white'>
     请输入账号
   </view>
-  <input type="number" ></input>
+  <input type="number" bindinput='userInput' ></input>
   <view class='text-md text-white'>
     请输入密码
   </view>
-  <input password="true"></input>
+  <input password="true" bindinput='pswInput'></input>
 
-  <view class='btn btn-full btn-white btn-circle'>登录</view>
+  <view class='btn btn-full btn-white btn-circle' bindtap='login'>登录</view>
   
   <view class='flex flex-center text-gray flex-center martop-30'>
     <text>其他登录方式</text>

@@ -1,73 +1,3 @@
-// pages/login/index.js
-var app = getApp();
-var B = new Base64();
-var str = B.encode("admin:admin");
-
-console.log(str)
-Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    tel:'',
-    psw:''
-  },
-  userInput:function(e){
-    this.setData({
-      tel:e.detail.value
-    })
-  },
-  pswInput: function (e) {
-    this.setData({
-      psw: e.detail.value
-    })
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
-  login:function(){
-    var self=this;
-    wx.showLoading({
-      title: '登陆中',
-    })
-    wx.request({
-      url: app.globalData.apiUrl +'/restful/3.0/subscriber/login',
-      method:'POST',
-      header: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      data:{
-        mobilePhone: self.data.tel||'15680249538',
-        password: self.data.psw ||'123456'
-      },
-      success:function(res){
-        console.log('suc',res)
-        wx.hideLoading();
-        if(res.statusCode==200){
-        }else if(res.statusCode ==400){
-            
-          wx.showToast({
-            title: '账号密码错误',
-            duration:2000
-          })
-        }
-      },
-      fail:function(e){
-        wx.hideLoading();
-        console.log('fail',e);
-        wx.showToast({
-          title: '请稍后重试',
-          duration: 2000
-        })
-      }
-    })
-  }
-})
-
 /**
 *
 * Base64 encode / decode
@@ -77,9 +7,9 @@ Page({
 * @email tuhaitao@foxmail.com
 *
 */
-function Base64() {
+exports.base64 = function Base64() {
   // private property
-  var _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+  _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
   // public method for encoding
   this.encode = function (input) {
     var output = "";
@@ -132,7 +62,7 @@ function Base64() {
     return output;
   }
   // private method for UTF-8 encoding
-  var _utf8_encode = function (string) {
+  _utf8_encode = function (string) {
     string = string.replace(/\r\n/g, "\n");
     var utftext = "";
     for (var n = 0; n < string.length; n++) {
@@ -151,7 +81,7 @@ function Base64() {
     return utftext;
   }
   // private method for UTF-8 decoding
-  var _utf8_decode = function (utftext) {
+  _utf8_decode = function (utftext) {
     var string = "";
     var i = 0;
     var c = c1 = c2 = 0;

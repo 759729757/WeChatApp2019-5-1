@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    payType:0
+    payType:0,
+    series:true
   },
 
   /**
@@ -13,6 +14,11 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  checkSeries:function(){
+    this.setData({
+      series: !this.data.series
+    })
   },
   //选择付款方式
   chooseType:function(event){

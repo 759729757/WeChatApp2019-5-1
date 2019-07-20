@@ -3,7 +3,7 @@ page{height: 100%}
 .pic{width: 100px;height: 260rpx;padding: 20rpx 40rpx 20rpx 0;box-sizing: border-box;}
 .item{background-color: #212C9A;margin: 40rpx 0;padding-right: 40rpx;}
 .icon-cricle{background: white;border-radius: 100%;text-align: center;width: 25rpx;height: 25rpx;padding: 5rpx;margin-top: 10rpx;}
-.icon-cricle .icon{width: 25rpx;height: 25rpx;margin-top: 1rpx;}
+.icon-cricle .icon{width: 25rpx;height: 25rpx;}
 .icon{vertical-align: text-top;display: inline-block;margin: 0;}
 .text-xlg{font-weight: bold;}
 

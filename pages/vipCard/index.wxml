@@ -31,7 +31,11 @@
         <text class='pull-right'>
           <text class='text-yellow'>100元/</text>月
         </text>
-        <view class='text-sm text-gray'>到期后自动续费，可随时取消</view>
+        <view class='flex flex-left martop-15 text-sm text-gray' bindtap='checkSeries'>
+          <image class='icon icon-sm' wx:if="{{!series}}" src='../../images/checkbox.png'></image>
+          <image class='icon icon-sm' wx:if="{{series}}" src='../../images/checkboxed.png'></image>
+          到期后自动续费，可随时取消
+        </view>
       </view>
     </view>
 
@@ -45,11 +49,13 @@
         <image class='icon icon-md' src='../../images/alipay.png'></image>
         <text>支付宝</text>
         <image wx:if="{{payType==0}}" class='icon pull-right' src='../../images/correct.png'></image>
+        <image wx:if="{{payType!=0}}" class='icon pull-right' src='../../images/_correct.png'></image>
       </view>
       <view class='text-white tr' data-type="1" bindtap='chooseType'> 
         <image class='icon icon-md' src='../../images/wechat.png'></image>
         <text>微信支付</text>
         <image wx:if="{{payType==1}}" class='icon pull-right' src='../../images/correct.png'></image>
+        <image wx:if="{{payType!=1}}" class='icon pull-right' src='../../images/_correct.png'></image>
       </view>
     </view>
 

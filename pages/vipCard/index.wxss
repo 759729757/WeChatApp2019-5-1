@@ -5,5 +5,5 @@
 .tr{height: 100rpx;}
 .headTitle{width: 35%;display: inline-block;vertical-align: middle;}
 input,picker{display: inline-block;}
-
+.icon-sm{margin-left: 0;}
 .headImg{width: 100rpx;height: 100rpx;margin-right: 20rpx;} 

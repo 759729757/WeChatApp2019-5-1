@@ -130,17 +130,17 @@ var data = {
   "engine": [
     {
       "image": "https://p.ssl.qhimg.com/dm/299_417_/t0122af5092acecdb35.jpg",
-      "title": "2018广州分等会啊实打实的",
+      "title": "2018广州分等会啊等会啊实打实的",
       "describe": "Dnvncing"
     },
     {
       "image": "https://ps.ssl.qhimg.com/dm/299_417_/t015dfab25f6d4b6556.jpg",
-      "title": "2018广州分等会啊实打实的",
+      "title": "2018广州分等会等会啊等会啊啊实打实的",
       "describe": "Dnvncing"
     },
     {
       "image": "https://p.ssl.qhimg.com/dm/417_417_/t01e4d67a651ab1d53c.jpg",
-      "title": "2018广州分等会啊实打实的",
+      "title": "2018广州分等等会啊会啊实打实的",
       "describe": "Dnvncing"
     },
     {
@@ -154,14 +154,14 @@ var data = {
     {
       "image": "http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg",
       "title": "新闻标题",
-      "subTitle": "新闻内容新闻内容新新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容容新闻内容新闻内容新闻内容新闻内容闻内容新闻内容",
+      "subTitle": "新内容新闻内容新闻内闻内容新闻内容新闻内容容新闻内容新闻内容新闻内容新闻内容闻内容新闻内容",
       "date":"2019/02/23",
       "time":"18:00"
     },
     {
       "image": "https://p.ssl.qhimg.com/dm/417_417_/t01e4d67a651ab1d53c.jpg",
       "title": "新闻标题",
-      "subTitle": "新闻内容新闻内容新闻新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容内容新闻内容",
+      "subTitle": "新闻内容新闻内内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容内容新闻内容",
       "date": "2019/02/23",
       "time": "18:00"
     },

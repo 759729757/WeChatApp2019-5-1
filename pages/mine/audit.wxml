@@ -9,16 +9,16 @@
   <view class='stripe stripe-right'></view>
   <view class='container'>
 
-    <view class='resource martop-30' wx:for="{{ data[navLeftActive].data }}" wx:key bindtap='goDetail'>
+    <view class='resource martop-50' wx:for="{{ data[navLeftActive].data }}" wx:key bindtap='goDetail'>
 
-      <view class='title text-lg'>{{item.title}}</view>
+      <view class='title text-lg '>{{item.title}}</view>
       <image class='pic-full' src='{{item.image}}'></image>
       <view class='flex flex-between'>
         <view class='flex'>
           <image class='logo table-cell' src='{{item.logo}}'></image>
           <view class='table-cell'>
             <view>
-              <text class='_title text-md'>{{item.name}}</text>
+              <text class='_title text-md text-white'>{{item.name}}</text>
             </view>
             <view class='table-cell text-gray text-md'>
               {{item.time}}
