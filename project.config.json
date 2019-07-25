@@ -13,7 +13,7 @@
 		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "2.5.0",
 	"appid": "wxfbc96b8226cac17e",
 	"projectname": "WeChatApp",
 	"debugOptions": {

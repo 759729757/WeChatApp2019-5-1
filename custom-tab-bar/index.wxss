@@ -4,11 +4,13 @@
   left: 0;
   right: 0;
   height: 48px;
-  background: white;
+  background: #1E2887;
   display: flex;
   padding-bottom: env(safe-area-inset-bottom);
 }
-
+   /* "color": "#e6e6e6",
+    "selectedColor": "#EBC682",
+    "backgroundColor": "#1E2887", */
 .tab-bar-border {
   background-color: rgba(0, 0, 0, 0.33);
   position: absolute;
@@ -29,10 +31,13 @@
 }
 
 .tab-bar-item cover-image {
-  width: 27px;
-  height: 27px;
+  width: 22px;
+  height: 22px;
+  margin-top: 5px;
 }
+.tab-bar-item .bigTab{height: 30px;width: 30px;}
 
 .tab-bar-item cover-view {
   font-size: 10px;
+  margin-top: 5px;
 }

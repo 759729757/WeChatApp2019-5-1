@@ -1,4 +1,6 @@
 // pages/credential/individual.js
+var app = getApp();
+
 Page({
 
   /**
@@ -6,42 +8,14 @@ Page({
    */
   data: {
       card1:'',
-      card2:''
+      card2:'',
+      headImg:'',
+      name:'',
+      idcard:'',
+      tel:'',
+      data:{}
   },
-  clear:function(){
-    this.setData({
-      card1: '',
-      card2: ''
-    })
-  },
-  chooseCard1:function(){
-    var self = this;
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
-      success: function(res) {
-        const tempFilePaths = res.tempFilePaths
-        self.setData({
-          card1 : res.tempFilePaths[0]
-        })
-      },
-    })
-  },
-  chooseCard2: function () {
-    var self = this;
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
-      success: function (res) {
-        const tempFilePaths = res.tempFilePaths
-        self.setData({
-          card2: res.tempFilePaths[0]
-        })
-      },
-    })
-  },
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -56,43 +30,175 @@ Page({
     wx.setNavigationBarTitle({
       title: '个人身份证'
     })
+    var self = this;
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/authentication/identity',
+      method: 'GET',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log(data);
+        if (data.statusCode == 200) {
+          self.setData({
+            data: data.data
+          })
+        } else {
+          //转台吗不是200 没有获取到用户数据
+          wx.navigateTo({
+            url: '/pages/login/index'
+          })
+        }
+        wx.hideLoading();
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      headImg: app.globalData.userInfo.headPortrait
+    })
+   
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  edit: function () {
+      wx.showLoading({
+        title: '加载中',
+      })
+      var data = this.data;
+      var self = this;
+      //可编辑转态
+      wx.request({//保存用户数据
+        url: app.globalData.apiUrl + '/restful/3.0/authentication/identity',
+        method: 'POST',
+        header: {
+          Authorization: app.globalData.token
+        },
+        data: data.data,
+        success: function (data) {
+          console.log(data);
+          self.setData({
+            isEdit: false,
+          })
+          wx.hideLoading();
+          wx.showToast({
+            title: '修改成功',
+          })
+        }, fail: function (e) {
+          wx.hideLoading();
+          wx.showToast({
+            title: '发送失败',
+          })
+        }
+      })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  nameInput: function (e) {
+    this.setData({
+      ['data.name']: e.detail.value
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  idInput: function (e) {
+    this.setData({
+      ['data.cardNo']: e.detail.value
+    })
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  telInput: function (e) {
+    this.setData({
+      ['data.tel']: e.detail.value
+    })
   },
+  clear: function () {
+    this.setData({
+      data:{}
+    })
+  },
+  chooseCard1: function () {
+    var self = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        const tempFilePaths = res.tempFilePaths
+        wx.showLoading({
+          title: '上传图片中',
+        });
+        wx.uploadFile({
+          url: app.globalData.apiUrl + '/restful/3.0/common/upload',
+          filePath: tempFilePaths[0],
+          name: 'file',
+          success(res) {
+            console.log(res)
+            var _data = res.data
+            var data = JSON.parse(_data.replace(/↵|\r|\n/g, ''))
+            var imgUrl = data.data;
+            if (imgUrl) {
+              self.setData({
+                ['data.cardPic1']: tempFilePaths[0]
+              })
+            }
+            wx.hideLoading();
+            if (res.statusCode == 400) {
+              wx.showToast({
+                title: '提交失败',
+              })
+            }
+          }, fail(e) {
+            console.log('error', e);
+            wx.hideLoading();
+            wx.showToast({
+              title: '提交失败',
+            })
+          }
+        })
+      },
+    })
+  },
+  chooseCard2: function () {
+    var self = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        const tempFilePaths = res.tempFilePaths
+        wx.uploadFile({
+          url: app.globalData.apiUrl + '/restful/3.0/common/upload',
+          filePath: tempFilePaths[0],
+          name: 'file',
+          success(res) {
+            console.log(res)
+            var _data = res.data
+            var data = JSON.parse(_data.replace(/↵|\r|\n/g, ''))
+            var imgUrl = data.data;
+            if (imgUrl) {
+              self.setData({
+                ['data.cardPic2'] : res.tempFilePaths[0]
+              })
+            }
+            wx.hideLoading();
+            if (res.statusCode == 400) {
+              wx.showToast({
+                title: '提交失败',
+              })
+            }
+          }, fail(e) {
+            console.log('error', e);
+            wx.hideLoading();
+            wx.showToast({
+              title: '提交失败',
+            })
+          }
+        })
 
+      },
+    })
+  },
   /**
    * 用户点击右上角分享
    */

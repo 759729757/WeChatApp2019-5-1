@@ -59,7 +59,7 @@
         <view class='text-content'>{{item.content}}</view>
 
         <view class='flex flex-between table-full ' >
-        <view>
+        <view class='flex'>
           <image class='icon icon-sm' src='/images/position.png'></image>
           <text class='text-gray text-small'>{{item.address}}</text>
         </view>

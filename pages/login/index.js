@@ -47,7 +47,11 @@ Page({
       success:function(res){
         console.log('suc',res)
         wx.hideLoading();
-        if(res.statusCode==200){
+        if (res.statusCode==200){
+          app.globalData.token = res.data.data.token
+          wx.navigateBack({
+            delta: 1
+          })
         }else if(res.statusCode ==400){
             
           wx.showToast({

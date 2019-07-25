@@ -7,7 +7,7 @@
       <view class='line-left text-white'>
         账号信息
       </view> 
-      <view class='text-white tr'>
+      <view class='text-white tr flex flex-left'>
         <text class='headTitle'>昵称</text>
         <input class='text-gray' value="{{ data.nickName }}" disabled='{{!isEdit}}' bindinput="nameInput" placeholder="请输入昵称" />
       </view>
@@ -53,7 +53,7 @@
           </view>
         </picker>
       </view>
-      <view class='text-white tr'>
+      <view class='text-white tr flex flex-left'>
         <text class='headTitle'>所在地</text>
         <input class='text-gray' value="{{data.location}}" disabled='{{!isEdit}}' bindinput='locInput' placeholder="请填写您的所在地"/>
       </view>

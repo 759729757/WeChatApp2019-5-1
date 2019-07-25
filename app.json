@@ -47,6 +47,7 @@
     "color": "#e6e6e6",
     "selectedColor": "#EBC682",
     "backgroundColor": "#1E2887",
+    "custom": true,
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -79,6 +80,5 @@
       }
     ]
   },
-  "usingComponents": {},
   "sitemapLocation": "sitemap.json"
 }

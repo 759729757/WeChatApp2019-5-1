@@ -1,9 +1,9 @@
 /* pages/vipCard/index.wxss */
 .warp{position: relative;margin-top: 150rpx;width: 100%;padding-top: 100rpx;}
-.container{padding: 30rpx 60rpx;margin: 0;margin-bottom: 30rpx;box-sizing: border-box;width: 100%;padding-bottom: 0;}
+.container{padding: 25rpx 60rpx;margin: 0;margin-bottom: 30rpx;box-sizing: border-box;width: 100%;}
 .line-left{padding-left: 18rpx;border-left: 6rpx deeppink solid;margin-left: -20rpx;box-sizing: border-box;margin-top: 30rpx;margin-bottom: 30rpx;}
 .tr{height: 100rpx;}
 .headTitle{width: 35%;display: inline-block;vertical-align: middle;}
 input,picker{display: inline-block;}
 .icon-sm{margin-left: 0;}
-.headImg{width: 100rpx;height: 100rpx;margin-right: 20rpx;} 
+.headImg{width: 80rpx;height: 80rpx;margin-right: 20rpx;} 

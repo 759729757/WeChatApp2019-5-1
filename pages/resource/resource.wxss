@@ -1,5 +1,6 @@
 /* pages/resource/resource.wxss */
 /* 搜索 */
+page{margin-bottom: 50px;}
 .search .input-item{background-color: #1E2887;}
 picker{width: 5em;}
 .picker{color: white;margin-right: 0;}

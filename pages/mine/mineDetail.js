@@ -1,5 +1,5 @@
 // pages/mine/mineDetail.js
-var app = getApp();
+var app = getApp(); 
 
 function getNowFormatDate() {
   var date = new Date();
@@ -168,10 +168,12 @@ Page({
     wx.setNavigationBarTitle({
       title: '会员资料'
     })
+
+    //获取用户数据
     wx.showLoading({
       title: '加载中',
     })
-    wx.request({//获取用户数据
+    wx.request({
       url: app.globalData.apiUrl + '/restful/3.0/subscriber',
       method: 'GET',
       header: {
@@ -179,11 +181,19 @@ Page({
       },
       success: function (data) {
         console.log(data);
-        self.setData({
-          data:data.data.data
-        })
+        if (data.statusCode == 200){
+          self.setData({
+            data: data.data.data
+          })
+        }else{
+          //转台吗不是200 没有获取到用户数据
+          wx.navigateTo({
+            url: '/pages/login/index'
+          })
+        }
         wx.hideLoading();
       }
     })
+    
   }
 })

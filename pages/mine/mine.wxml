@@ -4,17 +4,17 @@
   <view class='stripe stripe-right'></view>
   <view class='flex flex-between content-warp '>
     <view class='flex flex-between'>
-      <image class='headImg pic' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
+      <image class='headImg pic' src='{{data.headPortrait}}'></image>
       <view>
-        <view class='title text-xxlg'>Blanche Hall</view>
+        <view class='title text-xxlg'>{{data.nickName}}</view>
         <view class='_title flex flex-left'>
-          Blanche Hall
+          {{data.name}}
           <image class='icon icon-sm' src='../../images/headIcon.png'></image>
         </view>
       </view>
     </view>
     <view>
-      <image class='icon icon-xmd' src='../../images/edit.png'></image>
+      <image class='icon icon-xmd' bindtap='goDetail' src='../../images/edit.png'></image>
     </view>
   </view>
   <view class=' flex text-center'>
@@ -24,11 +24,11 @@
     </view>
     <view class=''>
       <view class='text-xmd text-white'>128</view>
-      <view class='_title'>收藏</view>
+      <view class='_title'>产品</view>
     </view>
     <view class=''>
       <view class='text-xmd text-white'>128</view>
-      <view class='_title'>收藏</view>
+      <view class='_title'>发布</view>
     </view>
   </view>
   <view class=''>
