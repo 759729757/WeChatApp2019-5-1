@@ -3,7 +3,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 48px;
+  height: 100rpx;
+  overflow: hidden;
   background: #1E2887;
   display: flex;
   padding-bottom: env(safe-area-inset-bottom);
@@ -31,13 +32,13 @@
 }
 
 .tab-bar-item cover-image {
-  width: 22px;
-  height: 22px;
-  margin-top: 5px;
+  width: 44rpx;
+  height: 44rpx;
+  margin-top: 10rpx;
 }
-.tab-bar-item .bigTab{height: 30px;width: 30px;}
+.tab-bar-item .bigTab{height: 60rpx;width: 60rpx;}
 
 .tab-bar-item cover-view {
-  font-size: 10px;
-  margin-top: 5px;
+  font-size: 20rpx;
+  margin-top: 10rpx;
 }

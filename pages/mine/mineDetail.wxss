@@ -1,7 +1,7 @@
 /* pages/mine/mineDetail.wxss */
 .warp{position: relative;margin-top: 150rpx;width: 100%;padding-top: 100rpx;}
 .headImg{width: 120rpx;height: 120rpx;position: absolute;left: 50%;margin-left: -60rpx;top: -60rpx;}
-.container{padding: 30rpx 40rpx;margin-bottom: 30rpx;box-sizing: border-box;}
+.container{padding: 30rpx 10rpx;margin-bottom: 30rpx;box-sizing: border-box;}
 .line-left{padding-left: 18rpx;border-left: 6rpx deeppink solid;margin-left: -20rpx;box-sizing: border-box;margin-top: 30rpx;margin-bottom: 30rpx;}
 .tr{height: 100rpx;line-height: 100rpx;}
 .headTitle{width: 35%;display: inline-block;}

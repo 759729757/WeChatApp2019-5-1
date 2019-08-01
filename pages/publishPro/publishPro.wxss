@@ -2,6 +2,12 @@
 page{position: relative;}
 .flex{flex-wrap: wrap;}
 .text-xxlg{margin-bottom: 30rpx;}
-
-
+.tab{margin-right: 30rpx;}
+.tab-normal{background: #212C9A;color: white;}
+.tab input{text-overflow: initial;width: 0;display: inline-block;transition: all .3s ease-out;}
+.tab input.active{width: 10em;}
+input+.icon{
+  width:26rpx;
+height:26rpx;padding: 0;
+}
 

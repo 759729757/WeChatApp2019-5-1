@@ -15,14 +15,14 @@
 <view class="table table-full content-warp part-search bg-normal">
   <view class='table-cell'>
     <picker bindchange="bindPickerChange" value="{{cityNum}}" range="{{city}}">
-      <view class="picker text-white">
+      <view class="picker text-white flex flex-left">
         <image class='icon icon-position icon-left' src='/images/position.png'></image>
         {{city[cityNum]}}
       </view>
     </picker>
   </view>
-  <view class="table-cell text-warp">
-    <text>Stay turned</text>
+  <view class="table-cell text-warp text-center">
+    <text class='text-aline text-bold'>Stay turned</text>
   </view>
   <view class='table-cell search bg-dark'>
     <view class='input-item '>
@@ -70,7 +70,7 @@
   </view>
 </view>
 
-<view class='bg-dark'>
+<view class='bg-normal'>
   <view class='container-full flex yingshi content-warp-fullRow '>
     <view class='flex-col detail content-warp-fullCol'>
       <view class='part-title'>{{viedo[viedoIndex].name}}</view>
@@ -132,7 +132,7 @@
     <view class='pull-right'>
       <text class='text-content'>MORE</text>
       <image class='icon-more' src='/images/_next.png'></image>
-    </view>
+    </view> 
   </view>
 </view>
 <view class=' content-warp bg-dark float-warp part-hr'>
@@ -150,7 +150,7 @@
   </view>
 
   <view class='part-hr-warp item-3'>
-      <view class='item  {{"2"+index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr}}" wx:key bindtap='hr2Click'>
+      <view class='item  {{"2"+index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr2}}" wx:key bindtap='hr2Click'>
         <view class='flex flex-between'>
           <view>
             <view class='title'>{{item.name}}</view>
@@ -163,7 +163,7 @@
   </view>
 
   <view class='part-hr-warp item-3'>
-      <view class='item  {{"3"+index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr}}" wx:key bindtap='hr3Click'>
+      <view class='item  {{"3"+index==hrIndex?"active":""}}' id='{{index}}' wx:for="{{hr3}}" wx:key bindtap='hr3Click'>
         <view class='flex flex-between'>
           <view>
             <view class='title'>{{item.name}}</view>
@@ -251,7 +251,7 @@
   <block wx:for="{{engine}}" wx:for-index="idx" wx:key>
     <view class='item-5'>
       <image aspectFill src="{{item.image}}" class="slide-image" height="160" />
-      <view class='text-aline _title'>{{ item.title }}</view>
+      <view class='text-aline _title text-white'>{{ item.title }}</view>
     </view>
   </block>
 
@@ -320,7 +320,7 @@
       <view class='item-5 content-warp-full'>
         <view class='flex-col'>
           <view class='text-gray text-md width-full'>
-            <text class=' text-gray pull-left'>{{index+1}}</text>
+            <text class=' text-gray pull-left text-xmd'>0{{index+1}}</text>
             <text class='pull-right'>{{item.time}}</text>
           </view>
 

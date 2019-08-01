@@ -14,9 +14,19 @@ Page({
       url: 'audit',
     })
   },
+  goPublish: function () {
+    wx.navigateTo({
+      url: 'pubilsh',
+    })
+  },
   goCredential:function(){
     wx.navigateTo({
       url: '/pages/credential/index',
+    })
+  },
+  goFollow: function () {
+    wx.navigateTo({
+      url: '/pages/mine/follow',
     })
   },
   goCard:function(){
@@ -66,9 +76,9 @@ Page({
           app.globalData.userInfo = data.data.data
         } else {
           //状态吗不是200 没有获取到用户数据
-          wx.navigateTo({
-            url: '/pages/login/index'
-          })
+            wx.navigateTo({
+              url: '/pages/login/index'
+            })
         }
         wx.hideLoading();
       }

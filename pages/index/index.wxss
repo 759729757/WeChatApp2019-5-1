@@ -1,5 +1,5 @@
 @import "../../font.wxss"; 
-page{margin-bottom: 50px;}
+page{padding-bottom: 100rpx;font-family: -apple-system,BlinkMacSystemFont,SF UI Text,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei UI,Microsoft YaHei,Arial,sans-serif;}
 page{font-family: "pinfang";}
 .swiper{height: 440rpx;width: 100%;}
 .swiper image{width: 100%;height: 100%;}
@@ -7,8 +7,8 @@ page{font-family: "pinfang";}
 .ban-text,.ban-title{position: absolute;left: 40rpx;top: 42%;font-weight: bold;font-size: 40rpx}
 .ban-text{top: calc(42% + 1.4em);width: calc(100% - 80rpx);}
 .companyLogo{width: 100rpx;height: 50rpx;vertical-align: middle;}
-.part-search .text-warp{background-color: #192079;border-top-left-radius: 50rpx;border-bottom-left-radius: 50rpx;color: white;font-weight:bold;padding-left: 1em;width: 7em;}
-.search{width: 280rpx;}
+.part-search .text-warp{background-color: #192079;border-top-left-radius: 50rpx;font-family: '-apple-system,BlinkMacSystemFont,SF UI Text,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei UI,Microsoft YaHei,Arial,sans-serif';border-bottom-left-radius: 50rpx;color: white;font-weight:bold;padding-left: 1em;width: 30%;}
+.search{width: 50%;}
 .search .input-item{background-color: #1E2887;border-top-right-radius: 60rpx;border-bottom-right-radius: 60rpx;}
 .table-cell.search{border-top-right-radius: 60rpx;border-bottom-right-radius: 60rpx;}
 .input-item input{background: #fff;border-radius: 50rpx;padding-left: 1em;color: #4E578B;height: 50rpx;padding-right: 80rpx;font-size: 18rpx;}
@@ -19,7 +19,7 @@ page{font-family: "pinfang";}
 .pull-right .text-content{color: #fff;}
 
 /* 推荐供应商 */
-.gongying .headImg{width: 132rpx;height: 132rpx;margin-bottom: 0rpx;border: 2px solid #212C9A;}
+.gongying .headImg{width: 136rpx;height: 136rpx;margin-bottom: 0rpx;box-sizing: border-box;border: 3px solid #212C9A;}
 .gongying .item{margin-right: 40rpx;}
 .gongying .text-content{font-size: 20rpx;}
 

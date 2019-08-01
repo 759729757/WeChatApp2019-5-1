@@ -1,4 +1,5 @@
 // pages/resource/resource.js
+var app = getApp();
 var data = require('data.js');
 Page({
 
@@ -67,24 +68,32 @@ Page({
       cityNum: e.detail.value
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    wx.setNavigationBarTitle({
-      title: '找资源',
-    })
     this.setData({
       data: data
     })
-
+    // 获取初始资料
+    var self = this;
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/app/publish/RESOURCE/1/10',
+      method: 'GET',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('资源', data);
+        if (data.statusCode == 200) {
+          self.setData({
+            // data: data.data.data
+          })
+        }
+        wx.hideLoading();
+      }
+    })
    
   },
 
@@ -92,6 +101,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    wx.setNavigationBarTitle({
+      title: '找资源',
+    })
     //设置tab下标
     if (typeof this.getTabBar === 'function' &&
       this.getTabBar()) {

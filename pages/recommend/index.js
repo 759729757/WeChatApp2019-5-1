@@ -1,5 +1,6 @@
 // pages/recommend/index.js
 var testData = require('../../data.js');//拿测试数据 
+var app = getApp();
 Page({
 
   /**
@@ -26,12 +27,32 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    wx.setNavigationBarTitle({
-      title: '推荐供应商',
-    })
     var data = testData.supplier;
     var l = data.length;
     var harf = Math.floor(l/2);
+    // 获取供应商
+    var self = this;
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/supplier/1/10',
+      method: 'GET',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('供应商',data);
+        if (data.statusCode == 200) {
+          self.setData({
+            data: data.data.data.content
+          })
+        } else {
+          //状态吗不是200 没有获取到用户数据
+          wx.navigateTo({
+            url: '/pages/login/index'
+          })
+        }
+        wx.hideLoading();
+      }
+    })
 
     this.setData({
       data: data,
@@ -45,6 +66,9 @@ Page({
    */
   onShow: function () {
 
+    wx.setNavigationBarTitle({
+      title: '推荐供应商',
+    })
   },
 
   /**

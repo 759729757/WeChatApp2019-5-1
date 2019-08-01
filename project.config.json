@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 5,
 			"list": [
 				{
 					"id": 0,
@@ -78,9 +78,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 5,
 					"name": "发布项目填资料",
-					"pathName": "pages/publishPro/publishPro",
+					"pathName": "pages/publishRes/publishRes",
 					"query": "",
 					"scene": null
 				},

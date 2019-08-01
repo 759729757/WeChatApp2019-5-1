@@ -11,7 +11,7 @@
 
     <view class='resource martop-30' wx:for="{{ data[navLeftActive].data }}" wx:key >
 
-      <view class='tisd   sdsd   tle text-lg'>{{item.title}}</view>
+      <view class='title text-xmd '>{{item.title}}</view>
       <image class='pic-full' src='{{item.image}}'></image>
       <view class='flex flex-between'>
         <view class='flex'>

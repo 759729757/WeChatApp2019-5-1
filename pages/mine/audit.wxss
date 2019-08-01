@@ -9,5 +9,7 @@
 .hini{position: absolute;background: #000;color: #fff;border-radius: 10rpx;padding: 20rpx;font-size: 18rpx;justify-content: space-between;bottom: 10rpx;right:4.5em;width: 8em;}
 .croner{width: 0;height: 0;border-left: 10rpx solid #000;border-top:10rpx solid transparent;border-bottom:10rpx solid transparent;position: absolute;right: -10rpx;}
 .confirm .btn{border-radius: 2em;width: 5em;}
-.pic-full{height: 400rpx;}
+.pic-full{height: 400rpx;box-sizing: border-box;border: #212C9A 4px solid;}
 .container{margin-bottom: 30px;}
+.text-xmd{font-size: 16px;}
+.logo{width: 80rpx;height: 80rpx;}

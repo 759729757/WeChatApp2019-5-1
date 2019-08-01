@@ -17,7 +17,7 @@
   </view>
 </view>
 
-<view>
+<view class='container'>
   <view class='item-5'>
       <view wx:for="{{list2}}" wx:key class='item' bindtap='goDetail'>
         <image class='pic' src="{{item.image}}"></image>

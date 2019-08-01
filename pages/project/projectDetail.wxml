@@ -23,7 +23,7 @@
 
  
   <scroll-view class='scroll-view' scroll-x>
-      <image class='pic' mode='widthFix' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'  wx:for="[1,2,4,5]" wx:key></image>
+      <image class='pic' mode='widthFix' data-src="https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg" src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg' bindtap="previewImage" wx:for="[1,2,4,5]" wx:key></image>
   </scroll-view>
 
 </view>

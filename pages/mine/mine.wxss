@@ -1,6 +1,6 @@
 /* pages/mine/mine.wxss */
 /* 顶部 */
-page{margin-bottom: 50px;min-height: calc(100% - 50px);}
+page{padding-bottom: 100rpx;min-height: calc(100% - 100rpx);}
 .content-warp{position: relative;}
 .pic{width: 180rpx;height: 180rpx;margin-right: 40rpx;}
 .card{background-color: #fff;border-radius: 40rpx 40rpx 0 0;color: #1E2887;padding: 20rpx 30rpx;margin-top: 30rpx;}

@@ -41,22 +41,22 @@ var data = {
   "viedo": [
     {
       "name": "LESS盟1",
-      "subName": "中国驰名商标企业",
-      "describe": "和广州其他的影视制 作公司也合作过，但",
+      "subName": "中国驰名商标企",
+      "describe": "和广州其他的影视制 作公司也合",
       "content": "33从领尚家居建材广再到联塑万嘉，每次的创意，和拍摄制作，新视团队都超越了我们的期待。我们已经合作3年了。",
       "note": "印象：文案策划不错 演员资料很全",
       "image": "https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg"
     }, {
       "name": "LES2",
-      "subName": "中国驰名商标企业",
-      "describe": "和广州其他的影视制 作公司也合作过，但",
+      "subName": "中国驰名商标企",
+      "describe": "和广州其他的影视制 作过，但",
       "content": "22从领尚家居建材广告片到领尚生活品牌每次的创意，和拍摄制作，新视团队都超越了我们的期待。我们已经合作3年了。",
       "note": "印象：文案策划不错 演员资料很全",
       "image": "https://ps.ssl.qhimg.com/dm/417_417_/t01433ce62e3d6f5d32.jpg"
     }, {
       "name": "LE联盟3",
-      "subName": "中国驰名商标企业",
-      "describe": "和广州其他的影视制 作公司也合作过，但",
+      "subName": "中国驰名商标企",
+      "describe": "和广州其他的视制 作公司也",
       "content": "11从领尚家居建材牌形象片再到联塑万嘉，每次的创意，和拍摄制作，新视团队都超越了我们的期待。我们已",
       "note": "印象：文案策划不错 演员资料很全",
       "image": "https://p.ssl.qhimg.com/dm/420_207_/t01e897ef43bf4502f1.jpg"
@@ -94,6 +94,24 @@ var data = {
       "image": "https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640",
       "name": "陈田",
       "major":"导演资源",
+      "describe": "舞台3D搭v 的 饭都不敢发那敢发那个个"
+    }, {
+      "image": "http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg",
+      "name": "陈田",
+      "major": "导演资源",
+      "describe": "舞台3D搭建v 繁华的 v 都不" 
+    }, {
+      "image": "https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640",
+      "name": "陈田",
+      "major": "导演资源",
+      "describe": "舞台3D搭建v 繁华都不敢发那个"
+    }
+  ],
+  "hr2": [
+    {
+      "image": "https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640",
+      "name": "陈田",
+      "major": "导演资源",
       "describe": "舞台3D搭v 的 饭都不敢发那个"
     }, {
       "image": "http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg",
@@ -105,6 +123,24 @@ var data = {
       "name": "陈田",
       "major": "导演资源",
       "describe": "舞台3D搭建v 繁华都不敢发那个"
+    }
+  ],
+  "hr3": [
+    {
+      "image": "https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640",
+      "name": "陈田",
+      "major": "导演资源",
+      "describe": "舞台3D搭v 的 饭都不敢发那个"
+    }, {
+      "image": "http://img4.imgtn.bdimg.com/it/u=2153937626,1074119156&fm=26&gp=0.jpg",
+      "name": "陈田",
+      "major": "导演资源",
+      "describe": "舞台3D搭建v 繁华的 v "
+    }, {
+      "image": "https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640",
+      "name": "陈田",
+      "major": "导演资源",
+      "describe": "舞台3D搭建v 繁华都不都不敢发那个敢发那个"
     }
   ],
   "performance": [

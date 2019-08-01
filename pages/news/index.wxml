@@ -27,7 +27,7 @@
       <view class='table-cell content'>
         <!-- <text class='badge'>{{index}}</text> -->
         <view class='text-normal'>{{item.title}}</view>
-        <text class='text-content'>{{item.subTitle}}</text>
+        <text class='text-content martop-30'>{{item.subTitle}}</text>
       </view>
     </view>
 

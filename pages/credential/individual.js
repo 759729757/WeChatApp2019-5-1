@@ -44,7 +44,7 @@ Page({
         console.log(data);
         if (data.statusCode == 200) {
           self.setData({
-            data: data.data
+            data: data.data.data
           })
         } else {
           //转台吗不是200 没有获取到用户数据
@@ -178,7 +178,7 @@ Page({
             var imgUrl = data.data;
             if (imgUrl) {
               self.setData({
-                ['data.cardPic2'] : res.tempFilePaths[0]
+                ['data.cardPic2'] : tempFilePaths[0]
               })
             }
             wx.hideLoading();

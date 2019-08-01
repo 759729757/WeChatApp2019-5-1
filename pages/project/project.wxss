@@ -1,6 +1,6 @@
 /* pages/project/project.wxss */
 page{background: #212C9A;}
-page{margin-bottom: 50px;}
+page{padding-bottom: 100rpx;}
 /* 搜索 */
 .search .input-item{background-color: #1E2887;}
 picker{width: 5em;}
@@ -31,5 +31,5 @@ picker{width: 5em;}
 .warp .item-5:nth-child(6n + 4) .text-content,.warp .item-5:nth-child(6n + 1) .text-content{height: 12.6em;overflow: hidden;}
 
 .media .text-lg{height: auto;}
-.item-5 .text-content{height: 3em;overflow: hidden;}
+.item-5 .text-content{height: 58rpx;overflow: hidden;}
 

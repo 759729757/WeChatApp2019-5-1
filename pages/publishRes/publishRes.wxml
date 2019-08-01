@@ -11,7 +11,7 @@
   <view class='flex pic-warp' bindtap='getImg'>
     <view wx:if="{{!tempFilePaths}}">
       <image class='icon icon-lg' src='../../images/add2.png'></image>
-      <view class='_title'>上传照片</view>
+      <view class='_title'>上传 视频/照片</view>
     </view>
 
     <view wx:if="{{tempFilePaths}}">
@@ -48,21 +48,25 @@
   </view>
 
   <view class='tab-warp'>
-    <input class='title ' placeholder="编辑标签" value="{{tab}}" bindinput="bindKeyInput" />  
-    <view class='flex'>
+    <input class='title {{ tabEdit ? "active":"" }}' bindinput='tabInput' auto-focus='{{tabEdit}}' value='{{tabValue}}' placeholder='编辑标签'></input>
+     <view class='flex flex-left'>
     
-      <view class='tab' wx:for="{{tabArr}}" wx:if="{{item}}" wx:key data-index="{{index}}" bindtap='removeTab'>
-        {{item}}
-        <image class='icon icon-sm' src='../../images/close.png'></image>
+      <view class='tab' wx:for="{{tabArr}}" wx:if="{{item}}" wx:key>
+        <text>{{item}}</text>
+        <image class='icon icon-sm' src='../../images/close.png' data-index="{{index}}" bindtap='removeTab'></image>
       </view>
     
     </view>
-    <view class='tab btn-tab' bindtap='addTab'>
-      <image class='icon icon-sm' src='../../images/add2.png'></image>
-      添加标签
+    <view class='tab btn-tab tab-normal'>
+      <view class='flex flex-left'>
+        <image class='icon icon-sm' src='../../images/add2.png'></image>
+       
+        <text class='text-md' bindtap='addTab' >添加标签</text>
+
+      </view>
     </view>
 
-    <view class='btn btn-full btn-circle martop-50 btn-yellow'>发布</view>
+    <view class='btn btn-full btn-circle martop-50 btn-white' bindtap='send'>发布</view>
 
   </view>
 

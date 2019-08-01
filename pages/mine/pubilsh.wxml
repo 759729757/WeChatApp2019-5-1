@@ -36,7 +36,7 @@
 
     <view class='resource martop-30' wx:for="{{ data[navLeftActive].data }}" wx:key>
 
-      <view class='title text-lg'>{{item.title}}3d场景搭建业务介绍文字描述情绪秒速</view>
+      <view class='title text-xmd'>{{item.title}}3d场景搭建业务介绍文字描述情绪秒速</view>
       <view class='float-warp'>
        <image class='item-3' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
         <image class='item-3' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>

@@ -1,11 +1,34 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
+    //获取本地的token
+    var self = this;
+    self.globalData.token = wx.getStorageSync('token')
+    if (self.globalData.token){
+      //获取用户数据
+      wx.showLoading({
+        title: '加载中',
+      })
+      wx.request({
+        url: self.globalData.apiUrl + '/restful/3.0/subscriber',
+        method: 'GET',
+        header: {
+          Authorization: self.globalData.token
+        },
+        success: function (data) {
+          if (data.statusCode == 200) {
+            self.globalData.userInfo = data.data.data
+          } else {
+            //状态吗不是200 没有获取到用户数据
+            wx.navigateTo({
+              url: '/pages/login/index'
+            })
+          }
+          wx.hideLoading();
+        }
+      })
+    }
+    
     // 登录
     wx.login({
       success: res => {
@@ -36,7 +59,7 @@ App({
   globalData: {
     userInfo: null,
     apiUrl: 'http://47.92.103.76:18080',//api地址
-    token: "1EDEAE56E17AA94C8A51D04A998341651BBC84F4311859A8E87805A79B5184238FA197DE8FA6ABA134C7014C73BA049704BAB93C87BC6FAEBB0B0D9935E26643E75A2436B26311A77377EB023C2B9933AC849274A1835F941A643DE960C4B6A7CEC53DBCF5CAA25A79D023FD6D89F2EFFC12D04A8D59BA0E940FAAA3BC54462BBA07EE9C9F804FEEC1C34FD940AE0AD6EF5438D7BD4E7467055B233A1788C65E83B0A602896B691D22FB34F6476F4C2D",
+    token: "",
     
   }
 })

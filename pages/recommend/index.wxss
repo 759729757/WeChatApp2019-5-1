@@ -20,7 +20,10 @@
 }
 .item-5 .content{border-bottom: rgb(41, 51, 158) 4px solid;}
 .item-5.martop-50 .content{border-top: rgb(41, 51, 158) 4px solid;border-bottom: 0;}
-
-
+.part-title-warp .item-5{vertical-align: middle;}
+.container{
+  width:96%;
+margin:0 2%;
+}
 
 

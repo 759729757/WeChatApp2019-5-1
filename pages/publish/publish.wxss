@@ -1,5 +1,5 @@
 /* pages/publish/publish.wxss */
-page{margin-bottom: 50px;}
+page{padding-bottom: 100rpx;}
 page{height: 100%}
 .pic{width: 100px;height: 260rpx;padding: 20rpx 40rpx 20rpx 0;box-sizing: border-box;}
 .item{background-color: #212C9A;margin: 40rpx 0;padding-right: 40rpx;}

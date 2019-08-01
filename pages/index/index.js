@@ -84,12 +84,6 @@ Page({
     })
     
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -107,7 +101,7 @@ Page({
       supplier: testData.supplier,
       viedo: testData.viedo,
       media: testData.media,
-      hr: testData.hr,
+      hr: testData.hr, hr2: testData.hr2, hr3: testData.hr3,
       performance: testData.performance,
       engine: testData.engine,
       information: testData.information,
@@ -128,6 +122,9 @@ Page({
         selected: 0
       })
     }
+    wx.setNavigationBarTitle({
+      title: 'AD圈',
+    })
   },
 
   /**

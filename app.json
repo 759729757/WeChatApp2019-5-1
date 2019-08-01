@@ -38,7 +38,7 @@
     "pages/logs/logs"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#1E2887",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "white"

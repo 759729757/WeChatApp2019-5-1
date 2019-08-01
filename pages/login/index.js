@@ -23,6 +23,7 @@ Page({
       psw: e.detail.value
     })
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -49,6 +50,10 @@ Page({
         wx.hideLoading();
         if (res.statusCode==200){
           app.globalData.token = res.data.data.token
+          wx.setStorage({
+            key: "token",
+            data: res.data.data.token
+          })
           wx.navigateBack({
             delta: 1
           })

@@ -54,7 +54,7 @@ Page({
         console.log(data);
         if (data.statusCode == 200) {
           self.setData({
-            identity: data.data
+            identity: data.data.data
           })
         } else {
           //转台吗不是200 没有获取到用户数据
@@ -75,7 +75,7 @@ Page({
         console.log(data);
         if (data.statusCode == 200) {
           self.setData({
-            enterprise: data.data
+            enterprise: data.data.data
           })
         } else {
           //转台吗不是200 没有获取到用户数据
@@ -96,7 +96,7 @@ Page({
         console.log(data);
         if (data.statusCode == 200) {
           self.setData({
-            qualifications: data.data
+            qualifications: data.data.data
           })
         } else {
           //转台吗不是200 没有获取到用户数据
