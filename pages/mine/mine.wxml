@@ -19,7 +19,7 @@
   </view>
   <view class=' flex text-center'>
     <view class='' bindtap='goFollow'>
-      <view class='text-xmd text-white'>128</view>
+      <view class='text-xmd text-white'>{{data.collectCount}}</view>
       <view class='_title'>收藏</view>
     </view>
     <!-- <view class=''>
@@ -27,7 +27,7 @@
       <view class='_title'>产品</view>
     </view> -->
     <view class='' bindtap='goPublish'>
-      <view class='text-xmd text-white'>128</view>
+      <view class='text-xmd text-white'>{{data.publishCount+data.productCount}}</view>
       <view class='_title'>发布</view>
     </view>
   </view>

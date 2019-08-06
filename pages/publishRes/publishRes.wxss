@@ -2,6 +2,6 @@
 page{position: relative;}
 .text-xxlg{margin-bottom: 30rpx;}
 .flex{flex-wrap: wrap;}
-
+.icon-lg{margin-right: 0;}
 
 

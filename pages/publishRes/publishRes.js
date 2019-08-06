@@ -14,8 +14,19 @@ Page({
     tabValue: '',
     tab: '',
     tabArr: [],//用来放标签
+    name: '暂无',
 
 
+  },
+  telInput: function (e) {
+    this.setData({
+      telphone: e.detail.value
+    })
+  },
+  addInput: function (e) {
+    this.setData({
+      address: e.detail.value
+    })
   },
   send: function () {
     wx.showLoading({
@@ -25,10 +36,10 @@ Page({
     var self = this;
     //可编辑转态
     wx.request({//保存用户数据
-      url: app.globalData.apiUrl + '/restful/3.0/publish/2',
+      url: app.globalData.apiUrl + '/restful/3.0/publish/RESOURCE',
       method: 'PUT',
       header: {
-        // "Content-Type": "application/json",
+        "Content-Type": "application/json",
         Authorization: app.globalData.token
       },
       data: {
@@ -39,9 +50,10 @@ Page({
         "firstLevelClassify": data.proTypeIndex,
         "publishPic": data.tempFilePaths,
         "publishSynopsis": "暂无",
-        "publishType": 2,
+        "publishType": 1,
         "secondLevelClassify": data.proTypeIndex2,
         "tagNames": data.tabArr,
+        "name": data.name,
       },
       success: function (data) {
         console.log(data);

@@ -19,11 +19,11 @@
 
   <!-- 筛选框 -->
   <view class='content-warp-fullCol flex'>
-    <view class='text-center text-gray {{filterActive == 1 ? "text-normal" : ""}}'>
+    <view class='text-center text-gray {{filterActive == 0 ? "text-normal" : ""}}' bindtap='setTab1'>
       资源产品
       <image class='icon icon-sm' src='/images/xia.png'></image>
     </view>
-    <view class='text-center text-gray  {{filterActive == 2 ? "text-normal" : ""}}'>
+    <view class='text-center text-gray  {{filterActive == 1 ? "text-normal" : ""}}' bindtap='setTab2'>
       项目需求
       <image class='icon icon-sm' src='/images/xia.png'></image>
     </view>
@@ -34,24 +34,24 @@
 <view class='warp'>
   <view class='container'>
 
-    <view class='resource martop-30' wx:for="{{ data[navLeftActive].data }}" wx:key>
+    <view class='resource martop-30' wx:for="{{ data }}" wx:key>
 
-      <view class='title text-xmd'>{{item.title}}3d场景搭建业务介绍文字描述情绪秒速</view>
+      <view class='title text-xmd'>
+      {{item.title}} <text wx:if='{{!item.title }}'>还没有设置标题哦</text>
+      </view>
       <view class='float-warp'>
-       <image class='item-3' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
-        <image class='item-3' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
-         <image class='item-3' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
+       <image class='item-3' src='{{ item.publishPic }}'></image>
       </view>
       <view class='flex flex-between'>
         <view class='flex'>
 
           <view class='table-cell text-gray text-md'>
-            {{item.time}}
+            {{item.createdTime}}
           </view>
         </view>
-        <view hover-class='menu-active' data-index='{{index}}' bindtap='hini' hover-stay-time='200' class='menu-warp'>
+        <view hover-class='menu-active' data-index='{{item.id}}' hover-stay-time='200' class='menu-warp'>
           <image class='img-text menu' mode='widthFix' 
-           data-index='{{index}}' bindtap='toogleHini'
+          data-index='{{item.id}}' bindtap='toogleHini'
            src='../../images/delete.png'></image>
         </view>
 
@@ -66,7 +66,7 @@
   <view class='confirm'>
     <view>确定真的要删除您关注的内容？</view>
     <view class='flex flex-between martop-50'>
-      <view class='btn btn-text bg-normal btn-circle' bindtap='toogleHini'>确定</view>
+      <view class='btn btn-text bg-normal btn-circle' bindtap='deleteById'>确定</view>
       <view class='btn btn-text bg-normal btn-circle' bindtap='toogleHini'>我再想想</view>
     </view>
   </view>

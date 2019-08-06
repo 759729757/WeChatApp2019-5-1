@@ -1,5 +1,6 @@
 // pages/mine/pubilsh.js
 var data = require('data.js');
+var app = getApp();
 Page({
 
   /**
@@ -7,12 +8,19 @@ Page({
    */
   data: {
     city: ['广州', '深圳', '珠海', '东莞'], cityNum: 0,//城市选择器
-    filterActive:1,
+    filterActive: 0, filterType: ['project', 'resource'],
+    
     navLeftActive: 0,
+    deleteId:'',
   },
   bindPickerChange(e) {//城市选择器
     this.setData({
       cityNum: e.detail.value
+    })
+  },
+  onShow:function(){
+    wx.setNavigationBarTitle({
+      title: '我的发布',
     })
   },
   /**
@@ -22,34 +30,83 @@ Page({
     this.setData({
       data: data
     })
-    wx.setNavigationBarTitle({
-      title: '我的发布',
+    this.InitData();
+  
+  },
+  InitData:function(){
+    //获取用户数据
+    var self = this;
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/publish/subscriber/' + self.data.filterType[self.data.filterActive]+'/1/10',
+      method: 'GET',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log(data);
+        if (data.statusCode == 200) {
+          self.setData({
+            data: data.data.data.content
+          })
+        } else {
+          //状态吗不是200 没有获取到用户数据
+          wx.navigateTo({
+            url: '/pages/login/index'
+          })
+        }
+        wx.hideLoading();
+      }
     })
   },
   toogleHini(e) {
     var i = e ? e.currentTarget.dataset.index : '';
-    this.setHiniState(i); //把menu关闭
+    // this.setHiniState(i); //把menu关闭
     this.setData({
-      confirm: !this.data.confirm
+      confirm: !this.data.confirm,
+      deleteId:i
     })
   },
-  //点击菜单按钮
-  hini(e) {
-    var i = e.currentTarget.dataset.index;
-    var navLeftActive = this.data.navLeftActive;
-    var _hini = this.data.data[navLeftActive].data[i].hini;
-    var hini = 'data[' + navLeftActive + '].data[' + i + '].hini'
+  setTab1(){
     this.setData({
-      [hini]: !_hini
+      filterActive:0
     })
+    this.InitData();
   },
-  setHiniState(index) {
-    if (index == undefined) return false;
-    var navLeftActive = this.data.navLeftActive;
-    var _hini = this.data.data[navLeftActive].data[index].hini;
-    var hini = 'data[' + navLeftActive + '].data[' + index + '].hini'
+  setTab2() {
     this.setData({
-      [hini]: !_hini
+      filterActive: 1
+    })
+    this.InitData();
+  },
+  deleteById(id) {
+   
+    //获取用户数据
+    var self = this;
+    wx.showLoading({
+      title: '删除中',
+    })
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/publish/'+self.data.deleteId,
+      method: 'DELETE',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log(data);
+        if (data.statusCode == 200) {
+          self.setData({
+            confirm: !self.data.confirm,
+            deleteId: ''
+          })
+          self.InitData();
+        } else {
+
+        }
+        wx.hideLoading();
+      }
     })
   },
 

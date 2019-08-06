@@ -89,13 +89,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    if (typeof this.getTabBar === 'function' &&
-      this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 0
-      })
-    }
-
     this.setData({
       banner: testData.banner,
       supplier: testData.supplier,
@@ -108,6 +101,25 @@ Page({
       project: testData.project,
       partnar: testData.partnar,
     });
+
+    // 获取初始资料
+    var self = this;
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/app',
+      method: 'GET',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('资源', data);
+        if (data.statusCode == 200) {
+          self.setData({
+            // data: data.data.data
+          })
+        }
+        wx.hideLoading();
+      }
+    })
   
   },
 

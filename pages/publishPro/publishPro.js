@@ -7,15 +7,26 @@ Page({
    */
   data: {
     tempFilePaths:"",
-    proType: ['类型1', '类型2', '类型3', '类型4'], proTypeIndex: '',
-    proType2: ['2类型1', '2类型2', '2类型3', '2类型4'], proTypeIndex2:'',
+    proType: ['类型1', '类型2', '类型3', '类型4'], proTypeIndex: 0,
+    proType2: ['2类型1', '2类型2', '2类型3', '2类型4'], proTypeIndex2: 0,
     address:"广东佛山",
     telphone:"186****3239",
     tabValue:'',
     tab:'',
+    name:'暂无',
     tabArr:[],//用来放标签
 
 
+  },
+  telInput:function(e){
+    this.setData({
+      telphone:e.detail.value
+    })
+  },
+  addInput: function (e) {
+    this.setData({
+      address: e.detail.value
+    })
   },
   send:function(){
     wx.showLoading({
@@ -25,10 +36,10 @@ Page({
     var self = this;
     //可编辑转态
     wx.request({//保存用户数据
-      url: app.globalData.apiUrl + '/restful/3.0/publish/1',
+      url: app.globalData.apiUrl + '/restful/3.0/publish/PROJECT',
       method: 'PUT',
       header: {
-        // "Content-Type": "application/json",
+        "Content-Type": "application/json",
         Authorization: app.globalData.token
       },
       data: {
@@ -42,12 +53,13 @@ Page({
         "publishType": 1,
         "secondLevelClassify": data.proTypeIndex2,
         "tagNames": data.tabArr,
+        "name": data.name,
       },
       success: function (data) {
         console.log(data);
         wx.hideLoading();
         wx.showToast({
-          title: '修改成功',
+          title: '上传成功',
         })
         setTimeout(function(){
           wx.navigateBack({
@@ -56,6 +68,7 @@ Page({
         },1000)
       }, fail: function (e) {
         wx.hideLoading();
+        console.log(e);
         wx.showToast({
           title: '发送失败',
         })
