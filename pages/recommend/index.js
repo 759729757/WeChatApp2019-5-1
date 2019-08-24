@@ -33,7 +33,7 @@ Page({
     // 获取供应商
     var self = this;
     wx.request({
-      url: app.globalData.apiUrl + '/restful/3.0/supplier/1/10',
+      url: app.globalData.apiUrl + '/restful/3.0/app/subscriber/RECOMMEND_SUPPLIER/1/10',
       method: 'GET',
       header: {
         Authorization: app.globalData.token
@@ -44,12 +44,7 @@ Page({
           self.setData({
             data: data.data.data.content
           })
-        } else {
-          //状态吗不是200 没有获取到用户数据
-          wx.navigateTo({
-            url: '/pages/login/index'
-          })
-        }
+        } 
         wx.hideLoading();
       }
     })

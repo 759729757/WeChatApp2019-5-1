@@ -1,34 +1,34 @@
 <!--pages/mine/follow.wxml-->
 <wxs module="filter" src="../../filter.wxs"></wxs>
 <view class='flex text-gray bg-normal padding'>
-  <view  class='item _title {{navLeftActive == index?"text-white":""}}' wx:for="{{ data }}"
-   wx:key data-index="{{index}}" bindtap='chooseType' >{{item.typeName}}<image class='icon icon-sm' src='../../images/xia.png'></image></view>
+  <view  class='item _title {{navLeftActive == index?"text-white":""}}' wx:for="{{ navTab }}"
+   wx:key data-index="{{index}}" bindtap='chooseType' >{{item}}<image class='icon icon-sm' src='../../images/xia.png'></image></view>
 </view>
 <!-- 内容 --> 
 <view class='warp ' wx:if="{{!isFilter}}">
   <view class='stripe stripe-right'></view>
   <view class='container'>
 
-    <view class='resource martop-30' wx:for="{{ data[navLeftActive].data }}" wx:key >
+    <view class='resource martop-30' wx:for="{{ data }}" wx:key >
 
-      <view class='title text-xmd '>{{item.title}}</view>
-      <image class='pic-full' src='{{item.image}}'></image>
+      <view class='title text-xmd '>{{item.name}}</view>
+      <image class='pic-full' src='{{item.cardPic1}}'></image>
       <view class='flex flex-between'>
         <view class='flex'>
-          <image class='logo table-cell' src='{{item.logo}}'></image>
+          <image class='logo table-cell' src='{{item.subscriberInfo.headPortrait}}'></image>
           <view class='table-cell'>
             <view>
-              <text class='_title text-md'>{{item.name}}</text>
+              <text class='_title text-md'>{{item.nickName}}</text>
             </view>
             <view class='table-cell text-gray text-md'>
-              {{item.time}}
+              {{item.updatedTime}}
             </view>
           </view>
         </view>
-        <view class='hini flex' wx:if='{{ data[navLeftActive].data[index].hini }}'>
+        <view class='hini flex' wx:if='{{ data[index].hini }}'>
           <view class='croner'></view>
-          <view>取消关注</view>
-          <view  data-index='{{index}}' bindtap='toogleHini'>删除</view>
+          <view data-index='{{index}}' data-id='{{item.id}}' bindtap='toogleHini'>取消关注</view>
+          <view data-index='{{index}}' data-id='{{item.id}}' bindtap='toogleHini'>删除</view>
         </view>
         <view hover-class='menu-active' data-index='{{index}}' bindtap='hini'
         hover-stay-time='200' class='menu-warp'>
@@ -47,7 +47,7 @@
   <view class='confirm'>
     <view>确定真的要删除您关注的内容？</view>
     <view class='flex flex-between martop-50'>
-      <view class='btn btn-text bg-normal btn-circle' bindtap='toogleHini'>确定</view>
+      <view class='btn btn-text bg-normal btn-circle' bindtap='unFollow'>确定</view>
        <view class='btn btn-text bg-normal btn-circle' bindtap='toogleHini'>我再想想</view>
     </view>
   </view>

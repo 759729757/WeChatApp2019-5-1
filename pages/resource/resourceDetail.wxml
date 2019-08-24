@@ -3,7 +3,7 @@
 <view class='clear'></view>
 <view class='container'>
   <view class='flex flex-between session'>
-    <text class='text-lg text-white'>业务/产品介绍</text>
+    <text class='text-lg text-white'>后台获取不到数据（根据id获取发布信息这个接口</text>
       <image class='img-text' hidden="{{isFollow}}" mode='widthFix' bindtap='follow' src='../../images/follow.png'></image>
     <image class='img-text' hidden="{{!isFollow}}" mode='widthFix' bindtap='follow' src='../../images/followed.png'></image>
   </view>

@@ -4,7 +4,7 @@ var app = getApp();
 Page({
 
   /**
-   * 页面的初始数据
+   * 页面的初始数据 
    */
   data: {
     city: ['广州', '深圳', '珠海', '东莞'], cityNum: 0,//城市选择器
@@ -22,9 +22,11 @@ Page({
       isFilter: false
     })
   },
-  goDetail(){
+  goDetail(e){
+    console.log(e)
     wx.navigateTo({
-      url: 'projectDetail',
+      url: 'projectDetail?id=' + e.currentTarget.dataset.id,
+
     })
   },
   //清除
@@ -88,6 +90,9 @@ Page({
     })
     // 获取初始资料
     var self = this;
+    wx.showLoading({
+      title: '加载中',
+    })
     wx.request({
       url: app.globalData.apiUrl + '/restful/3.0/app/publish/PROJECT/1/10',
       method: 'GET',
@@ -98,7 +103,7 @@ Page({
         console.log('资源', data);
         if (data.statusCode == 200) {
           self.setData({
-            // data: data.data.data
+            data: data.data.data.content
           })
         }
         wx.hideLoading();

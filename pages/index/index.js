@@ -111,10 +111,13 @@ Page({
         Authorization: app.globalData.token
       },
       success: function (data) {
-        console.log('资源', data);
         if (data.statusCode == 200) {
+          data.data.data.hrs1 = data.data.data.hrs.slice(0, 3);
+          data.data.data.hrs2 = data.data.data.hrs.slice(3, 6);
+          data.data.data.hrs3 = data.data.data.hrs.slice(6, 9);
+          console.log('首页', data);
           self.setData({
-            // data: data.data.data
+            data: data.data.data
           })
         }
         wx.hideLoading();

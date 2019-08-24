@@ -112,7 +112,7 @@ transition: padding .35s;}
 .swiper.project{padding-bottom: 40rpx;}
 
 /* 战略伙伴 */
-.part-partner .item{background: #212C9A;width: 280rpx;height: 410rpx;text-align: center;margin-right: 20rpx;}
+.part-partner .item{background: #212C9A;width: 280rpx;overflow: hidden;height: 410rpx;text-align: center;margin-right: 20rpx;}
 .part-partner .text-content{font-size: 24rpx;}
 .part-partner .headImg{width: 150rpx;height: 150rpx;margin: 30rpx;box-sizing: border-box;border: 6px #1E2887 solid;}
 .part-partner .btn-circle{background-color: #1E2887;border: none;padding: 15rpx 30rpx;}

@@ -1,7 +1,7 @@
 // pages/resource/resourceDetail.js
+var app = getApp();
 Page({
-
-  /**
+  /** 
    * 页面的初始数据
    */
   data: {
@@ -16,6 +16,24 @@ Page({
     })
   },
   follow: function (e) {
+    var self = this;
+    var id = this.data.data.id
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/attention/' + id,
+      method: 'POST',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('关注', data);
+        if (data.statusCode == 200) {
+          wx.hideLoading();
+          wx.showToast({
+            title: '关注成功',
+          })          
+        }
+      }
+    })
     this.setData({
       isFollow: !this.data.isFollow
     })
@@ -34,25 +52,27 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  onLoad:function(o){
+      console.log(o)
+    var id = o.id;
+    // 获取初始资料
+    var self = this;
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/publish/'+id,
+      method: 'GET',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('资源', data);
+        if (data.statusCode == 200) {
+          self.setData({
+            data: data.data.data
+          })
+        }
+        wx.hideLoading();
+      }
+    })
   },
 
   /**

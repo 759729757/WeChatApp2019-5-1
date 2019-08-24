@@ -1,4 +1,5 @@
 // pages/resource/resourceDetail.js
+var app = getApp();
 Page({
 
   /**
@@ -33,11 +34,27 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  onLoad: function (o) {
+    console.log(o)
+    var id = o.id;
+    // 获取初始资料
+    var self = this;
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/publish/' + id,
+      method: 'GET',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('资源', data);
+        if (data.statusCode == 200) {
+          self.setData({
+            // data: data.data.data.content
+          })
+        }
+        wx.hideLoading();
+      }
+    })
   },
 
   /**

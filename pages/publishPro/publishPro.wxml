@@ -2,7 +2,7 @@
 <view class='stripe stripe-right'></view>
 <view class='content-warp'>
   <view class='text-xxlg text-white'>
-    填写资料
+    填写资料 
   </view>
   <view class='_title'>
     发布资源产品介绍 最多输入30字

@@ -16,9 +16,9 @@ Page({
 
 
   },
-  goDetail:function(){
+  goDetail:function(e){
     wx.navigateTo({
-      url: 'resourceDetail',
+      url: 'resourceDetail?id=' + e.currentTarget.dataset.id,
     })
   },
   // 确认筛选
@@ -78,6 +78,9 @@ Page({
     })
     // 获取初始资料
     var self = this;
+    wx.showLoading({
+      title: '加载中',
+    })
     wx.request({
       url: app.globalData.apiUrl + '/restful/3.0/app/publish/RESOURCE/1/10',
       method: 'GET',
@@ -88,7 +91,7 @@ Page({
         console.log('资源', data);
         if (data.statusCode == 200) {
           self.setData({
-            // data: data.data.data
+            data: data.data.data.content
           })
         }
         wx.hideLoading();

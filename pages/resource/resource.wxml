@@ -49,25 +49,25 @@
 <view class='warp ' wx:if="{{!isFilter}}">
   <view class='stripe stripe-right'></view>
   <view class='container'>
-    <view class='resource martop-30' wx:for="{{ data[navLeftActive].data }}" wx:key bindtap='goDetail'>
+    <view class='resource martop-30' wx:for="{{ data }}" wx:key data-id='{{item.id}}' bindtap='goDetail'>
 
-      <view class='title text-xmd'>{{item.title}}</view>
-      <image class='pic-full' src='{{item.image}}'></image>
+      <view class='title text-xmd'>{{item.name}}</view>
+      <image class='pic-full' src='{{item.publishPic}}'></image>
 
       <view class='flex flex-between'>
 
         <view class='flex'>
-          <image class='logo table-cell' src='{{item.logo}}'></image>
+          <image class='logo table-cell' src='{{item.publishSubscriberInfo.headPortrait}}'></image>
 
           <view class='table-cell'>
             <view>
-              <view class='flex text-md text-white text-small'>{{item.name}}
+              <view class='flex text-md text-white text-small'>{{item.publishSubscriberInfo.nickName}}
                 <image class='icon icon-sm' src='/images/gou.png'></image>
                 <image class='icon icon-sm' src='/images/edit2.png'></image>
               </view>
             </view>
             <view class='table-cell text-gray text-small'>
-              {{item.time}}
+              {{item.createdTime}}
             </view>
           </view>
         </view>

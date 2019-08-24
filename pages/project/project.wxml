@@ -26,7 +26,7 @@
     <view class='text-center text-gray  {{filterActive == 2 ? "text-normal" : ""}}' data-index='2' bindtap='shaixuan'>
       筛选
       <image class='icon icon-sm' src='/images/xia.png'></image>
-    </view>
+    </view> 
   </view>
 
 </view>
@@ -51,9 +51,9 @@
 <view class='warp ' wx:if="{{!isFilter}}">
   <view class='stripe stripe-right'></view>
   <view class='container'>
-    <view class='content-warp media item-5' wx:for="{{ data[navLeftActive].data }}" wx:key bindtap='goDetail'>
-      <view class='title text-xmd'>{{item.title}}</view>
-      <view class='text-content'>{{item.content}}</view>
+    <view class='content-warp media item-5' wx:for="{{ data }}" wx:key bindtap='goDetail' data-id='{{item.id}}'>
+      <view class='title text-xmd'>{{item.name}}</view>
+      <view class='text-content'>{{item.publishSynopsis}}</view>
 
       <view class='flex flex-between table-full abs-bottom'>
         <view class='flex'>
@@ -62,7 +62,7 @@
         </view>
         <view>
           <!-- <image class='icon icon-sm' src='/images/eyes.png'></image> -->
-          <text class='text-gray text-small'>{{item.time}}</text>
+          <text class='text-gray text-small'>{{item.createdBy}}</text>
         </view>
       </view>
     </view>

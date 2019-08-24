@@ -3,27 +3,27 @@
 <view class='clear'></view>
 <view class='container'>
   <view class='flex flex-between session'>
-    <text class='text-lg text-white'>业务/产品介绍</text>
+    <text class='text-lg text-white'>{{data.name}}</text>
     
     <image class='img-text' hidden="{{isFollow}}" mode='widthFix' bindtap='follow' src='../../images/follow.png'></image>
     <image class='img-text' hidden="{{!isFollow}}" mode='widthFix' bindtap='follow' src='../../images/followed.png'></image>
   </view>
   <view class='text-white session'>
     特性：
-    <text class='text-btn text-btn-sm btn-circle text-yellow'>1W-2W</text>
-    <text class='text-btn text-btn-sm btn-circle text-yellow'>3天</text>
-    <text class='text-btn text-btn-sm btn-circle text-yellow'>要求面谈</text>
+    <text wx:for="{{data.tags}}" wx:key
+    class='text-btn text-btn-sm btn-circle text-yellow'>{{item.name}}</text>
+  
   </view>
-  <view class='text-white session text-md'>
+  <!-- <view class='text-white session text-md'>
     截至日期：2019-05-18
-  </view>
+  </view> -->
   <view class='text-gray text-md session'>
-    业务介绍文字描述就是选哪个当数据改变触发渲染层重新渲染的时候，会校正带有 key 的组件，框架会确保他们被重新排序，而不是重新创建，以确保使组件保持自身的状态，并且提高列表渲染时的效率。
+    {{data.publishSynopsis}}
   </view>
 
  
   <scroll-view class='scroll-view' scroll-x>
-      <image class='pic' mode='widthFix' data-src="https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg" src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg' bindtap="previewImage" wx:for="[1,2,4,5]" wx:key></image>
+      <image class='pic' mode='widthFix' src="{{data.publishPic}}" bindtap="previewImage" ></image>
   </scroll-view>
 
 </view>
@@ -32,9 +32,9 @@
 
   <view class=''>
     <view class='flex flex-left'>
-      <image class='headImg' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
+      <image class='headImg' src='{{data.publishSubscriberInfo.headPortrait}}'></image>
       <view>
-        <view class='text-lg text-white'>广东省科技技术信息有限公司</view>
+        <view class='text-lg text-white'>{{data.publishSubscriberInfo.nickName}}</view>
         <view class='text-content '>公司剪辑欸公司简介公司简介公司简介Eb32232</view>
       </view>
     </view>

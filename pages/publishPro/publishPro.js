@@ -4,13 +4,13 @@ Page({
 
   /**
    * 页面的初始数据
-   */
+   */ 
   data: {
     tempFilePaths:"",
     proType: ['类型1', '类型2', '类型3', '类型4'], proTypeIndex: 0,
-    proType2: ['2类型1', '2类型2', '2类型3', '2类型4'], proTypeIndex2: 0,
-    address:"广东佛山",
-    telphone:"186****3239",
+    proType2: ['请先选一级分类'], proTypeIndex2: 0,
+    address:"",
+    telphone:"",
     tabValue:'',
     tab:'',
     name:'暂无',
@@ -62,8 +62,8 @@ Page({
           title: '上传成功',
         })
         setTimeout(function(){
-          wx.navigateBack({
-            delta: 1
+          wx.switchTab({
+            url: "/pages/publish/publish"
           })
         },1000)
       }, fail: function (e) {
@@ -104,8 +104,15 @@ Page({
     })
   },
   bindPickerChange: function (e) {
+    var pickerArr = this.data.pickerArr
+      , index = e.detail.value
+      , _pickerArr = [];
+    for (var i = 0; i < pickerArr[index].secondClassifys.length; i++) {
+      _pickerArr.push(pickerArr[index].secondClassifys[i].name)
+    }
     this.setData({
-      proTypeIndex: e.detail.value
+      proTypeIndex: index,
+      proType2: _pickerArr
     })
   },
   bindPickerChange2: function (e) {
@@ -117,7 +124,30 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    //获取发布类型
+    var self = this;
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/publish/classify/PROJECT',
+      method: 'GET',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log(data);
+        var pickerArr = data.data.data , _pickerArr=[];
+        for(var i=0;i<pickerArr.length;i++){
+          _pickerArr.push(pickerArr[i].name)
+        }
+        self.setData({
+          pickerArr: pickerArr,
+          proType: _pickerArr
+        })
+        wx.hideLoading();
+      }
+    })
   },
 
   /**
