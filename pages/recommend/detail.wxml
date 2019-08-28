@@ -1,25 +1,25 @@
 <!--pages/recommend/detail.wxml-->
 <view class='bg-normal flex flex-col flex-center container-sm'>
-  <image class='headImg' src='https://ps.ssl.qhimg.com/dmfd/420_207_/t01ed8e6f986b9c3356.jpg'></image>
-  <view class='text-xmd sub-title text-white '>广州科技有限公司</view>
-  <view class='text-content text-sm'>公司简介：广州科技优先公司射虎对手打败菜名都是大号圣诞节安康读好书打火机阿斯加德好</view>
+  <image class='headImg' src='{{data.headPortrait}}'></image>
+  <view class='text-xmd sub-title text-white '>{{data.nickName}}</view>
+  <view class='text-content text-sm'>简介：{{data.signature||'暂无'}}</view>
   <!-- <view class='btn btn-yellow text-btn btn-circle'>+ 关注</view> -->
   <image class='img-text' hidden="{{isFollow}}" mode='widthFix' bindtap='follow' src='../../images/follow.png'></image>
-  <image class='img-text' hidden="{{!isFollow}}" mode='widthFix' bindtap='follow' src='../../images/followed.png'></image>
+  <image class='img-text' hidden="{{!isFollow}}" mode='widthFix' bindtap='unFollow' src='../../images/followed.png'></image>
 </view>
 <view class='bg-normal text-white'>
   <view class='container'>
     <view class='bg-dark'>
      <image class='icon ' src='../../images/lianxi.png'></image>
-      联系人：灌灌
+      联系人：{{data.name}}
     </view>
     <view class='bg-dark'>
      <image class='icon ' src='../../images/tel.png'></image>
-      联系电话：123827368
+      联系电话：{{data.mobilePhone}}
     </view>
-    <view class='bg-dark flex'>
+    <view class='bg-dark flex flex-left'>
      <image class='icon ' src='../../images/address.png'></image>
-      <text>公司地址：广东省广是是是州市白云区沙河镇8东1单元201</text>
+      <text>公司地址：{{data.location}}</text>
     </view>
   </view>
 </view>

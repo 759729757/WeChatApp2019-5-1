@@ -47,7 +47,9 @@
   </view>
 
   <scroll-view class='scroll-view gongying content-warp' scroll-x>
-    <view class='item' wx:for="{{data.recommendSuppliers}}" wx:key>
+  
+    <view class='item' wx:for="{{data.recommendSuppliers}}" 
+    data-id="{{item.id}}" bindtap='goRecommendDetail' wx:key>
       <view class='flex session'>
         <image class='headImg' src="{{item.headPortrait}}"></image>
       </view>

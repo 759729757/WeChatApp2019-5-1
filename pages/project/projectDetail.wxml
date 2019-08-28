@@ -6,7 +6,7 @@
     <text class='text-lg text-white'>{{data.name}}</text>
     
     <image class='img-text' hidden="{{isFollow}}" mode='widthFix' bindtap='follow' src='../../images/follow.png'></image>
-    <image class='img-text' hidden="{{!isFollow}}" mode='widthFix' bindtap='follow' src='../../images/followed.png'></image>
+    <image class='img-text' hidden="{{!isFollow}}" mode='widthFix' bindtap='unFollow' src='../../images/followed.png'></image>
   </view>
   <view class='text-white session'>
     特性：
@@ -40,15 +40,15 @@
     </view>
     
     <view class='session footer'>
-      <view class='text-white '>联系方式：1232923823</view>
-      <view class='text-white '>联系地址：广州市某是的撒肯德基</view>
-      <view class='text-white '>官网链接：www.asdasd.com</view>
+      <view class='text-white '>联系方式：{{data.publishSubscriberInfo.mobilePhone}}</view>
+      <view class='text-white '>联系地址：{{data.publishSubscriberInfo.location}}</view>
+      <view class='text-white '>官网链接：{{data.publishSubscriberInfo.enterpriseWebRul}}</view>
     </view>
   </view>
 </view>
 
 <view class='flex flex-between content-warp bg-dark martop-50 warp-fixed-bottom'>
-  <view class='btn btn-full btn-white'>
+  <view class='btn btn-full btn-white' bindtap="phoneCall">
     立即联系TA
   </view>
   <view class=' text-btn '>

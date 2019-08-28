@@ -18,9 +18,10 @@ Page({
   onLoad: function (options) {
 
   },
-  goDetail:function(){
+  goDetail:function(e){
+    var id = e.currentTarget.dataset.id;
     wx/wx.navigateTo({
-      url: 'detail'
+      url: 'detail?id='+id,
     })
   },
   /**
@@ -33,16 +34,24 @@ Page({
     // 获取供应商
     var self = this;
     wx.request({
-      url: app.globalData.apiUrl + '/restful/3.0/app/subscriber/RECOMMEND_SUPPLIER/1/10',
+      url: app.globalData.apiUrl + '/restful/3.0/app/subscriber/{tagCode}/1/10',
       method: 'GET',
       header: {
         Authorization: app.globalData.token
       },
+      data:{
+        subscriberTag:'RECOMMEND_SUPPLIER'
+      },
       success: function (data) {
         console.log('供应商',data);
         if (data.statusCode == 200) {
+          var list = data.data.data.content;
+          var data = list;
+          var l = data.length;
+          var harf = Math.floor(l / 2);
           self.setData({
-            data: data.data.data.content
+            list1: data.slice(0, harf),
+            list2: data.slice(harf)
           })
         } 
         wx.hideLoading();

@@ -1,4 +1,5 @@
 // pages/recommend/detail.js
+var app = getApp();
 Page({
 
   /**
@@ -19,6 +20,59 @@ Page({
       })
   },
 
+  follow: function (e) {
+    var self = this;
+    var id = this.data.data.id
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/attention/' + id,
+      method: 'PUT',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('关注', data);
+        if (data.statusCode == 200) {
+          wx.hideLoading();
+          wx.showToast({
+            title: '关注成功',
+          })
+        }
+      }
+    })
+    this.setData({
+      isFollow: !this.data.isFollow
+    })
+  },
+  phoneCall: function () {
+    var self = this;
+    wx.makePhoneCall({
+      phoneNumber: self.data.data.publishSubscriberInfo.mobilePhone //仅为示例，并非真实的电话号码
+    })
+  },
+  unFollow: function (e) {
+    var self = this;
+    var id = this.data.data.id
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/attention/' + id,
+      method: 'DELETE',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('取消关注', data);
+        if (data.statusCode == 200) {
+          wx.hideLoading();
+          wx.showToast({
+            title: '取消成功',
+          })
+        }
+      }
+    })
+    this.setData({
+      isFollow: !this.data.isFollow
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -36,7 +90,28 @@ Page({
       title: '供应商'
     })
   },
-
+  onLoad: function (o) {
+    console.log(o)
+    var id = o.id;
+    // 获取初始资料
+    var self = this;
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/subscriber/' + id,
+      method: 'GET',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('供应商详情', data);
+        if (data.statusCode == 200) {
+          self.setData({
+            data: data.data.data
+          })
+        }
+        wx.hideLoading();
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

@@ -19,23 +19,23 @@
 
 <view class='container'>
   <view class='item-5'>
-      <view wx:for="{{list2}}" wx:key class='item' bindtap='goDetail'>
-        <image class='pic' src="{{item.image}}"></image>
+      <view wx:for="{{list2}}" wx:key class='item' data-id="{{item.id}}" bindtap='goDetail'>
+        <image class='pic' src="{{item.headPortrait}}"></image>
          <view class='content'>
-          <view class='text-normal'>{{item.name}}</view>
-          <text class='text-yellow text-sm'>{{item.describe}}</text>
+          <view class='text-normal'>{{item.nickName}}</view>
+          <text class='text-yellow text-sm'>{{item.signature}}</text>
           <view class='text-content'>简介：{{item.detail}} <text class='text-yellow'>【展开】</text></view>
         </view>
       </view>
   </view>
   <view class='item-5 martop-50'>
-       <view wx:for="{{list1}}" wx:key class='item' bindtap='goDetail'>
+       <view wx:for="{{list1}}" wx:key class='item' data-id="{{item.id}}" bindtap='goDetail'>
          <view class='content'>
-          <view class='text-normal'>{{item.name}}</view>
-          <text class='text-yellow text-sm'>{{item.describe}}</text>
+          <view class='text-normal'>{{item.nickName}}</view>
+          <text class='text-yellow text-sm'>{{item.signature}}</text>
           <view class='text-content'>简介：{{item.detail}} <text class='text-yellow'>【展开】             </text></view>
         </view>
-        <image class='pic' src="{{item.image}}"></image>
+        <image class='pic' src="{{item.headPortrait}}"></image>
       </view>
   </view>
 </view>

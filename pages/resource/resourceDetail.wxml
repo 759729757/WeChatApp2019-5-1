@@ -1,11 +1,11 @@
-<!--pages/resource/resourceDetail.wxml-->
+<!--pages/resource/resourceDetail.wxml--> 
 <view class='stripe stripe-right'></view>
 <view class='clear'></view>
 <view class='container'>
   <view class='flex flex-between session'>
-    <text class='text-lg text-white'>后台获取不到数据（根据id获取发布信息这个接口</text>
+    <text class='text-lg text-white'>{{data.name}}</text>
       <image class='img-text' hidden="{{isFollow}}" mode='widthFix' bindtap='follow' src='../../images/follow.png'></image>
-    <image class='img-text' hidden="{{!isFollow}}" mode='widthFix' bindtap='follow' src='../../images/followed.png'></image>
+    <image class='img-text' hidden="{{!isFollow}}" mode='widthFix' bindtap='unFollow' src='../../images/followed.png'></image>
   </view>
 
   <view class='text-gray text-md session'>
@@ -19,7 +19,7 @@
     <text class='text-btn text-btn-sm btn-circle text-yellow'>要求面谈</text>
   </view>
 
-  <image class='pic-full' src='https://p.ssl.qhimg.com/dm/664_417_/t01eaff13080a5f2829.jpg'></image>
+  <image class='pic-full' src='{{data.publishPic}}'></image>
 
 </view>
 

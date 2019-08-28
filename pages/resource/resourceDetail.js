@@ -49,7 +49,7 @@ Page({
         console.log('资源', data);
         if (data.statusCode == 200) {
           self.setData({
-            // data: data.data.data.content
+            data: data.data.data
           })
         }
         wx.hideLoading();
@@ -57,6 +57,52 @@ Page({
     })
   },
 
+  follow: function (e) {
+    var self = this;
+    var id = this.data.data.id
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/attention/' + id,
+      method: 'PUT',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('关注', data);
+        if (data.statusCode == 200) {
+          wx.hideLoading();
+          wx.showToast({
+            title: '关注成功',
+          })
+        }
+      }
+    })
+    this.setData({
+      isFollow: !this.data.isFollow
+    })
+  },
+  unFollow: function (e) {
+    var self = this;
+    var id = this.data.data.id
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/attention/' + id,
+      method: 'DELETE',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('取消关注', data);
+        if (data.statusCode == 200) {
+          wx.hideLoading();
+          wx.showToast({
+            title: '取消成功',
+          })
+        }
+      }
+    })
+    this.setData({
+      isFollow: !this.data.isFollow
+    })
+  }, 
   /**
    * 生命周期函数--监听页面卸载
    */

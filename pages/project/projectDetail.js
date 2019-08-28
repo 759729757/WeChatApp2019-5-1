@@ -15,12 +15,18 @@ Page({
       urls: [current] // 需要预览的图片http链接列表  
     })
   },
+  phoneCall: function () {
+    var self = this;
+    wx.makePhoneCall({
+      phoneNumber: self.data.data.publishSubscriberInfo.mobilePhone //仅为示例，并非真实的电话号码
+    })
+  },
   follow: function (e) {
     var self = this;
     var id = this.data.data.id
     wx.request({
       url: app.globalData.apiUrl + '/restful/3.0/attention/' + id,
-      method: 'POST',
+      method: 'PUT',
       header: {
         Authorization: app.globalData.token
       },
@@ -31,6 +37,29 @@ Page({
           wx.showToast({
             title: '关注成功',
           })          
+        }
+      }
+    })
+    this.setData({
+      isFollow: !this.data.isFollow
+    })
+  },
+  unFollow: function (e) {
+    var self = this;
+    var id = this.data.data.id
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/attention/' + id,
+      method: 'DELETE',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('取消关注', data);
+        if (data.statusCode == 200) {
+          wx.hideLoading();
+          wx.showToast({
+            title: '取消成功',
+          })
         }
       }
     })
