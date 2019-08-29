@@ -9,13 +9,18 @@
   </view>
 
   <view class='flex pic-warp' bindtap='getImg'>
-    <view class='text-center' wx:if="{{!tempFilePaths}}">
+    <view class='text-center' wx:if="{{!tempFilePaths.length}}">
       <image class='icon icon-lg' src='../../images/add2.png'></image>
       <view class='_title'>上传 视频/照片</view>
     </view>
 
-    <view wx:if="{{tempFilePaths}}">
-      <image class='pic-show' mode='aspectFit' src='{{tempFilePaths}}'></image>
+    <view wx:if="{{tempFilePaths.length}}">
+      <video wx:if="{{upLoadType == 'video'}}" src="{{tempFilePaths[0]}}" muted="true" autoplay="true" controls="false" loop></video>
+
+      <view wx:if="{{upLoadType == 'image'}}" class="full-width">
+        <image class='pic-show item-{{tempFilePaths.length}}' mode='widthFix'
+          wx:for="{{tempFilePaths}}" wx:key src='{{item}}'></image>  
+      </view>
     </view>
   </view>
   <view class='info-warp'>
@@ -37,18 +42,31 @@
     </picker>
   </view>
 
-  <view class='info-warp flex flex-between'>
-    <input class='title ' placeholder="请输入地区" bindinput='addInput' value="{{address}}"/>
-    <text class='_title '>修改 </text>
+  <view class='info-warp'>
+
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="title">
+        选择地区：{{region[0]}}，{{region[1]}}，{{region[2]}}
+      </view>
+    </picker>
+  
   </view>
 
+  <view class='info-warp flex flex-between'>
+    <input class='title ' placeholder="请输入项目名称" bindinput='nameInput' value="{{name}}"/>
+    <text class='_title '>修改 </text>
+  </view>
+  <view class='info-warp flex flex-between'>
+    <input class='title ' placeholder="请输入项目简介" bindinput='publishSynopsisInput' value="{{publishSynopsis}}"/>
+    <text class='_title '>修改 </text>
+  </view>
   <view class='info-warp flex flex-between'>
     <input class='title ' placeholder="请输入电话" bindinput='telInput' value="{{telphone}}"/>
     <text class='_title '>修改 </text>
   </view>
 
   <view class='tab-warp'>
-    <input class='title {{ tabEdit ? "active":"" }}' bindinput='tabInput' auto-focus='{{tabEdit}}' value='{{tabValue}}' placeholder='编辑标签'></input>
+    <input class='title {{ tabEdit ? "active":"" }}' bindinput='tabInput' auto-focus='{{tabEdit}}' value='{{tabValue}}' placeholder='点击编辑标签'></input>
      <view class='flex flex-left'>
     
       <view class='tab' wx:for="{{tabArr}}" wx:if="{{item}}" wx:key>

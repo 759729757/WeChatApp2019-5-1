@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tempFilePaths: "",
+    tempFilePaths: [],
     proType: ['类型1', '类型2', '类型3', '类型4'], proTypeIndex: '',
     proType2: ['请先选一级分类'], proTypeIndex2: '',
     address: "",
@@ -14,8 +14,10 @@ Page({
     tabValue: '',
     tab: '',
     tabArr: [],//用来放标签
-    name: '暂无',
-
+    name: '',
+    region: ['广东省', '广州市', '海珠区'],
+    customItem: '全部',
+    upLoadType: 'image'
 
   },
   telInput: function (e) {
@@ -43,7 +45,8 @@ Page({
         Authorization: app.globalData.token
       },
       data: {
-        "address": data.address,
+        "publishSynopsis": data.publishSynopsis,
+        "address": data.region[0] + data.region[1] + data.region[2],
         "contactPhone": data.telphone,
         // "createdBy": "string",
         // "createdTime": "2019-07-25T14:49:00.287Z",
@@ -100,6 +103,16 @@ Page({
   tabInput: function (e) {
     this.setData({
       tabValue: e.detail.value
+    })
+  },
+  nameInput: function (e) {
+    this.setData({
+      name: e.detail.value
+    })
+  },
+  publishSynopsisInput: function (e) {
+    this.setData({
+      publishSynopsis: e.detail.value
     })
   },
   bindPickerChange: function (e) {
@@ -160,50 +173,128 @@ Page({
   getImg: function () {
     var that = this;
     var self = this;
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
+     wx.showModal({
+      title: '选择类型',
+      content: '请选择上传类型',
+      confirmText:'视频',
+      cancelText:'照片',
       success(res) {
-        // tempFilePath可以作为img标签的src属性显示图片
-        const tempFilePaths = res.tempFilePaths
-        console.log(tempFilePaths);
-        wx.showLoading({
-          title: '上传图片中',
-        });
-        wx.uploadFile({
-          url: app.globalData.apiUrl + '/restful/3.0/common/upload',
-          filePath: tempFilePaths[0],
-          name: 'file',
-          success(res) {
-            console.log(res)
-            var _data = res.data
-            var data = JSON.parse(_data.replace(/↵|\r|\n/g, ''))
-            var imgUrl = data.data;
-            if (imgUrl) {
-              self.setData({
-                tempFilePaths: imgUrl
-              })
-            }
-            wx.hideLoading();
-            if (res.statusCode == 400) {
-              wx.showToast({
-                title: '提交失败',
-              })
-            }
-          }, fail(e) {
-            console.log('error', e);
-            wx.hideLoading();
-            wx.showToast({
-              title: '提交失败',
-            })
-          }
-        })
+        if (res.confirm) {
+          console.log('用户点击视频')
+          wx.chooseVideo({
+            sourceType: ['album', 'camera'],
+            maxDuration: 10,
+            camera: 'back',
+            success(res) {
+              var videoArr = [];
+              videoArr.push(res.tempFilePath);
+              console.log(videoArr);
+              wx.showLoading({
+                title: '上传视频中',
+              });
+              wx.uploadFile({
+                url: app.globalData.apiUrl + '/restful/3.0/common/upload',
+                filePath: res.tempFilePath,
+                name: 'file',
+                success(res) {
+                  var _data = res.data
+                  var data = JSON.parse(_data.replace(/↵|\r|\n/g, ''))
+                  console.log(data)
+                  var imgUrl = data.data;
+                  var arr = [];arr.push(imgUrl)
+                  if (imgUrl) {
+                    self.setData({
+                      tempFilePaths: arr,
+                      upLoadType: 'video'
 
+                    })
+                  }
+                  wx.hideLoading();
+                  if (res.statusCode == 400) {
+                    wx.showToast({
+                      title: '提交失败',
+                    })
+                  }
+                }, fail(e) {
+                  console.log('error', e);
+                  wx.hideLoading();
+                  wx.showToast({
+                    title: '提交失败',
+                  })
+                }
+              })
+            }
+          })
+        } else if (res.cancel) {
+          console.log('用户点击照片')
+          wx.chooseImage({
+            count: 5,
+            sizeType: ['original', 'compressed'],
+            sourceType: ['album', 'camera'],
+            success(res) {
+              // tempFilePath可以作为img标签的src属性显示图片
+              const tempFilePaths = res.tempFilePaths
+              console.log('选择的图片',tempFilePaths);
+              self.setData({
+                tempFilePaths:[]
+              })
+              self.uploadImg(tempFilePaths,0);
+            }
+          })
+        }
       }
     })
 
   },
-
+  uploadImg:function(img,i){
+    var self = this;
+     wx.showLoading({
+      title: '上传图片中',
+    });
+    wx.uploadFile({
+      url: app.globalData.apiUrl + '/restful/3.0/common/upload',
+      filePath: img[i],
+      name: 'file',
+      success(res) {
+        var _data = res.data
+        var data = JSON.parse(_data.replace(/↵|\r|\n/g, ''))
+        console.log(data)
+        var imgUrl = data.data;
+        var tempFilePaths = self.data.tempFilePaths;
+        tempFilePaths.push(imgUrl)
+        console.log('tempFilePaths参数：', tempFilePaths, imgUrl)
+        if (imgUrl) {
+          self.setData({
+            tempFilePaths: tempFilePaths,
+            upLoadType: 'image'
+          })
+          //递归，回调该函数直到历编所有
+          if(i<img.length-1){
+            i++;
+            self.uploadImg(img, i);
+          }else{
+            wx.hideLoading();
+          };
+        }
+        if (res.statusCode == 400) {
+          wx.showToast({
+            title: '提交失败',
+          })
+        }
+      }, fail(e) {
+        console.log('error', e);
+        wx.hideLoading();
+        wx.showToast({
+          title: '提交失败',
+        })
+      }
+    })
+  },
+  bindRegionChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
+  }
 
 })

@@ -31,6 +31,8 @@ Page({
     project:[],
     partnar:[],
 
+    region: ['广东省', '广州市', '海珠区'],
+    customItem: '全部',
   },
   goRecommendDetail: function (e) {
     var id = e.currentTarget.dataset.id;
@@ -95,7 +97,7 @@ Page({
    */
   onReady: function () {
     this.setData({
-      banner: testData.banner,
+      // banner: testData.banner,
       supplier: testData.supplier,
       viedo: testData.viedo,
       media: testData.media,
@@ -109,6 +111,9 @@ Page({
 
     // 获取初始资料
     var self = this;
+    wx.showLoading({
+      title: '加载中',
+    })
     wx.request({
       url: app.globalData.apiUrl + '/restful/3.0/app',
       method: 'GET',
@@ -128,7 +133,7 @@ Page({
         wx.hideLoading();
       }
     })
-  
+
   },
 
   /**
@@ -144,6 +149,26 @@ Page({
     }
     wx.setNavigationBarTitle({
       title: 'AD圈',
+    })
+    wx.showLoading({
+      title: '加载中',
+    })
+    var self = this;
+    wx.request({
+      url: app.globalData.apiUrl + '/restful/3.0/app/home/banner',
+      method: 'GET',
+      header: {
+        Authorization: app.globalData.token
+      },
+      success: function (data) {
+        console.log('首页banner', data);
+        if (data.statusCode == 200) {
+          self.setData({
+            banner: data.data.data
+          })
+        }
+        wx.hideLoading();
+      }
     })
   },
 
@@ -180,5 +205,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  bindRegionChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
   }
+  
 })

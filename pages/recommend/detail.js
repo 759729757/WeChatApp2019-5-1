@@ -7,7 +7,7 @@ Page({
    */
   data: {
     tab:1,
-    isFollow:false
+    isFollow:false,
   },
   follow:function(e){
     this.setData({
@@ -107,8 +107,13 @@ Page({
           self.setData({
             data: data.data.data
           })
+        }else{
+          //状态吗不是200 没有获取到用户数据
+          wx.navigateTo({
+            url: '/pages/login/index'
+          })
         }
-        wx.hideLoading();
+        wx.hideLoading(); 
       }
     })
   },

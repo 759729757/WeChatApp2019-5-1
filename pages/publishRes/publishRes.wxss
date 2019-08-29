@@ -4,4 +4,8 @@ page{position: relative;}
 .flex{flex-wrap: wrap;}
 .icon-lg{margin-right: 0;}
 
-
+.full-width{width: 750rpx;}
+.item-2{width: 50%;float: left;}
+.item-3{width: 33.333%;float: left;}
+.item-4{width: 25%;float: left;}
+.item-5{width: 20%;float: left;}

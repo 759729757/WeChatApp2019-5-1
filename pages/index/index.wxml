@@ -4,9 +4,9 @@
   <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
     <block wx:for="{{banner}}" wx:key>
       <swiper-item class="banner">
-        <image src="{{item.image}}" class="slide-image" />
-        <text class='ban-title'>{{item.title}}</text>
-        <text class='ban-text'>{{item.describe}}</text>
+        <image wx:if="{{item.path}}" src="{{item.path}}" class="slide-image" />
+        <!-- <text class='ban-title'>{{item.title}}</text> -->
+        <!-- <text class='ban-text'>{{item.describe}}</text> -->
       </swiper-item>
     </block>
   </swiper>
@@ -14,12 +14,21 @@
 <!-- 搜索框 -->
 <view class="table table-full content-warp part-search bg-normal">
   <view class='table-cell'>
-    <picker bindchange="bindPickerChange" value="{{cityNum}}" range="{{city}}">
+
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker text-white flex flex-left">
+        <image class='icon icon-position icon-left' src='/images/position.png'></image>
+          {{region[2]}}
+        </view>
+      </picker>
+
+    <!-- <picker bindchange="bindPickerChange" value="{{cityNum}}" range="{{city}}">
       <view class="picker text-white flex flex-left">
         <image class='icon icon-position icon-left' src='/images/position.png'></image>
         {{city[cityNum]}}
       </view>
-    </picker>
+    </picker> -->
+
   </view>
   <view class="table-cell text-warp text-center">
     <text class='text-aline text-bold'>Stay turned</text>
