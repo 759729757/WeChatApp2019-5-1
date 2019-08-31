@@ -10,7 +10,7 @@
       <view class='_title'>上传 视频/照片</view>
     </view>
 
-    <view wx:if="{{tempFilePaths.length || tempFilePathsViedo}}">
+    <view class="flex" wx:if="{{tempFilePaths.length || tempFilePathsViedo}}">
       <video wx:if="{{tempFilePathsViedo}}" src="{{tempFilePathsViedo}}" muted="true" autoplay="true" controls="false" loop></video>
 
       <view class="full-width">
@@ -48,10 +48,6 @@
   
   </view>
 
-  <view class='info-warp flex flex-between'>
-    
-    <text class='_title '>修改 </text>
-  </view>
   <view class='info-warp flex flex-between'>
     <input class='title ' placeholder="请输入电话" bindinput='telInput' value="{{telphone}}"/>
     <text class='_title '>修改 </text>
