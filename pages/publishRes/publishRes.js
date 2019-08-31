@@ -7,6 +7,7 @@ Page({
    */
   data: {
     tempFilePaths: [],
+    tempFilePathsViedo: '',
     proType: ['类型1', '类型2', '类型3', '类型4'], proTypeIndex: '',
     proType2: ['请先选一级分类'], proTypeIndex2: '',
     address: "",
@@ -36,6 +37,8 @@ Page({
     })
     var data = this.data;
     var self = this;
+    var tempFilePaths = data.tempFilePaths;
+    if (data.tempFilePathsViedo) tempFilePaths.push(data.tempFilePathsViedo)
     //可编辑转态
     wx.request({//保存用户数据
       url: app.globalData.apiUrl + '/restful/3.0/publish/RESOURCE',
@@ -51,7 +54,7 @@ Page({
         // "createdBy": "string",
         // "createdTime": "2019-07-25T14:49:00.287Z",
         "firstLevelClassify": data.proTypeIndex,
-        "publishPic": data.tempFilePaths,
+        "publishPic": tempFilePaths,
         "publishSynopsis": "暂无",
         "publishType": 1,
         "secondLevelClassify": data.proTypeIndex2,
@@ -201,10 +204,10 @@ Page({
                   var data = JSON.parse(_data.replace(/↵|\r|\n/g, ''))
                   console.log(data)
                   var imgUrl = data.data;
-                  var arr = [];arr.push(imgUrl)
+                  // var arr = [];arr.push(imgUrl)
                   if (imgUrl) {
                     self.setData({
-                      tempFilePaths: arr,
+                      tempFilePathsViedo: imgUrl,
                       upLoadType: 'video'
 
                     })

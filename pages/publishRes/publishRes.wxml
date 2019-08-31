@@ -1,12 +1,8 @@
 <!--pages/publishPro/publishPro.wxml-->
 <view class='stripe stripe-right'></view>
 <view class='content-warp'>
-  <view class='text-xxlg text-white'>
-    填写资料
-  </view>
-  <view class='_title'>
-    发布资源产品介绍 最多输入30字
-  </view>
+<input class='text-xxlg text-white ' placeholder="填写资料" bindinput='nameInput' value="{{name}}"/>
+  <input class='_title ' placeholder="发布资源产品介绍 最多输入30字" bindinput='publishSynopsisInput' value="{{publishSynopsis}}"/>
 
   <view class='flex pic-warp' bindtap='getImg'>
     <view class='text-center' wx:if="{{!tempFilePaths.length}}">
@@ -14,10 +10,10 @@
       <view class='_title'>上传 视频/照片</view>
     </view>
 
-    <view wx:if="{{tempFilePaths.length}}">
-      <video wx:if="{{upLoadType == 'video'}}" src="{{tempFilePaths[0]}}" muted="true" autoplay="true" controls="false" loop></video>
+    <view wx:if="{{tempFilePaths.length || tempFilePathsViedo}}">
+      <video wx:if="{{tempFilePathsViedo}}" src="{{tempFilePathsViedo}}" muted="true" autoplay="true" controls="false" loop></video>
 
-      <view wx:if="{{upLoadType == 'image'}}" class="full-width">
+      <view class="full-width">
         <image class='pic-show item-{{tempFilePaths.length}}' mode='widthFix'
           wx:for="{{tempFilePaths}}" wx:key src='{{item}}'></image>  
       </view>
@@ -53,11 +49,7 @@
   </view>
 
   <view class='info-warp flex flex-between'>
-    <input class='title ' placeholder="请输入项目名称" bindinput='nameInput' value="{{name}}"/>
-    <text class='_title '>修改 </text>
-  </view>
-  <view class='info-warp flex flex-between'>
-    <input class='title ' placeholder="请输入项目简介" bindinput='publishSynopsisInput' value="{{publishSynopsis}}"/>
+    
     <text class='_title '>修改 </text>
   </view>
   <view class='info-warp flex flex-between'>
